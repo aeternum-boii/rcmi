@@ -1,0 +1,250 @@
+ideas = {
+	hidden_ideas = {
+		rcmi_FRA_hi_giraud_tech = {
+			picture = GFX_portrait_FRA_henri_giraud_small
+			
+			allowed = {
+				has_idea_with_trait = henri_giraud_trait
+			}
+			
+			research_bonus = {
+				radar_tech = -0.95
+			}
+		}		
+		rcmi_JAP_bop_hi_IJN_a = {
+			picture = GFX_idea_jap_interservice_rivalry_navy_dominant
+
+			allowed = {
+				always = yes
+			}
+
+			research_bonus = {
+				armor = -0.15
+				infantry_weapons = -0.15
+				artillery = -0.15
+				naval_equipment = 0.25				
+			}
+		}
+		rcmi_JAP_bop_hi_IJN_h = {
+			picture = GFX_idea_jap_interservice_rivalry_navy_dominant
+
+			allowed = {
+				always = yes
+			}
+
+			research_bonus = {
+				armor = -0.14
+				infantry_weapons = -0.14
+				artillery = -0.14
+				naval_equipment = 0.18				
+			}
+		}
+		rcmi_JAP_bop_hi_IJN_i = {
+			picture = GFX_idea_jap_interservice_rivalry_navy_strengthened
+
+			allowed = {
+				always = yes
+			}
+
+			research_bonus = {
+				armor = -0.07
+				infantry_weapons = -0.07
+				artillery = -0.07
+				naval_equipment = 0.10				
+			}
+		}
+		rcmi_JAP_bop_hi_IJN_l = {
+			picture = GFX_idea_jap_interservice_rivalry_navy_strengthened
+		
+			allowed = {
+				always = yes
+			}
+
+			research_bonus = {
+				armor = -0.03
+				infantry_weapons = -0.03
+				artillery = -0.03
+				naval_equipment = 0.05				
+			}
+		}		
+		rcmi_JAP_bop_hi_IJA_a = {
+			picture = GFX_idea_jap_interservice_rivalry_army_dominant
+
+			allowed = {
+				always = yes
+			}
+
+			research_bonus = {
+				armor = 0.23
+				infantry_weapons = 0.23
+				artillery = 0.23
+				naval_equipment = -0.20				
+			}
+		}
+		rcmi_JAP_bop_hi_IJA_h = {
+			picture = GFX_idea_jap_interservice_rivalry_army_dominant
+
+			allowed = {
+				always = yes
+			}
+
+			research_bonus = {
+				armor = 0.18
+				infantry_weapons = 0.18
+				artillery = 0.18
+				naval_equipment = -0.15				
+			}
+		}
+		rcmi_JAP_bop_hi_IJA_i = {
+			picture = GFX_idea_jap_interservice_rivalry_army_strengthened
+
+			allowed = {
+				always = yes
+			}
+
+			research_bonus = {
+				armor = 0.10
+				infantry_weapons = 0.10
+				artillery = 0.10
+				naval_equipment = -0.10				
+			}
+		}
+		rcmi_JAP_bop_hi_IJA_l = {
+			picture = GFX_idea_jap_interservice_rivalry_army_strengthened
+
+			allowed = {
+				always = yes
+			}
+
+			research_bonus = {
+				armor = 0.05
+				infantry_weapons = 0.05
+				artillery = 0.05
+				naval_equipment = -0.05				
+			}
+		}								
+	}
+	country = {
+		rcmi_ITA_romeBuff = {
+			
+			#picture = generic_intel_bonus
+		
+			allowed = {
+				always = yes
+			}
+				
+			modifier = { 
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				army_morale_factor = 0.15
+				army_attack_against_major_factor = 0.25
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.35
+			}
+		}
+		rcmi_BEL_legacyOfAlbert = {
+
+			#picture = TODO
+
+			allowed = {
+				always = yes 
+			}
+
+			modifier = {
+				political_power_cost = 0.05
+				army_core_defence_factor = 0.07
+				army_core_attack_factor = 0.02
+				army_attack_against_major_factor = 0.03	
+				army_defence_against_major_factor = 0.03	
+				forced_surrender_limit = 1
+				defensive_war_stability_factor = 0.12
+			}
+		}
+		rcmi_BEL_legacyOfAlbert_mon = {
+
+			#picture = TODO
+
+			allowed = {
+				always = yes 
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.05
+				army_attack_against_major_factor = 0.05
+				army_defence_against_major_factor = 0.05
+				forced_surrender_limit = 1
+				defensive_war_stability_factor = 0.15
+			}
+		}
+		rcmi_BEL_legacyOfAlbert_com = {
+
+			#picture = TODO
+
+			allowed = {
+				always = yes 
+			}
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_cost = 0.075
+				army_core_defence_factor = 0.07
+				army_core_attack_factor = 0.02
+				army_attack_against_major_factor = 0.03	
+				army_defence_against_major_factor = 0.03	
+				forced_surrender_limit = 1
+				defensive_war_stability_factor = 0.10
+			}
+		}	
+		rcmi_JAP_integrating_Korea = {
+
+			#picture = TODO
+
+			allowed = {
+				always = yes 
+			}
+
+			modifier = {
+				stability_weekly = 0.002
+			}
+		}	
+		rcmi_legation_city = {
+			#picture = TODO
+
+			allowed = {
+				tag = ZHL 
+			}
+
+			modifier = {
+				conscription_factor = -0.85
+				custom_modifier_tooltip = NOWAR_TT
+				custom_modifier_tooltip = NODIVS_TT
+				custom_modifier_tooltip = NOVOLS_TT
+			}
+
+			on_add = {
+				set_rule = {
+					can_not_declare_war = yes
+					can_join_factions = no		
+					can_send_volunteers = no			
+				}
+			}
+		}	
+		rcmi_the_question_of_the_mandate = {
+			#picture = TODO
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				stability_weekly = -0.0025
+				war_support_weekly = -0.0015
+				political_power_cost = 0.2
+			}
+		}	
+	}
+}

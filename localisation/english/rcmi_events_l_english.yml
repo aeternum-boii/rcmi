@@ -1,0 +1,15 @@
+﻿l_english:
+ # RCMI JAP EVENTS
+ rcmi_japan.1.t:0 "Operation AI"
+ rcmi_japan.1.d:0 "Today after being stalled out by [USA.GetNameDef] for months in negotiations regarding our fuel situation and after demands to withdraw from [CHI.GetNameDef] we finally managed to carry out Operation AI.\nToday at 7:48 local time the IJN has carried out multiple strikes on the US Base in Hawai. The countries fleets are in disarray and the time to strike has come!"
+ rcmi_japan.1.a:0 "Tora Tora Tora!"
+ rcmi_japan.2.t:0 "End of the Lightning Warfare"
+ rcmi_japan.2.d:0 "Our lightning warfare in the Pacific utilising the superior ships of the IJN has been stalled out. What comes now is slow and steady decimation of [USA.GetNameDef]." 
+ rcmi_japan.2.a:0 "Onwards!"
+ rcmi_japan.3.t:0 "Integration of Korea"
+ rcmi_japan.3.d:0 "[KOR.GetNameDef] was successfully integrated. Their leaders are now available for recruitment and their people are our people."
+ rcmi_japan.3.a:0 "Very Well!"
+ rcmi_japan.4.t:0 "The Kōdōha Faction"
+ rcmi_japan.4.d:0 "The Kōdōha or Imperial Way Faction is a political faction in the IJA. It seeks to establish a military government that promotes totalitarian, militaristic and aggressive expansionistic ideals, and is largely supported by junior officers. The radical Kōdōha rivals the moderate Tōseiha for influence in the army."
+ rcmi_japan.4.a:0 "Purge Them!"
+ rcmi_japan.4.b:0 "Support Them!"

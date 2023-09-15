@@ -1,0 +1,68 @@
+rcmi_building_slots_buff_20 = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	local_building_slots_factor = 0.2
+}
+rcmi_building_slots_buff_40 = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	local_building_slots_factor = 0.4
+}
+rcmi_building_slots_buff_60 = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	local_building_slots_factor = 0.6
+}
+rcmi_building_slots_buff_80 = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	local_building_slots_factor = 0.8
+}
+rcmi_building_slots_buff_100 = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	local_building_slots_factor = 1
+}
+
+
+rcmi_GEACPS_JAP = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	consumer_goods_factor = 0.02
+	research_speed_factor = global.rcmi_GEACPS_JAP_research_speed_factor
+}
+rcmi_GEACPS_sub = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	consumer_goods_factor = -0.05
+	cic_to_overlord_factor = 0.20
+	mic_to_overlord_factor = 0.20
+	local_resources_factor = 0.25
+	production_speed_buildings_factor = 0.15
+	production_speed_arms_factory_factor = global.rcmi_GEACPS_sub_production_speed_arms_factory_factor
+	research_speed_factor = global.rcmi_GEACPS_sub_research_speed_factor
+}
+
+rcmi_showa_steel_works = {
+	icon = GFX_decision_steel
+
+	production_speed_steel_mill_factor = MAN.rcmi_showa_steel_speed
+}
+
+rcmi_korea_compliance = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	compliance_growth = 0.25
+	compliance_gain = 0.1
+}
+
+rcmi_the_mandate_of_heaven = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	stability_weekly = rcmi_the_mandate_of_heaven
+	war_support_weekly = rcmi_the_mandate_of_heaven
+	army_core_attack_factor = rcmi_the_mandate_of_heaven
+	army_attack_factor = rcmi_the_mandate_of_heaven
+	army_core_defence_factor = rcmi_the_mandate_of_heaven
+	army_defence_factor = rcmi_the_mandate_of_heaven
+}

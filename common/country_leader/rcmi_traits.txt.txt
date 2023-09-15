@@ -1,0 +1,75 @@
+leader_traits = {
+	henri_giraud_trait = {
+		army_attack_factor = -0.25
+		army_defence_factor = 0.15
+		max_dig_in = 15
+		planning_speed = -0.65
+		experience_gain_army_factor	= -0.65
+		field_officer_promotion_penalty = 0.65
+		experience_gain_army_unit_factor = -0.65
+		coordination_bonus = -0.65
+		custom_modifier_tooltip = rcmi_giraud_tech_tt
+	}
+	# LEGATION COUNCILS 
+	rcmi_reformist = {
+		stability_factor = -0.10
+		political_power_factor = 0.05
+		trade_laws_cost_factor = -0.15
+		economy_cost_factor = -0.15
+	}
+	rcmi_businessman = {
+		consumer_goods_factor = -0.05
+		production_speed_industrial_complex_factor = 0.05
+		production_speed_infrastructure_factor = 0.05
+	}
+	rcmi_lawyer = {
+		stability_factor = -0.05
+		political_power_factor = 0.05
+		consumer_goods_factor = -0.05
+	}
+	rcmi_antifascist = {
+		fascism_acceptance = -80
+		fascism_drift = -0.01
+	}
+	rcmi_bad_diplomat = {
+		improve_relations_maintain_cost_factor = 0.4
+	}
+	rcmi_artist = {
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		consumer_goods_factor = 0.02
+	}
+	rcmi_traditionalist = {
+		neutrality_drift = 0.01
+		neutrality_acceptance = 80
+		ai_focus_defense_factor = 0.5
+	}
+	rcmi_head_of_intelligence = {
+		operative_slot = 1
+		own_operative_capture_chance_factor = -0.25
+		own_operative_detection_chance_factor = -0.25
+		intel_network_gain_factor = 0.25
+	}
+	rcmi_military_connections = {
+		experience_gain_army_factor = 0.15
+		experience_gain_army_unit_factor = 0.15
+		army_chief_cost_factor = -0.25
+		high_command_cost_factor = -0.25
+	}
+	rcmi_army_officer = {
+		army_attack_factor = 0.15
+		army_defence_factor = 0.15
+		command_cap = 15
+		command_power_gain = 0.2
+	}
+	rcmi_experienced_diplomat = {
+		improve_relations_maintain_cost_factor = -0.5
+		trade_opinion_factor = 0.4
+		enemy_justify_war_goal_time = 0.25
+		enemy_declare_war_tension = 0.4
+	}
+	rcmi_puppet = {
+		stability_factor = -0.15
+		political_power_factor = -0.15
+	}
+}

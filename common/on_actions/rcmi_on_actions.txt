@@ -1,0 +1,190 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_state = {
+				limit = {
+					is_core_of = MAN 
+				}
+				set_state_flag = rcmi_manchuria_region
+			}
+			BEL = {
+				add_ideas = {
+					rcmi_BEL_legacyOfAlbert
+				}
+			}
+			set_variable = { global.rcmi_GEACPS_modifier_factor = 1 }
+			every_state = {
+				limit = {
+					state = 2
+				}
+				add_dynamic_modifier = {
+					modifier = rcmi_building_slots_buff_60
+				}
+			}
+			every_state = {
+				limit = {
+					state = 162
+				}
+				add_dynamic_modifier = {
+					modifier = rcmi_building_slots_buff_40
+				}
+			}				
+			JAP = {
+				every_state = {
+					limit = {	
+						is_core_of = JAP
+					}
+					add_dynamic_modifer = {
+						modifier = rcmi_building_slots_buff_40
+					}					
+				}
+				282 = {
+					remove_dynamic_modifier = {
+						modifier = rcmi_building_slots_buff_40
+					}
+					add_dynamic_modifier = {
+						modifier = rcmi_building_slots_buff_60
+					}
+				}
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					is_subject_of = JAP
+					JAP = {
+						has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
+					}
+				}
+				add_to_tech_sharing_group = GEACPS_research
+			}
+			if = {
+				limit = {
+					is_subject_of = JAP
+					JAP = {
+						has_completed_focus = JAP_expand_geacps
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = rcmi_GEACPS_sub
+				}	
+			}
+			if = {
+				limit = {
+					JAP = {
+						all_controlled_state = {
+							OR = {
+								NOT = {
+									rcmi_is_korean_state = yes
+								}
+								compliance > 95
+							}
+						}
+					}
+				}
+				JAP = {
+					country_event = { id = rcmi_japan.3 days = 1 }
+				}
+			}		
+			JAP = {
+				every_controlled_state = {
+					limit = {
+						rcmi_is_korean_state = yes
+						NOT = {
+							is_core_of = JAP
+						}
+						compliance > 99
+					}
+					add_core_of = JAP
+				}
+			}	
+		}
+	}
+	on_weekly = {
+		effect = {
+			set_variable = { global.rcmi_GEACPS_JAP_research_speed_factor = 0 }
+			set_variable = { global.rcmi_GEACPS_sub_production_speed_arms_factory_factor = 0 }
+			set_variable = { global.rcmi_GEACPS_sub_research_speed_factor = 0 }
+			set_variable = { global.rcmi_GEACPS_jap_sub_count = 0 }
+
+			JAP = {
+				every_subject_country = {
+					add_to_variable = { global.rcmi_GEACPS_jap_sub_count = 1 }
+				}
+				#if = {
+				#	limit = {
+				#		check_variable = { global.rcmi_GEACPS_jap_sub_count > 3 }
+				#	}
+				#	add_to_temp_array = {
+				#		array = global.tempArray
+				#		value = THIS
+				#	}
+				#	resize_temp_array = {
+				#		array = global.tempArray
+				#		value = 1337
+				#		size = global.rcmi_GEACPS_jap_sub_count
+				#	}			
+				#	for_each_loop = {
+				#		array = global.tempArray
+				#		value = v
+				#		index = i
+				#		break = break
+				#
+				#		multiply_variable = { global.rcmi_GEACPS_modifier_factor = 0.95 }
+				#	}
+				#}
+				#divide_variable = { global.rcmi_GEACPS_modifier_factor = global.rcmi_GEACPS_jap_sub_count }
+				every_subject_country = {
+					set_temp_variable = { jap_res_fac = 0.02 }
+					multiply_temp_variable = { jap_res_fac = global.rcmi_GEACPS_modifier_factor }
+					add_to_variable = { global.rcmi_GEACPS_JAP_research_speed_factor = jap_res_fac }
+
+					set_temp_variable = { sub_res_fac = 0.04 }
+					multiply_temp_variable = { sub_res_fac = global.rcmi_GEACPS_modifier_factor }
+					add_to_variable = { global.rcmi_GEACPS_sub_research_speed_factor = sub_res_fac }		
+					
+					set_temp_variable = { sub_mic_build_fac = 0.08 }
+					multiply_temp_variable = { sub_mic_build_fac = global.rcmi_GEACPS_modifier_factor }
+					add_to_variable = { global.rcmi_GEACPS_sub_production_speed_arms_factory_factor = sub_mic_build_fac }						
+				}
+			}
+		}
+	}
+	on_weekly_BEL = {
+		effect = {
+			if = {
+				limit = {
+					has_government = communism 
+				}
+				remove_ideas = {
+					rcmi_BEL_legacyOfAlbert
+					rcmi_BEL_legacyOfAlbert_mon
+				}
+				add_ideas = {
+					rcmi_BEL_legacyOfAlbert_com
+				}
+			} else_if = {
+				limit = {
+					has_government = non_alligned 
+				}
+				remove_ideas = {
+					rcmi_BEL_legacyOfAlbert_com
+					rcmi_BEL_legacyOfAlbert
+				}
+				add_ideas = {
+					rcmi_BEL_legacyOfAlbert_mon
+				}
+			} else = {
+				remove_ideas = {
+					rcmi_BEL_legacyOfAlbert_com
+					rcmi_BEL_legacyOfAlbert_mon
+				}
+				add_ideas = {
+					rcmi_BEL_legacyOfAlbert
+				}
+			}
+		}
+	}
+}

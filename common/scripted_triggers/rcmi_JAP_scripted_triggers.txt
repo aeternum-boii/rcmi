@@ -1,0 +1,21 @@
+rcmi_korea_full_control = {
+	custom_trigger_tooltip = {
+		tooltip = rcmi_korea_full_control_tt
+		525 = { is_fully_controlled_by = JAP }
+		527 = { is_fully_controlled_by = JAP }
+		917 = { is_fully_controlled_by = JAP }
+		918 = { is_fully_controlled_by = JAP }
+		919 = { is_fully_controlled_by = JAP }
+		920 = { is_fully_controlled_by = JAP }				
+	}
+}
+rcmi_is_korean_state = {
+	OR = {
+		state = 525
+		state = 527
+		state = 917
+		state = 918
+		state = 919
+		state = 920
+	}
+}

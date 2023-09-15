@@ -1,0 +1,80 @@
+characters = {
+	SHN_Harry_Arnhold = {
+		name = "Harry Edward Arnhold"
+		portraits = {
+			#https://en.wikipedia.org/wiki/Harry_Edward_Arnhold
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = {
+				rcmi_businessman
+				rcmi_reformist
+				rcmi_antifascist
+				rcmi_bad_diplomat
+			}
+			id=-1
+			expire = "1950.1.1"
+		}
+	}
+	SHN_Cornell_Franklin = {
+		name = "Cornell Franklin"
+		portraits = {
+			#https://en.wikipedia.org/wiki/Cornell_Franklin
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = {
+				rcmi_lawyer
+				rcmi_artist
+			}
+			id=-1
+			expire = "1959.02.24"
+		}
+	}
+	SHN_Tony_Keswick = {
+		name = "Tony Keswick"
+		# no portrait found
+		country_leader = {
+			ideology = centrism
+			traits = {
+				rcmi_businessman
+				rcmi_traditionalist
+				rcmi_head_of_intelligence
+				rcmi_military_connections
+			}
+			expire = "1990.1.1"
+			id=-1
+		}
+	}
+	SHN_John_Liddell = {
+		name = "John Hellyer Liddell"
+		portraits = {
+			#https://en.wikipedia.org/wiki/John_Hellyer_Liddell
+		}
+		country_leader = {
+			ideology = centrism
+			traits = {
+				rcmi_businessman
+				rcmi_military_connections
+				rcmi_army_officer
+			}
+			expire = "1984.01.24"
+			id=-1
+		}
+	}
+	SHN_Katsuo_Okazaki = {
+		name = "Katsuo Okazaki"
+		portraits = {
+			#https://en.wikipedia.org/wiki/Katsuo_Okazaki
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {
+				rcmi_puppet
+				rcmi_experienced_diplomat
+			}
+			expire = "1965.10.10"
+			id=-1
+		}
+	}
+}

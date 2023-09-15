@@ -1,0 +1,228 @@
+JAP_bop = {
+	initial_value = -0.10
+	left_side = JAP_bop_IJN 
+	right_side = JAP_bop_IJA
+	decision_category = JAP_interservice_rivalry
+
+	range = {
+		id = JAP_balance_range
+		min = -0.10
+		max = 0.10
+		modifier = {
+		}
+		on_activate = {
+			hidden_effect = {
+				JAP_bop_remove_all = yes				
+			}
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+
+	side = {
+		id = JAP_bop_IJN
+		icon = GFX_bop_icons_JAP_bop_IJN
+		
+ 		range = {
+ 			id = JAP_bop_IJN_absolute
+ 			max = -0.75
+ 			min = -1
+ 			modifier = {
+ 				 political_power_cost = 0.15
+ 				 production_speed_arms_factory_factor = -0.2
+ 				 production_speed_dockyard_factor = 0.4
+ 				 industrial_capacity_factory = -0.05
+ 				 industrial_capacity_dockyard = 0.25
+ 				 land_doctrine_cost_factor = 0.05
+ 				 naval_doctrine_cost_factor = -0.20
+				 custom_modifier_tooltip = rcmi_JAP_bop_hi_IJN_a.tt
+ 			}
+ 			on_activate = {
+ 				log = "[GetDateText]:[THIS.GetName]:SER_bop:JAP_bop_IJN_absolute active"
+				clr_country_flag = JAP_young_officer_coup_success
+				uncomplete_national_focus = {
+					focus = JAP_showa_restoration
+				}
+				uncomplete_national_focus = {
+					focus = JAP_modern_shogunate
+				}
+				hidden_effect = {
+					JAP_bop_remove_all = yes
+					add_ideas = {
+						rcmi_JAP_bop_hi_IJN_a
+					}
+				}
+ 			}
+ 		}
+ 		
+ 		range = {
+ 			id = JAP_bop_IJN_high
+ 			max = -0.50
+ 			min = -0.75
+ 			modifier = {
+ 				 production_speed_arms_factory_factor = -0.2
+ 				 production_speed_dockyard_factor = 0.3
+ 				 industrial_capacity_factory = -0.05
+ 				 industrial_capacity_dockyard = 0.2
+ 				 land_doctrine_cost_factor = 0.05
+ 				 naval_doctrine_cost_factor = -0.15
+				 custom_modifier_tooltip = rcmi_JAP_bop_hi_IJN_h.tt
+ 			}
+ 			on_activate = {
+ 				 log = "[GetDateText]:[THIS.GetName]:JAP_bop:JAP_bop_IJN_high active"
+				hidden_effect = {
+					JAP_bop_remove_all = yes
+					add_ideas = {
+						rcmi_JAP_bop_hi_IJN_h
+					}
+				}				 
+ 			}
+ 		}
+ 
+ 		range = {
+ 			id = JAP_bop_IJN_increased
+ 			max = -0.25
+ 			min = -0.50
+ 			modifier = {
+ 				 production_speed_arms_factory_factor = -0.15
+ 				 production_speed_dockyard_factor = 0.20
+ 				 industrial_capacity_factory = -0.09
+ 				 industrial_capacity_dockyard = 0.15
+				custom_modifier_tooltip = rcmi_JAP_bop_hi_IJN_i.tt
+ 			}
+ 			on_activate = {
+ 				 log = "[GetDateText]:[THIS.GetName]:JAP_bop:JAP_bop_IJN_increased active"
+				hidden_effect = {
+					JAP_bop_remove_all = yes
+					add_ideas = {
+						rcmi_JAP_bop_hi_IJN_i
+					}
+				}				 
+ 			}
+ 		}
+ 
+ 		
+ 		range = {
+ 			id = JAP_bop_IJN_low
+ 			max = -0.10
+ 			min = -0.25
+ 			modifier = {
+ 				 production_speed_arms_factory_factor = -0.1
+ 				 production_speed_dockyard_factor = 0.15
+ 				 industrial_capacity_factory = -0.05
+ 				 industrial_capacity_dockyard = 0.1
+				custom_modifier_tooltip = rcmi_JAP_bop_hi_IJN_l.tt
+ 			}
+ 			on_activate = {
+ 				 log = "[GetDateText]:[THIS.GetName]:JAP_bop_IJN:JAP_bop_IJN_low active"
+				hidden_effect = {
+					JAP_bop_remove_all = yes
+					add_ideas = {
+						rcmi_JAP_bop_hi_IJN_l
+					}
+				}				 
+ 			}
+ 		}
+	}
+
+	side = {
+		id = JAP_bop_IJA
+		icon = GFX_bop_icons_JAP_bop_IJA
+		range = {
+			id = JAP_bop_IJA_absolute
+			min = 0.75
+			max = 1
+			modifier = {
+				 political_power_cost = 0.2
+				 production_speed_arms_factory_factor = 0.25
+				 production_speed_dockyard_factor = -0.1
+				 industrial_capacity_factory = 0.25
+				 industrial_capacity_dockyard = -0.1
+				 naval_doctrine_cost_factor = 0.05
+				 land_doctrine_cost_factor = -0.12
+				custom_modifier_tooltip = rcmi_JAP_bop_hi_IJA_a.tt
+			}
+			on_activate = {
+				 log = "[GetDateText]:[THIS.GetName]:SER_bop:JAP_bop_IJA_absolute active"
+				set_country_flag = JAP_young_officer_coup_success
+				hidden_effect = {
+					JAP_bop_remove_all = yes
+					add_ideas = {
+						rcmi_JAP_bop_hi_IJA_a
+					}
+				}				 
+			}
+		}
+		
+		range = {
+			id = JAP_bop_IJA_high
+			min = 0.5
+			max = 0.75
+			modifier = {
+				 production_speed_arms_factory_factor = 0.2
+				 production_speed_dockyard_factor = -0.1
+				 industrial_capacity_factory = 0.2
+				 industrial_capacity_dockyard = -0.1
+				 naval_doctrine_cost_factor = 0.05
+				 land_doctrine_cost_factor = -0.1
+				custom_modifier_tooltip = rcmi_JAP_bop_hi_IJA_h.tt
+			}
+			on_activate = {
+				 log = "[GetDateText]:[THIS.GetName]:JAP_bop:JAP_bop_IJA_high active"
+				hidden_effect = {
+					JAP_bop_remove_all = yes
+					add_ideas = {
+						rcmi_JAP_bop_hi_IJA_h
+					}
+				}				 
+			}
+		}
+
+		range = {
+			id = JAP_bop_IJA_increased
+			min = 0.25
+			max = 0.5
+			modifier = {
+				 production_speed_arms_factory_factor = 0.15
+				 production_speed_dockyard_factor = -0.10
+				 industrial_capacity_factory = 0.15
+				 industrial_capacity_dockyard = -0.09
+				custom_modifier_tooltip = rcmi_JAP_bop_hi_IJA_i.tt
+			}
+			on_activate = {
+				 log = "[GetDateText]:[THIS.GetName]:JAP_bop:JAP_bop_IJA_increased active"
+				hidden_effect = {
+					JAP_bop_remove_all = yes
+					add_ideas = {
+						rcmi_JAP_bop_hi_IJA_i
+					}
+				}				 
+			}
+		}
+
+		
+		range = {
+			id = JAP_bop_IJA_low
+			min = 0.10
+			max = 0.25
+			modifier = {
+				 production_speed_arms_factory_factor = 0.1
+				 production_speed_dockyard_factor = -0.05
+				 industrial_capacity_factory = 0.1
+				 industrial_capacity_dockyard = -0.05
+				custom_modifier_tooltip = rcmi_JAP_bop_hi_IJA_l.tt
+			}
+			on_activate = {
+				 log = "[GetDateText]:[THIS.GetName]:JAP_bop_IJA:JAP_bop_IJA_low active"
+				hidden_effect = {
+					JAP_bop_remove_all = yes
+					add_ideas = {
+						rcmi_JAP_bop_hi_IJA_l
+					}
+				}				 
+			}
+		}
+	}	
+} 

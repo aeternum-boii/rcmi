@@ -1,0 +1,8 @@
+opinion_modifiers = {
+	JAP_exploited_boxer_protocols = {
+		value = -15
+	}
+	JAP_exploited_boxer_protocols_ROC = {
+		value = -45
+	}
+}

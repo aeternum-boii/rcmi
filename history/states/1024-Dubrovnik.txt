@@ -1,0 +1,33 @@
+state={
+	id=1024
+	name="STATE_1024"
+	
+	state_category = town
+	
+	history = {
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = CRO
+		add_claim_by = SER
+		add_claim_by = MNT
+		
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			dockyard = 1
+			
+			6889 = {
+				naval_base = 4
+			}
+		}
+		
+		victory_points = { 6889 15 } #Dubrovnik
+	}
+	
+	provinces={
+		6889 
+	}
+	manpower=25639
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

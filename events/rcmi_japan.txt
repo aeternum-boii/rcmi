@@ -1,0 +1,203 @@
+# JAPAN RCMI #
+
+add_namespace = rcmi_japan
+
+# Pearl Harbor
+country_event = {
+	id = rcmi_japan.1
+	title = rcmi_japan.1.t
+	desc = rcmi_japan.1.d
+	#picture = TODO
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				25 = {
+					set_variable = { 629.JAP_pearl_damage = 3 }
+				}
+				60 = {
+					set_variable = { 629.JAP_pearl_damage = 2 }
+				}
+				30 = {
+					set_variable = { 629.JAP_pearl_damage = 1 }
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { 629.JAP_pearl_damage = 3 }
+				}
+				set_variable = { 629.JAP_pearl_death_toll = -6743 }
+			} else_if = {
+				limit = {
+					check_variable = { 629.JAP_pearl_damage = 2 }
+				}
+				set_variable = { 629.JAP_pearl_death_toll = -2403 }
+			} else = {
+				set_variable = { 629.JAP_pearl_death_toll = -1430 }
+			}
+		}
+	}
+
+	option = {
+		name = rcmi_japan.1.a
+		add_war_support = 0.05
+		JAP_bop_medium_decrease_effect = yes 
+		declare_war_on = {
+  			type = take_claimed_state
+  			target = USA
+			generator = {
+				629
+			}
+  		}
+		add_ideas = {
+			rcmi_JAP_tora
+		}
+		hidden_effect = {
+			country_event = {
+				id = rcmi_japan.2 # Removal of Tora Tora Tora + punishment if no land was taken 
+				days = 365
+			}
+		}
+		USA = {
+			add_manpower = 629.JAP_pearl_death_toll
+			add_stability = -0.15
+			add_war_support = -0.15
+			add_timed_idea = {
+				idea = rcmi_JAP_usDebuff_Tora
+				days = 180
+			}
+			629 = {
+				damage_building = {
+					type = infrastructure
+					damage = 5
+				}
+				damage_building = {
+					type = air_base
+					damage = 10
+				}
+			}
+		}
+	}
+}
+# End of Tora Tora Tora 
+country_event = { 
+	id = rcmi_japan.2
+	title = rcmi_japan.2.t
+	desc = rcmi_japan.2.d
+	#picture = TODO
+
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmi_japan.2.a
+		if = {
+			limit = {
+				USA = {
+					surrender_progress > 0
+				}
+			}
+			add_political_power = 120
+			add_war_support = 0.15
+			add_stability = 0.15
+			JAP_bop_very_low_decrease_effect = yes 
+		} else = {
+			add_political_power = -60
+			add_war_support = -0.15
+			add_stability = -0.15
+			JAP_bop_very_low_increase_effect = yes 
+		}
+		swap_ideas = {
+			remove_idea = rcmi_JAP_tora
+			add_idea = JAP_tora_tora_tora_idea
+		}
+	}
+}
+# Successful Integration of Korea
+country_event = { 
+	id = rcmi_japan.3
+	title = rcmi_japan.3.t
+	desc = rcmi_japan.3.d
+	#picture = TODO
+
+	is_triggered_only = yes
+	fire_only_once = yes 
+	
+	option = {
+		name = rcmi_japan.3.a
+		every_owned_state = {
+			limit = {
+				rcmi_is_korean_state = yes
+			}
+			add_core_of = ROOT 
+		}
+		KOR = {
+			every_character = {
+				set_nationality = {
+					target_country = JAP
+					character = THIS
+				}
+			}
+		}
+	}
+}
+# Kodoha faction
+country_event = { 
+	id = rcmi_japan.4
+	title = rcmi_japan.4.t
+	desc = rcmi_japan.4.d
+	#picture = TODO
+
+	is_triggered_only = yes
+	fire_only_once = yes 
+	
+	option = {
+		name = rcmi_japan.4.a
+			set_power_balance = {
+				id = JAP_bop
+				set_default = yes 
+			}			
+			add_stability = 0.1
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			hidden_effect = {
+				set_cosmetic_tag = JAP2
+				if = {
+					limit = {
+						has_dlc = "La Resistance"
+						NOT = {
+							has_global_flag = aiyappan_recruited
+						}						
+					}
+					#
+					create_operative_leader = {
+						name = "Aiyappan Pillai Madhavan Nair"
+						portrait_path = gfx/leaders/India/portrait_india_generic_operative_male_3.dds 
+						traits = {  operative_demolition_expert operative_natural_orator }
+						bypass_recruitment = no
+						available_to_spy_master = yes
+						nationalities = { JAP RAJ }
+					}
+					set_global_flag = aiyappan_recruited
+				}
+				country_event = { id = r56_japan.1 days = 10 random_days = 5 }
+			}
+	}
+	option = {
+		name = rcmi_japan.4.b
+		set_country_flag = JAP_young_officer_coup_success
+			set_power_balance = {
+				id = JAP_bop
+				left_side = JAP_bop_IJN
+				right_side = JAP_bop_IJA
+				set_value = 0.10
+			}	
+			add_political_power = 100
+			country_event = { id = wtt_japan.108 }
+			set_party_name = {
+			    ideology = neutrality
+			    long_name = JAP_neutrality_party_kodoha_long
+			    name = JAP_neutrality_party_kodoha
+			}		
+	}
+}

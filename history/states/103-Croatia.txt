@@ -1,0 +1,36 @@
+
+state={
+	id=103
+	name="STATE_103"
+	resources={
+		aluminium=16.000
+	}
+
+	history={
+		owner = YUG
+		victory_points = {
+			3924 3 
+		}
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			industrial_complex = 1
+			3924 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = YUG
+		add_core_of = CRO
+
+	}
+
+	provinces={
+		3924 3974 11816 13312 
+	}
+	manpower=756007
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

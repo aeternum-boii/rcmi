@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_bop_icons_JAP_bop_IJN"
+		texturefile = "gfx/bop_icons/JAP_bop_IJN.png"
+	}
+	spriteType = {
+		name = "GFX_bop_icons_JAP_bop_IJA"
+		texturefile = "gfx/bop_icons/JAP_bop_IJA.png"
+	}	
+}

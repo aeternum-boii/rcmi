@@ -1,0 +1,33 @@
+state={
+	id=1025
+	name="STATE_1025"
+	
+	state_category = rural	
+	
+	history = {
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = SER
+		add_core_of = MNT
+		
+		buildings = {
+			infrastructure = 2
+
+			
+			13313 = {
+				naval_base = 1
+			}
+		}
+		
+		victory_points = { 13313 2 } #Kotor
+	
+	}	
+	
+	provinces={
+		13313 
+	}
+	manpower=28943
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

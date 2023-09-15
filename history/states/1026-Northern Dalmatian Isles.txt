@@ -1,0 +1,26 @@
+state={
+	id=1026
+	name="STATE_1026"
+
+	state_category = small_island
+	
+	history = {
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = CRO
+		
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}	
+	
+	
+	provinces={
+		3868 13319 13320 13321 
+	}
+	manpower=26429
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

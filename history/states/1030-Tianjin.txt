@@ -1,0 +1,36 @@
+state={
+	id=1030
+	name="STATE_1030"
+	
+	history={
+		owner = ZHL
+		add_core_of = CHI
+		add_core_of = PRC
+		add_core_of = ZHL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			10068 = {
+				naval_base = 2
+
+			}
+
+		}
+		1938.10.25 = {
+			controller = JAP
+
+		}
+		victory_points = {
+			10068 8 
+		}
+	}
+	
+	
+	provinces={
+		10068 
+	}
+	manpower=3490234
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}
