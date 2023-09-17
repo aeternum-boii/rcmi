@@ -1,0 +1,338 @@
+add_namespace = rcmi_SHN_events
+
+country_event = {
+	id = rcmi_SHN_events.1
+	title = rcmi_SHN_events.1.t
+	desc = rcmi_SHN_events.1.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_variable = {
+				stab_gain_f = party_popularity@fascism
+			}
+			multiply_variable = {
+				stab_gain_f = 0.12
+			}
+			set_variable = {
+				pp_gain_f = party_popularity@fascism
+			}
+			multiply_variable = {
+				pp_gain_f = 100
+			}	
+			set_variable = {
+				stab_gain_d = party_popularity@democratic
+			}
+			multiply_variable = {
+				stab_gain_d = 0.12
+			}
+			set_variable = {
+				pp_gain_d = party_popularity@democratic
+			}
+			multiply_variable = {
+				pp_gain_d = 100
+			}	
+			set_variable = {
+				stab_gain_n = party_popularity@neutrality
+			}
+			multiply_variable = {
+				stab_gain_n = 0.12
+			}
+			set_variable = {
+				pp_gain_n = party_popularity@neutrality
+			}
+			multiply_variable = {
+				pp_gain_n = 100
+			}						
+		}
+	}
+
+
+	option = {
+		name = rcmi_SHN_events.1.a
+		trigger = {
+			OR = {
+				is_subject_of = JAP 
+				fascism > 0.4
+				date > 1941.1.1
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				is_subject_of = JAP 
+				factor = 1000
+			}
+			modifier = {
+				date < 1942.1.1
+				NOT = { is_subject_of = JAP }
+				factor = 0
+			}
+			modifier = {
+				date > 1942.1.1
+				factor = 5
+			}
+		}
+		set_politics = {
+			ruling_party = fascism
+		}
+		add_stability = var:stab_gain_f
+		add_political_power = var:pp_gain_f
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = rcmi_SHN_events.1.b
+		trigger = {
+			OR = {
+				AND = {
+					democratic > 0.4
+					any_country = {
+						has_war = yes 
+					}
+				}
+				AND = {
+					democratic > 0.2 
+					all_country = {
+						has_war = no 
+					}
+				}
+				date < 1940.1.1
+			}
+		}
+		ai_chance = {
+			base = 10 
+			modifier = {
+				NOT = { 
+					has_country_leader = SHN_Harry_Arnhold
+				}
+				set_temp_variable = {
+					temp = threat
+				}
+				multiply_temp_variable = {
+					temp = -1
+				}
+				add = temp
+			}
+			modifier = {
+				date > 1938.1.1
+				factor = 0.1
+			}
+			modifier = {
+				OVERLORD = {
+					has_government = democratic
+					has_war = no
+				}
+				factor = 10
+			}
+		}
+		if = {
+			limit = {
+				has_country_leader = SHN_Harry_Arnhold
+				date > 1937.1.1
+			}
+			SHN_Harry_Arnhold = {
+				retire_country_leader = yes 
+			}
+		}
+		set_politics = {
+			ruling_party = democratic
+		}		
+		add_stability = var:stab_gain_d
+		add_political_power = var:pp_gain_d
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}		
+	}	
+	option = {
+		name = rcmi_SHN_events.1.c
+		trigger = {
+			OR = {
+				AND = {
+					neutrality > 0.4
+					all_country = {
+						has_war = no 
+					}
+				}
+				AND = {
+					neutrality > 0.2 
+					any_country = {
+						has_war = yes 
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				always = yes 
+				add = var:threat
+
+			}
+			modifier = {
+				date < 1938.1.1
+				factor = 0.1
+			}
+			modifier = {
+				JAP = {
+					has_war = yes
+				}
+				factor = 2
+			}
+			modifier = {
+				OR = {
+					ENG = {
+						has_war = yes 
+					}
+					FRA = {
+						has_war = yes
+					}
+				}
+				factor = 5
+			}
+			modifier = {
+				OR = {
+					SOV = {
+						has_war = yes 
+					}
+					USA = {
+						has_war = yes 
+					}
+				}
+				factor = 10
+			}
+			modifier = {
+				OR = {
+					is_subject_of = JAP 
+					AND = {
+						1031 = {
+							controller = {
+								OR = {
+									608 = {
+										NOT = {
+											is_core_of = PREV
+										}
+									}
+									tag = MAN
+								}
+							}
+						}
+					}
+				}		
+				factor = 0.2		
+			}
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}		
+		add_stability = var:stab_gain_n
+		add_political_power = var:pp_gain_n
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}		
+	}		
+}
+
+country_event = { 
+	id = rcmi_SHN_events.2
+	title = rcmi_SHN_events.2.t
+	desc = rcmi_SHN_events.2.d
+	#picture = TODO
+
+	fire_only_once = yes 
+	trigger = {
+		date > 1941.01.01
+		tag = ENG
+		OR = {
+			has_government = democratic
+			has_government = neutrality
+			AND = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+				OR = {
+					has_war_with = JAP
+					has_war_with = CHI
+				}
+			}
+		}
+		OR = {
+			has_war_with = JAP 
+			has_war_with = CHI
+			any_allied_country = {
+				has_war = yes 
+				OR = {
+					tag = CHI
+					tag = JAP 
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = rcmi_SHN_events.2.a
+		ai_chance = {
+			base = 1
+		}
+		SHN = {
+			country_event = {
+				id = rcmi_SHN_events.3
+				days = 14
+			}
+		}
+		add_war_support = 0.05
+		effect_tooltip = {
+			SHN = {
+				add_political_power = -15
+				army_experience = -15
+				add_war_support = 0.05				
+				SHN_Tony_Keswick = {
+					retire_country_leader = yes
+					set_nationality = ENG
+				}
+			}
+		}
+	}
+	option = {
+		name = rcmi_SHN_events.2.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = { 
+	id = rcmi_SHN_events.3
+	title = rcmi_SHN_events.3.t
+	desc = rcmi_SHN_events.3.d
+	#picture = TODO
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+	
+	option = {
+		name = rcmi_SHN_events.3.a
+		add_political_power = -15
+		army_experience = -15
+		add_war_support = 0.05
+		SHN = {
+			SHN_Tony_Keswick = {
+				retire_country_leader = yes
+				set_nationality = ENG
+			}
+		}		
+		effect_tooltip = {
+			ENG = {
+				add_war_support = 0.05
+			}
+		}
+	}
+
+}

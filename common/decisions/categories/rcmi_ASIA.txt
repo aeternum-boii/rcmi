@@ -1,0 +1,17 @@
+SHN_municipal_council_elections = {
+	priority = 10
+	#icon = TODO
+
+	#scripted_gui = gre_internal_factions_decision_ui
+	#visible_when_empty = yes
+
+	allowed = {
+		original_tag = SHN
+	}
+
+	visible = {
+		NOT = {
+			has_country_flag = SHN_council_suspended
+		}
+	}
+}

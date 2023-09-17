@@ -53,7 +53,7 @@
 		completion_reward = {
 			if = {
 				limit = {
-					#has_completed_focus = JAP_support_the_kodoha_faction
+					has_country_flag = JAP_young_officer_coup_success
 				}
 				JAP_bop_low_increase_effect = yes
 			} else = {
@@ -2164,6 +2164,55 @@
 			is_subject = no
 			has_completed_focus = JAP_liaison_conference
 			OR = {
+				AND = {
+					is_ai = yes 
+					OR = {
+						NOT = {
+							has_completed_focus = JAP_prepare_for_war_with_the_soviet_union
+						}
+						AND = {
+							has_completed_focus = JAP_establish_the_northern_resource_area
+							SOV = {
+								OR = {
+									is_subject_of = ROOT  
+									AND = {
+										is_subject = yes 
+										OR = {
+											OVERLORD = {
+												is_in_faction_with = ROOT 
+											}
+											any_country = {
+												NOT = {
+													has_war_with = ROOT
+												}
+												has_government = fascism
+												is_faction_leader = yes 
+												is_in_faction_with = SOV
+											}
+										}
+									}
+									AND = {
+										has_war_with = ROOT 
+										OR = {
+											AND = {
+												surrender_progress > 0.15 
+												all_country = {
+													OR = {
+														NOT = { has_war_with = SOV }
+														is_in_faction_with = ROOT
+													}
+												}
+											}
+											surrender_progress > 0.65
+										}
+									}
+									has_capitulated = yes 
+									exists = no 
+								}
+							}							
+						}
+					}
+				}
 				AND = {
 					NOT = {
 						has_completed_focus = JAP_prepare_for_war_with_the_soviet_union
@@ -4593,6 +4642,9 @@
 		id = JAP_national_defense_state
 		icon = GFX_goal_JAP_defence
 		prerequisite = { focus = JAP_nationalize_war_industry focus = JAP_imperial_arsenals }
+		prerequisite = {
+			focus = JAP_national_research_policy
+		}
 		x = -2
 		y = 1
 		relative_position_id = JAP_imperial_arsenals
@@ -4991,6 +5043,13 @@
 
 		available = {
 			OR = {
+				AND = {
+					is_ai = yes 
+					OR = {
+						NOT = { has_completed_focus = JAP_exploit_the_boxer_protocol }
+						has_completed_focus = JAP_exploit_the_southern_resource_area
+					}
+				}
 				AND = {
 					NOT = {
 						has_completed_focus = JAP_exploit_the_boxer_protocol

@@ -96,3 +96,14 @@ JAP_bop_remove_all = {
 		rcmi_JAP_bop_hi_IJA_l		
 	}
 }
+
+SHN_election_effect = {
+	country_event = {
+		id = rcmi_SHN_events.1
+		days = 3
+	}
+	set_country_flag = {
+		flag = SHN_recent_elections
+		days = 120
+	}
+}

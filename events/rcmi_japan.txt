@@ -154,6 +154,29 @@ country_event = {
 	
 	option = {
 		name = rcmi_japan.4.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						OR = {
+							not = { has_dlc = "Waking the Tiger" }
+							has_game_rule = {
+								rule = JAP_ai_behavior
+								option = DEFAULT
+							}
+						}
+					}
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = FASCIST
+					}
+					has_country_flag = JAP_AI_RANDOM_FASCIST
+				}
+				factor = 10
+			}
+		}
 			set_power_balance = {
 				id = JAP_bop
 				set_default = yes 
@@ -185,6 +208,29 @@ country_event = {
 	}
 	option = {
 		name = rcmi_japan.4.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				OR = {
+					AND = {
+						is_historical_focus_on = yes
+						OR = {
+							not = { has_dlc = "Waking the Tiger" }
+							has_game_rule = {
+								rule = JAP_ai_behavior
+								option = DEFAULT
+							}
+						}
+					}
+					has_game_rule = {
+						rule = JAP_ai_behavior
+						option = FASCIST
+					}
+					has_country_flag = JAP_AI_RANDOM_FASCIST
+				}
+				factor = 0					
+			}
+		}
 		set_country_flag = JAP_young_officer_coup_success
 			set_power_balance = {
 				id = JAP_bop

@@ -1,0 +1,31 @@
+SHN_municipal_council_elections = {
+	SHN_municipal_council_elections_yearly_event_trigger = {
+		activation = {
+			OR = {
+				date > 1936.04.01
+				is_debug = yes 
+			}
+		}
+		cancel_trigger = {
+			NOT = {
+				original_tag = SHN
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = SHN_recent_elections
+			}
+		}
+		complete_effect = {
+			add_political_power = -25
+			add_stability = -0.02
+			SHN_election_effect = yes
+		}
+		timeout_effect = {
+			SHN_election_effect = yes 
+		}
+		days_mission_timeout = 365
+		fire_only_once = no 	
+		selectable_mission = yes 
+	}
+}
