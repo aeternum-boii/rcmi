@@ -1,0 +1,17 @@
+ideas ={
+	country = {
+		rcmi_AS_mandate_rule_of_rebellion = {
+			picture = TODO
+
+			modifier = {
+				political_power_cost = 0.2
+				compliance_growth_on_our_occupied_states = -0.45
+				resistance_activity = 0.4
+				resistance_decay_on_our_occupied_states = -0.4
+				resistance_target = -0.15
+				compliance_gain = 0.01
+				custom_modifier_tooltip = rcmi_AS_mandate_rule_of_rebellion.tt
+			}
+		}
+	}
+}

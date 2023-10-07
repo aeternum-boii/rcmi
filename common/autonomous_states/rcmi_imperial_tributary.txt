@@ -1,0 +1,70 @@
+autonomy_state = {
+	id = autonomy_rcmi_imperial_tributary
+	
+	default = yes
+	is_puppet = yes 
+	use_overlord_color = yes 
+	
+	min_freedom_level = 0
+	
+	manpower_influence = 0.15
+	
+	rule = {
+		can_not_declare_war = no
+		can_decline_call_to_war = yes
+		units_deployed_to_overlord = no
+		can_be_spymaster = yes
+		can_create_collaboration_government = yes
+		can_join_factions = yes 
+		can_join_opposite_factions = no 
+		can_be_called_to_war = no 
+	}
+	
+	modifier = {
+		autonomy_manpower_share = 0.15
+		can_master_build_for_us = 1
+		extra_trade_to_overlord_factor = 0.25
+		overlord_trade_cost_factor = -0.25
+		cic_to_overlord_factor = 0.15
+		mic_to_overlord_factor = 0.15
+	}
+	
+	ai_subject_wants_higher = {
+		factor = 0.0
+	}
+	
+	ai_overlord_wants_lower = {
+		factor = 0.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		OVERLORD = {
+			has_dynamic_modifier = {
+				modifier = rcmi_the_mandate_of_heaven
+			}
+		}
+	}
+	
+	allowed_levels_filter = {
+		autonomy_rcmi_imperial_tributary
+	}	
+
+	can_take_level = { 
+		custom_trigger_tooltip = {
+			tooltip = OVERLORD_mandate_legitmacy_low
+			OVERLORD = {
+				check_variable = {
+					rcmi_the_mandate_of_heaven_legitimacy < 20
+				}
+			}
+		}
+	}
+
+	can_lose_level = {
+		always = no 
+	}
+}

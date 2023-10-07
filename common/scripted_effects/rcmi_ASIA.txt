@@ -107,3 +107,543 @@ SHN_election_effect = {
 		days = 120
 	}
 }
+
+rcmi_AS_mandate_refresh = {
+	rcmi_AS_mandate_reset = yes
+	rcmi_AS_mandate_calc_legitimacy = yes 
+	rcmi_AS_mandate_legitimacy_effects = yes 	
+}
+
+rcmi_AS_mandate_reset = {
+	set_variable = {
+		rcmi_the_mandate_of_heaven_stability = 0
+	}
+	set_variable = {
+		rcmi_the_mandate_of_heaven_war_support = 0
+	}
+	set_variable = {
+		rcmi_the_mandate_of_heaven_combat_core = 0
+	}
+	set_variable = {
+		rcmi_the_mandate_of_heaven_combat = 0
+	}
+	set_variable = {
+		rcmi_the_mandate_of_heaven_industry = 0
+	}
+}
+
+rcmi_AS_mandate_calc_legitimacy = {
+	# Major Losses:
+	# - Stab and Ws below 20% while at war
+	# - No Control of all of: Beijing, Nanjing, Canton
+	# Medium Losses: 
+	# - No Control of either: Beijing, Nanjing, Canton (applies only once)
+	# - WS below 30% while at war
+	# - Stab below 30% while at peace
+	# Minor Losses:
+	# - No Control of either: Beijing, Nanjing, Canton, Shithole in the Mountains, Capital of Manchu (applies multiple times)
+	# - Stab below 50% 
+	# - Ws below 50% while at war 
+	# - Is Subject 
+	# - Has no Subjects 
+	# Major Increases:
+	# - Stab and Ws above 95% while at war
+	# - Controls all of: Beijing, Nanjing, Canton while Legitimacy is below 25% and Stab is above 60%
+	# Medium Increases: 
+	# - Controls all of: Beijing, Nanjing, Canton (applies only once)
+	# - WS above 95% while at war
+	# - Stability above 95% 
+	# Minor Increases: 
+	# - Stab above any of: 50%, 70%, 90% (each) 
+	# - WS above any of: 50%, 70%, 90% (each) while at war
+	# - Control of: Beijing, Nanjing, Canton, Shithole in the Mountains, Capital of Manchu (each)
+	# - For each subject of type Imperial Tributary 
+	# - For enemy major surrender progress above 50% (once)
+	# - For enemy major surrender progress above 95% (each)
+	# - For major subject (once) 
+
+	# MAJOR REDUCTION #
+	if = {
+		limit = {
+			has_idea = rcmi_JAP_insecure_mandate 
+		}
+		rcmi_AS_mandate_major_legitimacy_reduction = yes 
+	}
+	if = {
+		limit = {
+			has_war = yes 
+			has_stability < 0.2 
+			has_war_support < 0.2
+		}
+		rcmi_AS_mandate_major_legitimacy_reduction = yes 
+	}
+	if = {
+		limit = {
+			NOT = {
+				controls_province = 1047 # Canton
+				controls_province = 11913 # Nanjing
+				controls_province = 9843 # Beijing
+			}
+		}
+		rcmi_AS_mandate_major_legitimacy_reduction = yes 
+	}
+	# MEDIUM REDUCTION #
+	if = {
+		limit = {
+			NOT = {
+				controls_province = 9843 # Beijing
+				controls_province = 1047 # Canton
+				controls_province = 11913 # Nanjing
+			}
+		}
+		rcmi_AS_mandate_medium_legitimacy_reduction = yes 
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					has_war_support < 0.3 
+					has_war = yes 
+				}
+				AND = {
+					has_stability < 0.3
+					has_war = no 
+				}
+			}
+		}
+		rcmi_AS_mandate_medium_legitimacy_reduction = yes
+	}
+	# MINOR REDUCTION # 
+	if = {
+		limit = {
+			NOT = {
+				controls_province = 9843 # Beijing
+			}
+		}
+		rcmi_AS_mandate_minor_legitimacy_reduction = yes 
+	}
+	if = {
+		limit = {
+			NOT = {
+				controls_province = 1047 # Canton
+			}
+		}
+		rcmi_AS_mandate_minor_legitimacy_reduction = yes 
+	}
+	if = {
+		limit = {
+			NOT = {
+				controls_province = 11913 # Nanjing
+			}
+		}
+		rcmi_AS_mandate_minor_legitimacy_reduction = yes 
+	}
+	if = {
+		limit = {
+			NOT = {
+				controls_province = 6999 # Chongqing
+			}
+		}
+		rcmi_AS_mandate_minor_legitimacy_reduction = yes 
+	}
+	if = {
+		limit = {
+			NOT = {
+				controls_province = 4572 # Hsinking
+			}
+		}
+		rcmi_AS_mandate_minor_legitimacy_reduction = yes 
+	}	
+	if = {
+		limit = {
+			has_stability < 0.5 
+		}
+		rcmi_AS_mandate_minor_legitimacy_reduction = yes 
+	}			
+	if = {
+		limit = {
+			has_war = yes
+			has_war_support < 0.5 
+		}
+		rcmi_AS_mandate_minor_legitimacy_reduction = yes 
+	}
+	if = {
+		limit = {
+			is_subject = yes 
+		}
+		rcmi_AS_mandate_minor_legitimacy_reduction = yes 
+	}
+	if = {
+		limit = {
+			NOT = {
+				num_subjects > 0
+			}
+		}
+		rcmi_AS_mandate_minor_legitimacy_reduction = yes 
+	}
+
+	# MAJOR INCREASE #
+	if = {
+		limit = {
+			has_war = yes 
+			has_stability > 0.95
+			has_war_support > 0.95 
+		}
+		rcmi_AS_mandate_major_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			has_stability > 0.6
+			check_variable = {
+				rcmi_the_mandate_of_heaven_legitimacy < 0.25
+			}
+			controls_province = 9843 # Beijing
+			controls_province = 1047 # Canton
+			controls_province = 11913 # Nanjing
+		}
+		rcmi_AS_mandate_major_legitimacy_increase = yes 
+	}
+	# MEDIUM INCREASE #
+	if = {
+		limit = {
+			controls_province = 9843 # Beijing
+			controls_province = 1047 # Canton
+			controls_province = 11913 # Nanjing
+		}
+		rcmi_AS_mandate_medium_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			has_war = yes 
+			has_war_support > 0.95 
+		}
+		rcmi_AS_mandate_major_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			has_stability > 0.95 
+		}
+		rcmi_AS_mandate_major_legitimacy_increase = yes 
+	}
+	# MINOR INCREASES # 
+	if = {
+		limit = {
+			has_stability = 0.5
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			has_stability = 0.7
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			has_stability = 0.9
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			has_war = yes 
+			has_war_support = 0.5
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			has_war = yes 
+			has_war_support = 0.7
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			has_war = yes 
+			has_war_support = 0.9
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			controls_province = 9843 # Beijing
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}		
+	if = {
+		limit = {
+			controls_province = 1047 # Canton
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}	
+	if = {
+		limit = {
+			controls_province = 6999 # Chongqing
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}	
+	if = {
+		limit = {
+			controls_province = 11913 # Nanjing
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}	
+	if = {
+		limit = {
+			controls_province = 4572 # Hsinking
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}				
+	if = {
+		limit = {
+			num_subjects > 0
+		}
+		every_subject_country = {
+			if = {
+				limit = {
+					has_autonomy_state = autonomy_rcmi_imperial_tributary
+				}
+				OVERLORD = {
+					rcmi_AS_mandate_minor_legitimacy_increase = yes
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			any_enemy_country = {
+				is_major = yes 
+				surrender_progress > 0.5
+			}
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			has_war = yes 
+			any_enemy_country = {
+				is_major = yes 
+				surrender_progress > 0.95
+			}
+		}
+		every_enemy_country = {
+			if = {
+				limit = {
+					is_major = yes 
+					surrender_progress > 0.95
+				}
+				PREV = {
+					rcmi_AS_mandate_minor_legitimacy_increase = yes
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			any_subject_country = {
+				is_major = yes 
+			}
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}
+
+
+	if = {
+		limit = {
+			check_variable = {
+				rcmi_the_mandate_of_heaven_legitimacy < 0 
+			}
+		}
+		set_variable = {
+			rcmi_the_mandate_of_heaven_legitimacy = 0
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				rcmi_the_mandate_of_heaven_legitimacy > 100
+			}
+		}
+		set_variable = {
+			rcmi_the_mandate_of_heaven_legitimacy = 100
+		}
+	}
+}
+
+rcmi_AS_mandate_legitimacy_effects = {
+	# Effects of Legitimacy #
+	# Between 0 and 100: (scaling)
+	# industry_factor: -20 to +20%
+	# combat_factor: -25 to +25%
+	# Between 0 and 50: (scaling)
+	# combat_factor: -25 to 0% 
+	# Between 0 and 25: (scaling)
+	# combat_core_factor: -25 to 0%
+	# Between 75 and 100: (scaling) 
+	# combat_core_factor: 0 to 25% 
+	# EFFECTS FOR IMPERIAL TRIBUTARIES# 
+	# Between 0 and 100: (scaling)
+	# Autonomy Gain: +100 to -100%
+	# Between 50 and 100: (scaling)
+	# PP Gain: 0 to +25% 
+	# Stab: 0 to +50% 
+	# WS: 0 to +50% 
+	# Factories to Overlord: 0 to +25% 
+	# Manpower Factor: 0 to +75% 
+	# Between 75 and 100: (scaling) 
+	# Combat Factor: 0 to +35% 
+	# Combat Core Factor: 0 to +25% 
+	# Shared Factories: 0 to +12.5% 
+	# Weekly Stab: 0 to +0.2% 
+
+	# OWN EFFECTS #
+	set_temp_variable = {
+		rcmi_AS_man_scale_0_100_temp = rcmi_the_mandate_of_heaven_legitimacy
+	}
+	subtract_from_temp_variable = {
+		rcmi_AS_man_scale_0_100_temp = 50
+	}
+	divide_temp_variable = {
+		rcmi_AS_man_scale_0_100_temp = 100
+	}
+	set_temp_variable = {
+		rcmi_AS_man_ind_fac_temp = rcmi_AS_man_scale_0_100_temp
+	}
+	multiply_temp_variable = {
+		rcmi_AS_man_ind_fac_temp = 0.4 
+	}
+	set_variable = {
+		rcmi_the_mandate_of_heaven_industry = rcmi_AS_man_ind_fac_temp
+	}
+	set_temp_variable = {
+		rcmi_AS_man_com_temp = rcmi_AS_man_scale_0_100_temp
+	}
+	multiply_temp_variable = {
+		rcmi_AS_man_com_temp = 0.5 
+	}
+	set_variable = {
+		rcmi_the_mandate_of_heaven_combat = rcmi_AS_man_com_temp
+	}
+	if = {
+		limit = {
+			check_variable = {
+				rcmi_the_mandate_of_heaven_legitimacy < 50
+			}
+		}
+		set_temp_variable = {
+			rcmi_AS_man_scale_0_50_temp = rcmi_the_mandate_of_heaven_legitimacy
+		}
+		subtract_from_temp_variable = {
+			rcmi_AS_man_scale_0_50_temp = 50
+		}
+		multiply_temp_variable = {
+			rcmi_AS_man_scale_0_50_temp = 0.5
+		}
+		divide_temp_variable = {
+			rcmi_AS_man_scale_0_50_temp = 100
+		}
+		add_to_variable = {
+			rcmi_the_mandate_of_heaven_combat = rcmi_AS_man_scale_0_50_temp
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				rcmi_the_mandate_of_heaven_legitimacy < 25
+			}
+		}
+		set_temp_variable = {
+			rcmi_AS_man_scale_0_25_temp = rcmi_the_mandate_of_heaven_legitimacy
+		}
+		subtract_from_temp_variable = {
+			rcmi_AS_man_scale_0_25_temp = 25 
+		}
+		divide_temp_variable = {
+			rcmi_AS_man_scale_0_25_temp = 100
+		}
+		set_variable = {
+			rcmi_the_mandate_of_heaven_combat_core = rcmi_AS_man_scale_0_25_temp
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				rcmi_the_mandate_of_heaven_legitimacy > 75
+			}
+		}
+		set_temp_variable = {
+			rcmi_AS_man_scale_0_75_temp = rcmi_the_mandate_of_heaven_legitimacy
+		}
+		subtract_from_temp_variable = {
+			rcmi_AS_man_scale_0_75_temp = 75 
+		}
+		divide_temp_variable = {
+			rcmi_AS_man_scale_0_75_temp = 100 
+		}
+		set_variable = {
+			rcmi_the_mandate_of_heaven_combat_core = rcmi_AS_man_scale_0_75_temp
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				rcmi_the_mandate_of_heaven_legitimacy > 80
+			}
+		}
+		set_variable = {
+			rcmi_the_mandate_of_heaven_stability = 0.002
+		}
+		set_variable = {
+			rcmi_the_mandate_of_heaven_war_support = 0.002			
+		}
+	} else_if = {
+		limit = {
+			check_variable = {
+				rcmi_the_mandate_of_heaven_legitimacy < 20 
+			}
+		}
+		set_variable = {
+			rcmi_the_mandate_of_heaven_stability = -0.003
+		}
+		set_variable = {
+			rcmi_the_mandate_of_heaven_war_support = -0.003
+		}
+	}
+}
+
+rcmi_AS_mandate_minor_legitimacy_reduction = {
+	subtract_from_variable = {
+		rcmi_the_mandate_of_heaven_legitimacy = 0.25
+	}
+}
+
+rcmi_AS_mandate_medium_legitimacy_reduction = {
+	subtract_from_variable = {
+		rcmi_the_mandate_of_heaven_legitimacy = 0.65
+	}
+}
+
+rcmi_AS_mandate_major_legitimacy_reduction = {
+	subtract_from_variable = {
+		rcmi_the_mandate_of_heaven_legitimacy = 1.15
+	}
+}
+
+rcmi_AS_mandate_minor_legitimacy_increase = {
+	add_to_variable = {
+		rcmi_the_mandate_of_heaven_legitimacy = 0.25
+	}
+}
+
+rcmi_AS_mandate_medium_legitimacy_increase = {
+	add_to_variable = {
+		rcmi_the_mandate_of_heaven_legitimacy = 0.65
+	}
+}
+
+rcmi_AS_mandate_major_legitimacy_increase = {
+	add_to_variable = {
+		rcmi_the_mandate_of_heaven_legitimacy = 1.15
+	}
+}

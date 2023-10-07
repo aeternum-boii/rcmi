@@ -246,5 +246,19 @@ ideas = {
 				political_power_cost = 0.2
 			}
 		}	
+		rcmi_JAP_insecure_mandate = {
+			#picture = TODO
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_cost = 0.2
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				custom_modifier_tooltip = major_mandate_decrease.tt
+			}
+		}		
 	}
 }

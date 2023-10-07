@@ -51,6 +51,9 @@ on_actions = {
 	}
 	on_daily = {
 		effect = {
+			event_target:rcmi_EoC = {
+				rcmi_AS_mandate_refresh = yes 
+			}
 			if = {
 				limit = {
 					is_subject_of = JAP

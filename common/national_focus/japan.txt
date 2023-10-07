@@ -136,6 +136,9 @@
 		y = 1
 
 		cost = 5
+		mutually_exclusive = {
+			focus = JAP_hand_the_mandate_over
+		}
 
 		ai_will_do = {
 			factor = 20
@@ -149,6 +152,7 @@
 
 		available = {
 			has_idea = rcmi_the_question_of_the_mandate
+			always = no 
 		}
 
 		completion_reward = {
@@ -158,7 +162,12 @@
 			add_dynamic_modifier = {
 				modifier = rcmi_the_mandate_of_heaven
 			}
-			custom_effect_tooltip = TODO								
+			custom_effect_tooltip = TODO	
+			custom_effect_tooltip = rcmi_AS_insecure_mandate_warning
+			country_event = { id = rcmi_mandate_events.1 days = 25 }
+			hidden_effect = {
+				save_global_event_target_as	= rcmi_EoC
+			}						
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 	}		
@@ -171,6 +180,9 @@
 		y = 1
 
 		cost = 5
+		mutually_exclusive = {
+			focus = JAP_take_the_mandate
+		}
 
 		ai_will_do = {
 			factor = 60
@@ -200,6 +212,19 @@
 				add_dynamic_modifier = {
 					modifier = rcmi_the_mandate_of_heaven
 				}
+				add_ideas = {
+					rcmi_AS_mandate_rule_of_rebellion
+				}
+				hidden_effect = {
+					save_global_event_target_as = rcmi_EoC
+				}
+				uncomplete_national_focus = {
+					focus = MAN_assertiveness
+					refund_political_power = yes 
+				}
+				complete_national_focus = MAN_obedience
+				complete_national_focus = MAN_move_capitals
+				complete_national_focus = MAN_claim_the_mandate_of_heaven
 			}
 			custom_effect_tooltip = TODO
 			every_country = {
@@ -260,7 +285,237 @@
 					}
 				}
 				add_core_of = MAN 
-			}					
+			}			
+			custom_effect_tooltip = rcmi_AS_insecure_mandate_warning
+			MAN = {
+				country_event = { id = rcmi_mandate_events.1 days = 25 }					
+			}
+		}
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+	}	
+	focus = {
+		id = JAP_secure_the_mandate
+		#icon = GFX_goal_JAP_the_unthinkable_option
+
+		x = 1
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10000
+		}
+
+		prerequisite = {
+			focus = JAP_take_the_mandate
+			focus = JAP_hand_the_mandate_over
+		}
+
+		relative_position_id = JAP_take_the_mandate
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			event_target:rcmi_EoC = {	
+				every_country = {
+					limit = {
+						OR = {
+							original_tag = BHU
+							original_tag = NEP
+							original_tag = TIB
+							original_tag = KAZ
+							original_tag = KYR
+							original_tag = BUK
+							original_tag = AFG
+							original_tag = BRM
+							original_tag = SIA 
+							original_tag = LAO
+							original_tag = VIN
+							original_tag = CAM
+							original_tag = FRI
+							original_tag = MON 
+							original_tag = SIK
+							original_tag = TNG
+							original_tag = XSM
+							original_tag = MEN
+						}
+					}
+					country_event = { id = rcmi_mandate_events.2 days = 3 }		
+				}
+			}
+			if = {
+				limit = {
+					MEN = {
+						OR = {
+							is_in_faction_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					621 = {
+						OR = {
+							OWNER = {
+								OR = {
+									is_in_faction_with = ROOT 
+									tag = ROOT 
+									is_subject_of = ROOT
+								}
+							}
+							CONTROLLER = {
+								OR = {
+									is_in_faction_with = ROOT 
+									tag = ROOT 
+									is_subject_of = ROOT
+								}								
+							}
+						}
+					}
+				}
+				MEN = {
+					transfer_state = 621
+				}
+				event_target:rcmi_EoC = {
+					set_autonomy = {
+						target = MEN
+						autonomy_state = autonomy_rcmi_imperial_tributary
+					}					
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						XSM = {
+							OR = {
+								is_subject_of = ROOT 
+								is_in_faction_with = ROOT 
+							}
+						}
+						all_state = {
+							OR = {
+								NOT = {
+									is_core_of = XSM
+								}
+								OWNER = {
+									OR = {
+										is_in_faction_with = ROOT 
+										is_subject_of = ROOT 
+										tag = ROOT 
+									}
+								}
+							}
+						}
+					}
+				}
+				XSM = {
+					every_owned_state = {
+						limit = {
+							NOT = {
+								state = 756
+								state = 616
+							}
+						}
+						transfer_state_to = event_target:rcmi_EoC
+					}
+					transfer_state = 756
+					transfer_state = 616
+				}
+				event_target:rcmi_EoC = {
+					set_autonomy = {
+						target = XSM
+						autonomy_state = autonomy_rcmi_imperial_tributary
+					}
+				}	
+			}
+			if = {
+				limit = {
+					OR = {
+						TNG = {
+							OR = {
+								is_subject_of = ROOT 
+								is_in_faction_with = ROOT 
+							}
+						}
+						all_state = {
+							OR = {
+								NOT = {
+									is_core_of = TNG
+								}
+								OWNER = {
+									OR = {
+										is_in_faction_with = ROOT 
+										is_subject_of = ROOT 
+										tag = ROOT 
+									}
+								}
+							}
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = TNG
+					}
+					transfer_state_to = TNG 
+				}
+				event_target:rcmi_EoC = {
+					set_autonomy = {
+						target = TNG
+						autonomy_state = autonomy_rcmi_imperial_tributary
+					}
+				}	
+			}
+			if = {
+				limit = {
+					OR = {
+						SIK = {
+							OR = {
+								is_subject_of = ROOT 
+								is_in_faction_with = ROOT 
+							}
+						}
+						all_state = {
+							OR = {
+								NOT = {
+									is_core_of = SIK
+								}
+								OWNER = {
+									OR = {
+										is_in_faction_with = ROOT 
+										is_subject_of = ROOT 
+										tag = ROOT 
+									}
+								}
+							}
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						NOT = {
+							is_core_of = TNG
+						}
+						is_core_of = SIK 
+					}
+					transfer_state_to = SIK
+				}
+				event_target:rcmi_EoC = {
+					set_autonomy = {
+						target = SIK
+						autonomy_state = autonomy_rcmi_imperial_tributary
+					}
+				}	
+			}						
+			if = {
+				limit = {
+					has_completed_focus = JAP_hand_the_mandate_over
+				}
+				MAN = {
+					remove_ideas = rcmi_JAP_insecure_mandate
+				}
+			} else = {
+				remove_ideas = rcmi_JAP_insecure_mandate
+			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 	}	

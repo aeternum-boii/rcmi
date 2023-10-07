@@ -59,10 +59,12 @@ rcmi_korea_compliance = {
 rcmi_the_mandate_of_heaven = {
 	icon = GFX_decision_generic_merge_plant_materiel
 
-	stability_weekly = rcmi_the_mandate_of_heaven
-	war_support_weekly = rcmi_the_mandate_of_heaven
-	army_core_attack_factor = rcmi_the_mandate_of_heaven
-	army_attack_factor = rcmi_the_mandate_of_heaven
-	army_core_defence_factor = rcmi_the_mandate_of_heaven
-	army_defence_factor = rcmi_the_mandate_of_heaven
+	stability_weekly = rcmi_the_mandate_of_heaven_stability
+	war_support_weekly = rcmi_the_mandate_of_heaven_war_support
+	army_core_attack_factor = rcmi_the_mandate_of_heaven_combat_core
+	army_attack_factor = rcmi_the_mandate_of_heaven_combat
+	army_core_defence_factor = rcmi_the_mandate_of_heaven_combat_core
+	army_defence_factor = rcmi_the_mandate_of_heaven_combat
+	industrial_capacity_factory = rcmi_the_mandate_of_heaven_industry
+	industrial_capacity_dockyard = rcmi_the_mandate_of_heaven_industry
 }
