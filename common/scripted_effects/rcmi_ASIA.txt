@@ -616,34 +616,40 @@ rcmi_AS_mandate_minor_legitimacy_reduction = {
 	subtract_from_variable = {
 		rcmi_the_mandate_of_heaven_legitimacy = 0.25
 	}
+	log = "[GetDate]: [GetNameDef].rcmi_AS_mandate_minor_legitimacy_reduction"
 }
 
 rcmi_AS_mandate_medium_legitimacy_reduction = {
 	subtract_from_variable = {
 		rcmi_the_mandate_of_heaven_legitimacy = 0.65
 	}
+	log = "[GetDate]: [GetNameDef].rcmi_AS_mandate_medium_legitimacy_reduction"
 }
 
 rcmi_AS_mandate_major_legitimacy_reduction = {
 	subtract_from_variable = {
 		rcmi_the_mandate_of_heaven_legitimacy = 1.15
 	}
+	log = "[GetDate]: [GetNameDef].rcmi_AS_mandate_major_legitimacy_reduction"
 }
 
 rcmi_AS_mandate_minor_legitimacy_increase = {
 	add_to_variable = {
 		rcmi_the_mandate_of_heaven_legitimacy = 0.25
 	}
+	log = "[GetDate]: [GetNameDef].rcmi_AS_mandate_minor_legitimacy_increase"
 }
 
 rcmi_AS_mandate_medium_legitimacy_increase = {
 	add_to_variable = {
 		rcmi_the_mandate_of_heaven_legitimacy = 0.65
 	}
+	log = "[GetDate]: [GetNameDef].rcmi_AS_mandate_medium_legitimacy_increase"
 }
 
 rcmi_AS_mandate_major_legitimacy_increase = {
 	add_to_variable = {
 		rcmi_the_mandate_of_heaven_legitimacy = 1.15
 	}
+	log = "[GetDate]: [GetNameDef].rcmi_AS_mandate_major_legitimacy_increase"
 }

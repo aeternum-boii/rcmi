@@ -10,14 +10,14 @@ state={
 		owner = JAP
 		add_core_of = JAP
 		buildings = {
-			infrastructure = 3 #was 3
+			infrastructure = 2 #was 3
 			#there was even another steel mill built there in 37, and then others in 40-42
-            steel_mill = 2
+            steel_mill = 1
 			#made the bigggest gun of the Yamato at Japan steel works, Muroran
-            arms_factory = 2
+            arms_factory = 1
 		}
 		victory_points = {
-			10444 15 
+			10444 10 
 		}
 		victory_points = {
 			12421 5 

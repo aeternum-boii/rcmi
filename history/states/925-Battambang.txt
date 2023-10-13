@@ -7,7 +7,6 @@ state={
 	state_category = rural
 	history={
 		add_core_of = CAM
-		add_core_of = SIA
 		add_core_of = FRI
 		owner = FRI
 		buildings = {

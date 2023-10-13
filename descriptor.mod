@@ -7,5 +7,5 @@ name="Road to 56 Casual MP Improvements"
 dependencies={
 	"The Road to 56"
 }
-supported_version="1.12.*"
+supported_version="1.13.*"
 remote_file_id="2965590893"

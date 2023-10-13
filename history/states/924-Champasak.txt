@@ -8,7 +8,6 @@ state={
 	history={
 		owner = FRI
 		add_core_of = LAO
-		add_core_of = SIA
 		add_core_of = FRI
 		victory_points = {
 			1592 1

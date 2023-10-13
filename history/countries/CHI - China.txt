@@ -1,4 +1,4 @@
-﻿capital = 1033 # Nanjing
+﻿capital = 1054 # Nanjing
 
 set_stability = 0.5
 set_war_support = 0.45

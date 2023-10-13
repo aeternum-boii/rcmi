@@ -11,6 +11,15 @@ on_actions = {
 				add_ideas = {
 					rcmi_BEL_legacyOfAlbert
 				}
+				every_owned_state = {
+					limit = {
+						is_core_of = FLA
+					}
+					add_dynamic_modifier = {
+						modifier = rcmi_german_sentiment
+						target = GER 
+					}
+				}
 			}
 			set_variable = { global.rcmi_GEACPS_modifier_factor = 1 }
 			every_state = {
@@ -30,13 +39,19 @@ on_actions = {
 				}
 			}				
 			JAP = {
-				every_state = {
+				every_owned_state = {
 					limit = {	
 						is_core_of = JAP
 					}
-					add_dynamic_modifer = {
+					set_state_flag = rcmi_japanese_core
+				}
+				every_state = {
+					limit = {
+						has_state_flag = rcmi_japanese_core
+					}
+					add_dynamic_modifier = {
 						modifier = rcmi_building_slots_buff_40
-					}					
+					}
 				}
 				282 = {
 					remove_dynamic_modifier = {

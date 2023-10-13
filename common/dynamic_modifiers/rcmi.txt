@@ -68,3 +68,11 @@ rcmi_the_mandate_of_heaven = {
 	industrial_capacity_factory = rcmi_the_mandate_of_heaven_industry
 	industrial_capacity_dockyard = rcmi_the_mandate_of_heaven_industry
 }
+
+rcmi_german_sentiment = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	starting_compliance = 0.65
+	resistance_target = -0.3 
+	compliance_gain = 0.01
+}

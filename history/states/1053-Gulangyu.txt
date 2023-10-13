@@ -1,24 +1,26 @@
 state={
-	id=1033
-	name="STATE_1033"
+	id=1053
+	state_category = dense_urban
+	name="STATE_1053"
 	history={
-		save_global_event_target_as = KMT_treasure_state
-		owner = CHI
+		owner = ENG
 		add_core_of = CHI
 		add_core_of = PRC
+		add_core_of = ENG
 		buildings = {
 			infrastructure = 3 #was: 5
-			industrial_complex = 2
-			arms_factory = 1
+			13323 = {
+				naval_base = 3
+			}
 		}
 		victory_points = {
-			11913 35		#Nanjing 
+			13323 2
 		}
-	}	
+	}		
 	provinces={
-		996 1099 11913 11982 
+		13346
 	}
-	manpower=7436639
+	manpower=326486
 	buildings_max_level_factor=1.000
 	local_supplies=0.000
 }
