@@ -1,2 +1,3 @@
+KWA = "countries/Kwantung_Army.txt"
 SHN = "countries/Shanghai.txt"
 ZHL = "countries/Zhili.txt"

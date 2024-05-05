@@ -6,6 +6,8 @@ tags={
 name="Road to 56 Casual MP Improvements"
 dependencies={
 	"The Road to 56"
+	"The Road to 56 [Legacy for RCMI]"
 }
-supported_version="1.13.*"
+replace_path="history/states"
+supported_version="1.14.*"
 remote_file_id="2965590893"

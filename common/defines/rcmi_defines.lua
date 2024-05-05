@@ -17,7 +17,7 @@ NDefines.NProduction.LICENSE_EQUIPMENT_TECH_SPEED_MAX_YEARS = 8 			-- Maximum ye
 NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = 0 		-- MIC speed modifier for licensed equipment for not being in faction
 NDefines.NProduction.LICENSE_EQUIPMENT_UPGRADE_XP_FACTOR = 1.0 		-- XP cost for upgrading licensed equipment
 NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NO_LICENSE = -0.50 			-- Penalty for producing non licensed equipment
-
+NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0.0	-- The minimum number of factories we have to put on consumer goods, in percent.
 -- Changed Warscore gain
 
 NDefines.NMilitary.WAR_SCORE_LOSSES_RATIO = 0.05 								-- war score gained for every 1000 casualties
