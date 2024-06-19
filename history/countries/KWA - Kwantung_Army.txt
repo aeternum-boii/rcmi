@@ -1,6 +1,13 @@
 capital = 745
 
+JAP = {
+	set_autonomy = {
+		target = KWA
+		autonomy_state = autonomy_general_army
+	}
+}
 
+add_manpower = 1000000
 
 if = {
 	limit = {
@@ -22,9 +29,6 @@ if = {
 	}
 	set_oob = "JAP_1936_nsb"
 }
-
-set_stability = 0.5 #baseline, THE EMPEROR PROTECTS
-set_war_support = 0.8
 
 set_research_slots = 5
 set_fuel_ratio = 1.0

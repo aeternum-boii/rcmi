@@ -66,9 +66,6 @@ on_actions = {
 	}
 	on_daily = {
 		effect = {
-			event_target:rcmi_EoC = {
-				rcmi_AS_mandate_refresh = yes 
-			}
 			if = {
 				limit = {
 					is_subject_of = JAP
@@ -122,6 +119,10 @@ on_actions = {
 	}
 	on_weekly = {
 		effect = {
+			event_target:rcmi_EoC = {
+				rcmi_AS_mandate_refresh = yes 
+			}		
+		
 			set_variable = { global.rcmi_GEACPS_JAP_research_speed_factor = 0 }
 			set_variable = { global.rcmi_GEACPS_sub_production_speed_arms_factory_factor = 0 }
 			set_variable = { global.rcmi_GEACPS_sub_research_speed_factor = 0 }
@@ -185,7 +186,7 @@ on_actions = {
 				}
 			} else_if = {
 				limit = {
-					has_government = non_alligned 
+					has_government = neutrality 
 				}
 				remove_ideas = {
 					rcmi_BEL_legacyOfAlbert_com

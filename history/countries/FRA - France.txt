@@ -356,6 +356,11 @@ give_guarantee = CZE
 give_guarantee = YUG
 give_guarantee = ROM
 give_guarantee = BEL	#Instead of a an event which is meant to always fire - Fantom
+give_guarantee = SOV
+SOV = {
+	give_guarantee = FRA
+	give_guarantee = CZE
+}
 
 diplomatic_relation = {
     country = MNC
