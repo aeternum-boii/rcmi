@@ -2529,7 +2529,7 @@
 			JAP_bop_very_low_increase_effect = yes 
 			add_political_power = 20
 			transfer_state = 609
-			transfer_state = 1050
+			transfer_state = 1081
 			CHI = {
 				transfer_state = 614
 				set_autonomy = {

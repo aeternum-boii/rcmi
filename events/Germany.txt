@@ -47,7 +47,7 @@ country_event = {
 				add_core_of = GER
 			}
 		}
-		1054 = {
+		1085 = {
 			if = {
 				limit = { is_owned_by = AUS }
 				add_core_of = GER
@@ -2484,11 +2484,11 @@ country_event = {
 		add_state_claim = 152
 		add_state_claim = 153
 		add_state_claim = 848	#Vorarlberg
-		add_state_claim = 1054	#Styria
+		add_state_claim = 1085	#Styria
 		create_wargoal = {
 			type = take_state_focus
 			target = AUS
-			generator = { 4 152 153 848 1054 }
+			generator = { 4 152 153 848 1085 }
 		}
 	}
 }
@@ -4641,7 +4641,7 @@ country_event = {
 		}
 		set_country_flag = GER_rhineland_backed_down
 		42 = { set_demilitarized_zone = yes }
-		1053 = { set_demilitarized_zone = yes }
+		1084 = { set_demilitarized_zone = yes }
 		51 = { set_demilitarized_zone = yes }
 		989 = { set_demilitarized_zone = yes }
 		922 = { set_demilitarized_zone = yes }
@@ -4718,7 +4718,7 @@ country_event = {
 		set_country_flag = GER_rhineland_backed_down
 		add_war_support = -0.2 #That was scary for a moment there!
 		42 = { set_demilitarized_zone = yes }
-		1053 = { set_demilitarized_zone = yes }
+		1084 = { set_demilitarized_zone = yes }
 		51 = { set_demilitarized_zone = yes }
 		989 = { set_demilitarized_zone = yes }
 		922 = { set_demilitarized_zone = yes }
@@ -8645,7 +8645,7 @@ country_event = {
 		}
 		WGR = {
 			add_state_core = 42
-			add_state_core = 1053
+			add_state_core = 1084
 			add_state_core = 50
 			add_state_core = 51
 			add_state_core = 52

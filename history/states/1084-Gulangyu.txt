@@ -1,7 +1,7 @@
 state={
-	id=1053
+	id=1084
 	state_category = dense_urban
-	name="STATE_1053"
+	name="STATE_1084"
 	history={
 		owner = ENG
 		add_core_of = CHI
@@ -18,7 +18,7 @@ state={
 		}
 	}		
 	provinces={
-		13346
+		13437
 	}
 	manpower=326486
 	buildings_max_level_factor=1.000

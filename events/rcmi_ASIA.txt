@@ -109,7 +109,9 @@ country_event = {
 			base = 10 
 			modifier = {
 				NOT = { 
-					has_country_leader = SHN_Harry_Arnhold
+					SHN_Harry_Arnhold = {
+						is_country_leader = yes 
+					}
 				}
 				set_temp_variable = {
 					temp = threat
@@ -133,7 +135,9 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_leader = SHN_Harry_Arnhold
+				SHN_Harry_Arnhold = {
+					is_country_leader = yes 
+				}				
 				date > 1937.1.1
 			}
 			SHN_Harry_Arnhold = {
@@ -379,11 +383,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 3
-				threat > 25
+				threat > 0.25
 			}
 			modifier = {
 				factor = 5
-				threat > 60
+				threat > 0.60
 			}
 			modifier = {
 				factor = 0 
@@ -438,7 +442,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 3
-				threat < 25
+				threat < 0.25
 			}
 			modifier = {
 				factor = 0.2

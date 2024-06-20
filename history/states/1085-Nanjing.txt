@@ -1,7 +1,7 @@
 state={
-	id=1054
+	id=1085
 	state_category = metropolis
-	name="STATE_1054"
+	name="STATE_1085"
 	history={
 		save_global_event_target_as = KMT_treasure_state
 		owner = CHI

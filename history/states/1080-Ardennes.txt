@@ -1,8 +1,12 @@
 state={
-	id=1049
-	name="STATE_1049"
+	id=1080
+	name="STATE_1080"
 	state_category = developed_rural
 	
+	resources = {
+		steel = 42.00
+	}
+
 	history = {
 		owner = BEL
 		add_core_of = BEL

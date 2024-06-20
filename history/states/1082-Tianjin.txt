@@ -1,25 +1,36 @@
 state={
-	id=1052
-	name="STATE_1052"
-	state_category=large_city
+	id=1082
+	name="STATE_1082"
+	
 	history={
-		owner = CHI
+		owner = ZHL
 		add_core_of = CHI
 		add_core_of = PRC
-		add_core_of = SHN
+		add_core_of = ZHL
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
+			10068 = {
+				naval_base = 2
+
+			}
+
+		}
+		1938.10.25 = {
+			controller = JAP
+
 		}
 		victory_points = {
-			10076 3 
+			10068 8 
 		}
-		set_demilitarized_zone = yes
-	}	
-	provinces={
-		1089 4042 4091 7120 10034 10076 11928 12052 13142 
 	}
-	manpower=5435684
+	
+	
+	provinces={
+		10068 
+	}
+	manpower=3490234
 	buildings_max_level_factor=1.000
+	state_category=city
 	local_supplies=0.000
 }

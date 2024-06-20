@@ -3174,34 +3174,129 @@
  STATE_1044: "Nakhchivan"
  STATE_1044_RENAMING:0 "[1044.controller.GetStateName_1044]"
 
- STATE_1045:0 "Ragusa"
- STATE_1045_YUG:0 "Dubrovnik"
+ STATE_1045:0 "Basrah"
  STATE_1045_RENAMING:0 "[1045.controller.GetStateName_1045]"
 
- STATE_1046:0 "Cattaro"
- STATE_1046_YUG:0 "Kotor"
+ STATE_1046:0 "Karbala-Najaf"
  STATE_1046_RENAMING:0 "[1046.controller.GetStateName_1046]"
- 
- STATE_1047:0 "Northern Dalmatian Isles"
- STATE_1047_RENAMING:0 "[1047.controller.GetStateName_1047]"
- 
- STATE_1048:0 "Southern Dalmatian Isles"
- STATE_1048_RENAMING:0 "[1027.controller.GetStateName_1048]"
 
- STATE_1049:0 "Ardennes"
+ STATE_1047:0 "Dulaim"
+ STATE_1047_RENAMING:0 "[1047.controller.GetStateName_1047]"
+
+ STATE_1048:0 "Sulymaniyah"
+ STATE_1048_RENAMING:0 "[1048.controller.GetStateName_1048]"
+
+ STATE_1049:0 "Erbil"
  STATE_1049_RENAMING:0 "[1049.controller.GetStateName_1049]"
 
- STATE_1050:0 "Legation Territorries"
+ STATE_1050:0 "Guantanamo Bay"
  STATE_1050_RENAMING:0 "[1050.controller.GetStateName_1050]"
 
- STATE_1051:0 "Tianjin"
+ STATE_1051:0 "Choco"
  STATE_1051_RENAMING:0 "[1051.controller.GetStateName_1051]"
+
+ STATE_1052:0 "Acre"
+ STATE_1052_RENAMING:0 "[1052.controller.GetStateName_1052]"
+
+ STATE_1053:0 "Saarland"
+ STATE_1053_RENAMING:0 "[1053.controller.GetStateName_1053]"
+
+ STATE_1054:0 "Styria"
+ STATE_1054_RENAMING:0 "[1054.controller.GetStateName_1054]"
+ STATE_1054_AUS:0 "Steiermark"
+
+ STATE_1055:0 "Zanzibar"
+ STATE_1055_RENAMING:0 "[1055.controller.GetStateName_1055]"
+
+ STATE_1056:0 "Amapá"
+ STATE_1056_RENAMING:0 "[1056.controller.GetStateName_1056]"
+
+ STATE_1057:0 "Tocantins"
+ STATE_1057_RENAMING:0 "[1057.controller.GetStateName_1057]"
+
+ STATE_1058:0 "Rondônia"
+ STATE_1058_RENAMING:0 "[1058.controller.GetStateName_1058]"
+
+ STATE_1059:0 "Cerro Largo"
+ STATE_1059_RENAMING:0 "[1059.controller.GetStateName_1059]"
+
+ STATE_1060:0 "Paysandú"
+ STATE_1060_RENAMING:0 "[1060.controller.GetStateName_1060]"
+
+ STATE_1061:0 "Tacna"
+ STATE_1061_RENAMING:0 "[1061.controller.GetStateName_1061]"
+
+ STATE_1062:0 "Aysén"
+ STATE_1062_RENAMING:0 "[1062.controller.GetStateName_1062]"
+
+ STATE_1063:0 "Araucania"
+ STATE_1063_RENAMING:0 "[1063.controller.GetStateName_1063]"
+
+ STATE_1064:0 "Arica"
+ STATE_1064_RENAMING:0 "[1064.controller.GetStateName_1064]"
+
+ STATE_1065:0 "Tierra del Fuego"
+ STATE_1065_RENAMING:0 "[1065.controller.GetStateName_1065]"
+
+ STATE_1066:0 "Santa Cruz"
+ STATE_1066_RENAMING:0 "[1066.controller.GetStateName_1066]"
+
+ STATE_1067:0 "Chubut"
+ STATE_1067_RENAMING:0 "[1067.controller.GetStateName_1067]"
+
+ STATE_1068:0 "Santa Fe"
+ STATE_1068_RENAMING:0 "[1068.controller.GetStateName_1068]"
+
+ STATE_1069:0 "Formosa"
+ STATE_1069_RENAMING:0 "[1069.controller.GetStateName_1069]"
+
+ STATE_1070:0 "San Luis"
+ STATE_1070_RENAMING:0 "[1070.controller.GetStateName_1070]"
+
+ STATE_1071:0 "Los Andes"
+ STATE_1071_RENAMING:0 "[1071.controller.GetStateName_1071]"
+
+ STATE_1072:0 "Deep Amazonas"
+ STATE_1072_RENAMING:0 "[1072.controller.GetStateName_1072]"
+
+ STATE_1073:0 "Amazonas del Norte"
+ STATE_1073_RENAMING:0 "[1073.controller.GetStateName_1073]"
+
+ STATE_1074:0 "Easter Island"
+ STATE_1074_RENAMING:0 "[1074.controller.GetStateName_1074]"
+
+ STATE_1075:0 "Gyarong"
+ STATE_1075_RENAMING:0 "[1075.controller.GetStateName_1075]"
+
+ STATE_1076:0 "Ragusa"
+ STATE_1076_YUG:0 "Dubrovnik"
+ STATE_1076_RENAMING:0 "[1045.controller.GetStateName_1045]"
+
+ STATE_1077:0 "Cattaro"
+ STATE_1077_YUG:0 "Kotor"
+ STATE_1077_RENAMING:0 "[1046.controller.GetStateName_1046]"
  
- STATE_1052:0 "Changzhou"
- STATE_1052_RENAMING:0 "[1052.controller.GetStateName_1052]" 
+ STATE_1078:0 "Northern Dalmatian Isles"
+ STATE_1078_RENAMING:0 "[1047.controller.GetStateName_1047]"
  
- STATE_1053:0 "Gulangyu"
- STATE_1053_RENAMING:0 "[1053.controller.GetStateName_1053]
+ STATE_1079:0 "Southern Dalmatian Isles"
+ STATE_1079_RENAMING:0 "[1027.controller.GetStateName_1048]"
+
+ STATE_1080:0 "Ardennes"
+ STATE_1080_RENAMING:0 "[1049.controller.GetStateName_1049]"
+
+ STATE_1081:0 "Legation Territorries"
+ STATE_1081_RENAMING:0 "[1050.controller.GetStateName_1050]"
+
+ STATE_1082:0 "Tianjin"
+ STATE_1082_RENAMING:0 "[1051.controller.GetStateName_1051]"
  
- STATE_1054:0 "Nanjing"
- STATE_1054_RENAMING:0 "[1054.controller.GetStateName_1054]" 
+ STATE_1083:0 "Changzhou"
+ STATE_1083_RENAMING:0 "[1052.controller.GetStateName_1052]" 
+ 
+ STATE_1084:0 "Gulangyu"
+ STATE_1084_RENAMING:0 "[1053.controller.GetStateName_1053]
+ 
+ STATE_1085:0 "Nanjing"
+ STATE_1085_RENAMING:0 "[1054.controller.GetStateName_1054]" 
+ 

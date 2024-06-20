@@ -328,40 +328,40 @@ rcmi_AS_mandate_calc_legitimacy = {
 	# MINOR INCREASES # 
 	if = {
 		limit = {
-			has_stability = 0.5
+			has_stability > 0.5
 		}
 		rcmi_AS_mandate_minor_legitimacy_increase = yes 
 	}
 	if = {
 		limit = {
-			has_stability = 0.7
+			has_stability > 0.7
 		}
 		rcmi_AS_mandate_minor_legitimacy_increase = yes 
 	}
 	if = {
 		limit = {
-			has_stability = 0.9
-		}
-		rcmi_AS_mandate_minor_legitimacy_increase = yes 
-	}
-	if = {
-		limit = {
-			has_war = yes 
-			has_war_support = 0.5
+			has_stability > 0.9
 		}
 		rcmi_AS_mandate_minor_legitimacy_increase = yes 
 	}
 	if = {
 		limit = {
 			has_war = yes 
-			has_war_support = 0.7
+			has_war_support > 0.5
 		}
 		rcmi_AS_mandate_minor_legitimacy_increase = yes 
 	}
 	if = {
 		limit = {
 			has_war = yes 
-			has_war_support = 0.9
+			has_war_support > 0.7
+		}
+		rcmi_AS_mandate_minor_legitimacy_increase = yes 
+	}
+	if = {
+		limit = {
+			has_war = yes 
+			has_war_support > 0.9
 		}
 		rcmi_AS_mandate_minor_legitimacy_increase = yes 
 	}

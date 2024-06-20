@@ -1,7 +1,7 @@
 
 state={
-	id=1050
-	name="STATE_1050"
+	id=1081
+	name="STATE_1081"
 
 	history={
 		owner = ZHL
@@ -21,7 +21,7 @@ state={
 	}
 
 	provinces={
-		4137 4140 9969 11761 13347
+		4137 4140 9969 11761 13438
 	}
 	manpower=868210
 	buildings_max_level_factor=1.000

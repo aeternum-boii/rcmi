@@ -6,7 +6,7 @@ state={
 	
 	state_category = city
 	resources={
-		steel=100 # was: 236
+		steel=43 # was: 236
 		oil=1 #Pechelbronn 
 	}
 
@@ -54,6 +54,7 @@ state={
 
 		}
 		add_core_of = FRA
+		add_core_of = ALS
 	}
 
 	provinces={
