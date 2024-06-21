@@ -482,6 +482,7 @@ rcmi_AS_mandate_legitimacy_effects = {
 	# combat_core_factor: -25 to 0%
 	# Between 75 and 100: (scaling) 
 	# combat_core_factor: 0 to 25% 
+
 	# EFFECTS FOR IMPERIAL TRIBUTARIES# 
 	# Between 0 and 100: (scaling)
 	# Autonomy Gain: +100 to -100%
@@ -588,27 +589,153 @@ rcmi_AS_mandate_legitimacy_effects = {
 	if = {
 		limit = {
 			check_variable = {
-				rcmi_the_mandate_of_heaven_legitimacy > 80
-			}
-		}
-		set_variable = {
-			rcmi_the_mandate_of_heaven_stability = 0.002
-		}
-		set_variable = {
-			rcmi_the_mandate_of_heaven_war_support = 0.002			
-		}
-	} else_if = {
-		limit = {
-			check_variable = {
 				rcmi_the_mandate_of_heaven_legitimacy < 20 
 			}
 		}
 		set_variable = {
-			rcmi_the_mandate_of_heaven_stability = -0.003
+			rcmi_the_mandate_of_heaven_stability = -0.0045
 		}
 		set_variable = {
-			rcmi_the_mandate_of_heaven_war_support = -0.003
+			rcmi_the_mandate_of_heaven_war_support = -0.0045
 		}
+	}
+
+	# Subject Effects 
+	set_temp_variable = {
+		rcmi_AS_man_scale_0_100_temp = rcmi_the_mandate_of_heaven_legitimacy
+	}
+	subtract_from_temp_variable = {
+		rcmi_AS_man_scale_0_100_temp = 50
+	}
+	divide_temp_variable = {
+		rcmi_AS_man_scale_0_100_temp = 100
+	}
+	set_temp_variable = {
+		rcmi_AS_trib_autonomy_temp = rcmi_AS_man_scale_0_100_temp
+	}
+	multiply_temp_variable = {
+		rcmi_AS_trib_autonomy_temp = -2
+	}
+	set_variable = {
+		rcmi_imperial_tributary_dmod_autonomy_gain_global_factor = rcmi_AS_trib_autonomy_temp
+	}
+	if = {
+		limit = {
+			check_variable = {
+				rcmi_AS_man_scale_0_100_temp > 0
+			}
+		}
+		set_temp_variable = {
+			rcmi_AS_trib_pp_temp = rcmi_AS_man_scale_0_100_temp
+		}
+		multiply_temp_variable = {
+			rcmi_AS_trib_pp_temp = 0.5
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_political_power_factor = rcmi_AS_trib_pp_temp
+		}	
+		set_variable = {
+			rcmi_imperial_tributary_dmod_stability_factor = rcmi_AS_man_scale_0_100_temp
+		}	
+		set_variable = {
+			rcmi_imperial_tributary_dmod_war_support_factor = rcmi_AS_man_scale_0_100_temp
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_mic_to_overlord_factor = rcmi_AS_trib_pp_temp
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_cic_to_overlord_factor = rcmi_AS_trib_pp_temp
+		}
+		set_temp_variable = {
+			rcmi_AS_trib_cs_temp = rcmi_AS_man_scale_0_100_temp
+		}
+		multiply_temp_variable = {
+			rcmi_AS_trib_cs_temp = 0.75
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_conscription_factor = rcmi_AS_trib_cs_temp
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				rcmi_AS_man_scale_0_100_temp > 0.25
+			}
+		}
+		subtract_from_temp_variable = {
+			rcmi_AS_man_scale_0_100_temp = 0.25
+		}
+		set_temp_variable = {
+			rcmi_AS_trib_combat_temp = rcmi_AS_man_scale_0_100_temp
+		}
+		multiply_temp_variable = {
+			rcmi_AS_trib_combat_temp = 1.4 
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_army_attack_factor = rcmi_AS_trib_combat_temp
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_army_defence_factor = rcmi_AS_trib_combat_temp
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_army_core_attack_factor = rcmi_AS_man_scale_0_100_temp
+		}	
+		set_variable = {
+			rcmi_imperial_tributary_dmod_army_core_defence_factor = rcmi_AS_man_scale_0_100_temp
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_stability_weekly = 0.002
+		}			
+		set_temp_variable = {
+			rcmi_AS_trib_sic_temp = rcmi_AS_man_scale_0_100_temp
+		}	
+		multiply_temp_variable = {
+			rcmi_AS_trib_sic_temp = 0.5
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_shared_ic_factor = rcmi_AS_trib_sic_temp
+		}
+	}
+	every_subject_country = {
+		set_variable = {
+			rcmi_imperial_tributary_dmod_autonomy_gain_global_factor = PREV.rcmi_imperial_tributary_dmod_autonomy_gain_global_factor
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_political_power_factor = PREV.rcmi_imperial_tributary_dmod_political_power_factor
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_stability_factor = PREV.rcmi_imperial_tributary_dmod_stability_factor
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_war_support_factor = PREV.rcmi_imperial_tributary_dmod_war_support_factor
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_mic_to_overlord_factor = PREV.rcmi_imperial_tributary_dmod_mic_to_overlord_factor
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_cic_to_overlord_factor = PREV.rcmi_imperial_tributary_dmod_cic_to_overlord_factor
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_conscription_factor = PREV.rcmi_imperial_tributary_dmod_conscription_factor
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_army_attack_factor = PREV.rcmi_imperial_tributary_dmod_army_attack_factor
+		}		
+		set_variable = {
+			rcmi_imperial_tributary_dmod_army_defence_factor = PREV.rcmi_imperial_tributary_dmod_army_defence_factor
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_army_core_attack_factor = PREV.rcmi_imperial_tributary_dmod_army_core_attack_factor
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_army_core_defence_factor = PREV.rcmi_imperial_tributary_dmod_army_core_defence_factor
+		}
+		set_variable = {
+			rcmi_imperial_tributary_dmod_stability_weekly = PREV.rcmi_imperial_tributary_dmod_stability_weekly
+		}	
+		set_variable = {
+			rcmi_imperial_tributary_dmod_shared_ic_factor = PREV.rcmi_imperial_tributary_dmod_shared_ic_factor
+		}													
 	}
 }
 

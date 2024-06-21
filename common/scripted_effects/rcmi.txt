@@ -1,0 +1,61 @@
+rcmi_shared_ic_tick = {	
+	rcmi_sic_reset = yes 
+	every_subject_country = {
+		set_temp_variable = {
+			rcmi_cic_transfer_temp = num_of_civilian_factories
+		}
+		set_temp_variable = {
+			rcmi_mic_transfer_temp = num_of_military_factories
+		}
+		multiply_temp_variable = {
+			rcmi_cic_transfer_temp = modifier@shared_ic_factor
+		}
+		multiply_temp_variable = {
+			rcmi_mic_transfer_temp = modifier@shared_ic_factor
+		}		
+		add_to_variable = {
+			overlord.rcmi_shared_cic_from_subjects = rcmi_cic_transfer_temp
+		}
+		add_to_variable = {
+			overlord.rcmi_shared_mic_from_subjects = rcmi_mic_transfer_temp
+		}
+	}
+	round_variable = rcmi_shared_cic_from_subjects
+	round_variable = rcmi_shared_mic_from_subjects
+	add_offsite_building = {
+		type = arms_factory
+		level = rcmi_shared_mic_from_subjects
+	}
+	add_offsite_building = {
+		type = industrial_complex
+		level = rcmi_shared_cic_from_subjects
+	}		
+}
+rcmi_sic_reset = {
+	set_temp_variable = {
+		rcmi_shared_mic_from_subjects_inv_temp = rcmi_shared_mic_from_subjects
+	}
+	multiply_temp_variable = {
+		rcmi_shared_mic_from_subjects_inv_temp = -1
+	}
+	set_temp_variable = {
+		rcmi_shared_cic_from_subjects_inv_temp = rcmi_shared_mic_from_subjects
+	}
+	multiply_temp_variable = {
+		rcmi_shared_cic_from_subjects_inv_temp = -1
+	}	
+	add_offsite_building = {
+		type = arms_factory
+		level = rcmi_shared_mic_from_subjects_inv_temp
+	}
+	add_offsite_building = {
+		type = industrial_complex
+		level = rcmi_shared_cic_from_subjects_inv_temp
+	}	
+	set_variable = {
+		rcmi_shared_mic_from_subjects = 0 
+	}
+	set_variable = {
+		rcmi_shared_cic_from_subjects = 0 
+	}		
+}

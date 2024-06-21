@@ -1,0 +1,7 @@
+shared_ic_factor = {
+	color_type = good 
+	value_type = percentage
+	precision = 3
+	category = country
+	category = autonomy
+}

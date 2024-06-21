@@ -69,6 +69,23 @@ rcmi_the_mandate_of_heaven = {
 	industrial_capacity_dockyard = rcmi_the_mandate_of_heaven_industry
 }
 
+rcmi_imperial_tributary_dmod = {
+	icon = GFX_decision_generic_merge_plant_materiel
+
+	autonomy_gain_global_factor = rcmi_imperial_tributary_dmod_autonomy_gain_global_factor
+	political_power_factor = rcmi_imperial_tributary_dmod_political_power_factor
+	stability_factor = rcmi_imperial_tributary_dmod_stability_factor
+	war_support_factor = rcmi_imperial_tributary_dmod_war_support_factor
+	mic_to_overlord_factor = rcmi_imperial_tributary_dmod_mic_to_overlord_factor
+	cic_to_overlord_factor = rcmi_imperial_tributary_dmod_cic_to_overlord_factor
+	conscription_factor = rcmi_imperial_tributary_dmod_conscription_factor
+	army_attack_factor = rcmi_imperial_tributary_dmod_army_attack_factor
+	army_defence_factor = rcmi_imperial_tributary_dmod_army_defence_factor
+	army_core_attack_factor = rcmi_imperial_tributary_dmod_army_core_attack_factor
+	army_core_defence_factor = rcmi_imperial_tributary_dmod_army_core_defence_factor
+	stability_weekly = rcmi_imperial_tributary_dmod_stability_weekly
+	shared_ic_factor = rcmi_imperial_tributary_dmod_shared_ic_factor
+}
 rcmi_german_sentiment = {
 	icon = GFX_decision_generic_merge_plant_materiel
 
