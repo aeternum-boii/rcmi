@@ -1,0 +1,8 @@
+﻿l_english:
+ # Loc for 'Borrowed' Features 
+ dense_urban:0 "Metropolis"
+ dense_urban_desc:0 ""
+ town:0 "Town"
+ town_desc:0 ""
+ rock:0 "The Rock"
+ rock_desc:0 ""
