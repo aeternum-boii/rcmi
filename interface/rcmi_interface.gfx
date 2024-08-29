@@ -1,0 +1,42 @@
+spriteTypes = {
+	### MAP ###
+	
+	# TERRAIN
+	
+	spriteType = {
+		name = "GFX_adjuster_town_bg"
+		textureFile = "gfx/interface/town_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_adjuster_dense_urban_bg"
+		textureFile = "gfx/interface/dense_urban_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_terrain_town"
+		textureFile = "gfx/interface/terrains/terrain_town.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_dense_urban"
+		textureFile = "gfx/interface/terrains/terrain_dense_urban.dds"
+	}
+
+	spriteType = {
+		name = "GFX_adjuster_snow_bg"
+		textureFile = "gfx/interface/snow_icon.dds"
+	}
+	
+	# TERRAIN WINTER
+	
+	spriteType = {
+		name = "GFX_terrain_town_winter"
+		textureFile = "gfx/interface/terrains/terrain_town_winter.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_terrain_dense_urban_winter"
+		textureFile = "gfx/interface/terrains/terrain_dense_urban_winter.dds"
+	}
+}
