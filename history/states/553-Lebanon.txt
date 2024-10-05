@@ -13,7 +13,7 @@ state={
 		}
 		buildings = {
 			infrastructure = 2 #was 4
-			industrial_complex = 1
+			industrial_complex = 2
 			fuel_silo = 1 # second end of the Kirkuk oil Pipeline going to Tripoli through Syria to satisfy French interests
 			air_base = 5
 			792 = {

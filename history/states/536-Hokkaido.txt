@@ -14,7 +14,7 @@ state={
 			#there was even another steel mill built there in 37, and then others in 40-42
             steel_mill = 1
 			#made the bigggest gun of the Yamato at Japan steel works, Muroran
-            arms_factory = 1
+            arms_factory = 3
 		}
 		victory_points = {
 			10444 10 

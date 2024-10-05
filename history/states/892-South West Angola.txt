@@ -8,7 +8,7 @@ state={
 		owner = POR
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
+			industrial_complex = 2
 		}
 		victory_points = {
 			10966 1 

@@ -1,13 +1,20 @@
 
 -- Removed days without surrender
 NDefines.NCountry.DAYS_OF_WAR_BEFORE_SURRENDER = 0  -- 7
+-- Reduced Base Max CP (balanced out by high command giving CP)
+NDefines.NCountry.BASE_MAX_COMMAND_POWER = 40 -- 200
+-- Increased General Special Forces Cap (balanced by increasing equipment cost of special forces)
+NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.10 -- 0.005
+NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 48 -- 24
+-- Increased Reqs for Major due to industry rework
+NDefines.NCountry.MAJOR_MIN_FACTORIES = 105 -- 35
 
 -- Increased Effectiveness of Claims
 NDefines.NResistance.RESISTANCE_TARGET_MODIFIER_HAS_CLAIM = -15.0  -- -5.0
 NDefines.NResistance.COMPLIANCE_GROWTH_HAS_CLAIM = 15  -- 5
 
 -- Increased max Building Slots  to be able to buff Italy and Japan without new States and lag 
-NDefines.NBuildings.MAX_SHARED_SLOTS = 50  -- 25
+NDefines.NBuildings.MAX_SHARED_SLOTS = 160  -- 25
 
 -- Decreased License Debuffs
 NDefines.NProduction.LICENSE_IC_COST_YEAR_INCREASE = 1 					-- IC cost equipment for every year of equipment after 1936
@@ -18,6 +25,9 @@ NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = 0 		-- MIC speed modi
 NDefines.NProduction.LICENSE_EQUIPMENT_UPGRADE_XP_FACTOR = 1.0 		-- XP cost for upgrading licensed equipment
 NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NO_LICENSE = -0.50 			-- Penalty for producing non licensed equipment
 NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0.0	-- The minimum number of factories we have to put on consumer goods, in percent.
+-- Increased max Infra buff while reducing Infra buff per cic spent
+NDefines.NProduction.INFRA_MAX_CONSTRUCTION_COST_EFFECT = 1.5 
+
 -- Changed Warscore gain
 
 NDefines.NMilitary.WAR_SCORE_LOSSES_RATIO = 0.05 								-- war score gained for every 1000 casualties

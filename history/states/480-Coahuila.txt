@@ -8,7 +8,7 @@ state={
 		owner = MEX
 		buildings = {
 			infrastructure = 2 #was 3
-			industrial_complex = 1
+			industrial_complex = 2
 			7973 = {
 				bunker = 1
 			}

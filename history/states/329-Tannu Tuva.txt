@@ -13,8 +13,8 @@ state={
 		owner = TAN
 		buildings = {
 			infrastructure = 1 #was 2
-			arms_factory = 1
-			industrial_complex = 1
+			arms_factory = 3
+			industrial_complex = 2
 		}
 		victory_points = {
 			10627 3

@@ -13,8 +13,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 4
-			arms_factory = 3
-			industrial_complex = 5
+			arms_factory = 9
+			industrial_complex = 10
 			air_base = 1	#cant find much info, level 6 in basegame, can only find that Graz airport existed, >0 required because of OOB
 		}
 		add_core_of = AUS
