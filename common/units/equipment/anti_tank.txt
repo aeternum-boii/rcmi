@@ -52,6 +52,57 @@ equipments = {
 		visual_level = 0
 	}
 	
+	anti_tank_equipment_2 = {
+		year = 1939
+
+		archetype = anti_tank_equipment
+		parent = anti_tank_equipment_1
+		priority = 90
+		visual_level = 1
+		
+		hard_attack = 18
+		ap_attack = 50
+		
+		build_cost_ic = 10
+
+	}
+	
+	anti_tank_equipment_3 = {
+		year = 1941
+
+		archetype = anti_tank_equipment
+		parent = anti_tank_equipment_2
+		priority = 90
+		visual_level = 2
+		
+		soft_attack = 4
+		hard_attack = 22
+		ap_attack = 70
+		
+		build_cost_ic = 12
+
+	}
+
+	anti_tank_equipment_4 = {
+		year = 1943
+
+		archetype = anti_tank_equipment
+		parent = anti_tank_equipment_3
+		priority = 90
+		visual_level = 2
+		
+		soft_attack = 4
+		hard_attack = 26
+		ap_attack = 90
+		
+		build_cost_ic = 14.5
+
+		resources = {
+			tungsten = 15
+			steel = 25
+		}
+
+	}
 	anti_tank_equipment_squeeze = {
 		year = 1939
 
@@ -104,6 +155,28 @@ equipments = {
 		visual_level = 1	
 
 	}
+
+	anti_tank_equipment_squeeze_2 = {
+		year = 1942
+
+		archetype = anti_tank_equipment_squeeze
+		parent = anti_tank_equipment_squeeze_1
+		priority = 90
+		visual_level = 1
+		
+		soft_attack = 2
+		hard_attack = 20
+		ap_attack = 75
+		
+		
+		build_cost_ic = 9
+
+		resources = {
+			tungsten = 10
+			steel = 20
+		}
+
+	}	
 	
 	heavy_anti_tank_equipment = {
 		year = 1941
@@ -157,4 +230,18 @@ equipments = {
 		priority = 90
 		visual_level = 0
 	}
+
+	heavy_anti_tank_equipment_2 = {
+		year = 1943
+
+		archetype = heavy_anti_tank_equipment
+		parent = heavy_anti_tank_equipment_1
+		priority = 90
+		visual_level = 1
+		soft_attack = 4
+		hard_attack = 38
+		ap_attack = 110
+		
+		build_cost_ic = 27
+	}	
 }

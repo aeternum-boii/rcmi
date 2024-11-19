@@ -1,0 +1,1901 @@
+technologies = {
+
+	rcmi_gw_artillery = {
+
+		start_year = 1918
+
+		path = {
+			leads_to_tech = rcmi_early_low_calibre
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = rcmi_shell_research
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = rcmi_interwar_medium_shells
+			research_cost_coeff = 1.0
+		}
+
+		path = {
+			leads_to_tech = rcmi_interwar_heavy_shells
+			research_cost_coeff = 1.0
+		}
+
+		enable_equipments = {
+			anti_tank_equipment_1
+			anti_tank_equipment_squeeze_1
+			heavy_anti_tank_equipment_1
+			anti_air_equipment_1
+			heavy_anti_air_equipment_1
+			pack_artillery_equipment_1
+			artillery_equipment_1
+			heavy_artillery_equipment_1
+		}
+		enable_equipment_modules = {
+			ship_anti_air_1
+			tank_small_cannon
+			secondary_turret_small_cannon
+			tank_close_support_gun			
+			tank_shell_ap
+			tank_shell_shrapnel
+			tank_shell_smoke
+			tank_shell_he
+			tank_secondary_shell_ap
+			tank_secondary_shell_shrapnel
+			tank_secondary_shell_smoke
+			tank_secondary_shell_he			
+		}
+
+		research_cost = 1.5
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = -1 }
+		}
+		
+		categories = {
+			artillery
+			standard_artillery_tech
+			mio_cat_all_artillery_equipment
+		}
+
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1937.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1939.1.1"
+			}
+		}		
+	}
+
+
+	rcmi_early_low_calibre = {
+		research_cost = 0.9
+		start_year = 1918
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = -4
+				y = 0
+			}
+		}
+
+		path = {
+			leads_to_tech = rcmi_early_squad_weapons
+			research_cost_coeff = 1.0
+		}
+
+		path = {
+			leads_to_tech = rcmi_interwar_low_calibre_improvements
+			research_cost_coeff = 1.0
+		}
+
+		anti_air = {
+			air_attack = 0.05
+		}
+		
+		anti_air_brigade = {
+			air_attack = 0.05
+		}
+		mot_anti_air_brigade = {
+			air_attack = 0.05
+		}		
+		light_sp_anti_air_brigade = {
+			air_attack = 0.05
+		}
+		medium_sp_anti_air_brigade = {
+			air_attack = 0.05
+		}
+		heavy_sp_anti_air_brigade = {
+			air_attack = 0.05
+		}
+		
+		categories = {
+			cat_anti_air
+			artillery
+			mio_cat_all_artillery_equipment
+		}		
+	}
+
+	rcmi_early_squad_weapons = {
+		research_cost = 1.2
+		xp_research_type = army
+		xp_boost_cost = 25
+		xp_research_bonus = 2
+
+		start_year = 1920
+
+		path = {
+			leads_to_tech = rcmi_squad_weapons_upgrade_1
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -11
+				y = 0
+			}
+		}
+
+		category_front_line = {
+			max_organisation = 2
+			defense = 5
+			need = {
+				squad_equipment = 5
+			}
+		}
+
+		enable_equipments = {
+			squad_equipment_0
+		}
+
+		categories = {
+			infantry_tech
+			infantry_weapons
+		}
+	}
+
+	rcmi_squad_weapons_upgrade_1 = {
+		research_cost = 0.8
+		start_year = 1936 
+
+		path = {
+			leads_to_tech = rcmi_squad_weapons_1
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -11
+				y = 2
+			}
+		}
+
+		category_front_line = {
+			defense = 2
+			breakthrough = 2
+		}
+
+		categories = {
+			infantry_tech
+			infantry_weapons
+		}		
+	}
+
+	rcmi_squad_weapons_1 = {
+		start_year = 1938 
+		research_cost = 1
+
+		path = {
+			leads_to_tech = rcmi_squad_weapons_2
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = rcmi_squad_weapons_upgrade_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = -11
+				y = 4
+			}
+		}
+
+		enable_equipments = {
+			squad_equipment_1
+		}
+	}
+
+	rcmi_squad_weapons_upgrade_2 = {
+		start_year = 1940
+		research_cost = 1.5 
+
+		xp_boost_cost = 50
+		xp_research_bonus = 2.5
+		xp_research_type = army
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -13
+				y = 5
+			}
+		}
+
+		category_front_line = {
+			max_organisation = 5
+			default_morale = 0.05
+			need = {
+				squad_equipment = 5
+			}
+		}
+
+		categories = {
+			infantry_tech
+			infantry_weapons
+			land_doctrine
+		}		
+	}
+
+	rcmi_squad_weapons_2 = {
+		start_year = 1942
+		research_cost = 1.2
+
+		path = {
+			leads_to_tech = rcmi_squad_weapons_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -11 
+				y = 9
+			}
+		}		
+
+		enable_equipments = {
+			squad_equipment_2
+		}
+
+		categories = {
+			infantry_tech
+			infantry_weapons
+		}		
+	}
+
+	rcmi_squad_weapons_3 = {
+		start_year = 1944
+		research_cost = 1.4
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -11 
+				y = 13
+			}
+		}
+
+		enable_equipments = {
+			squad_equipment_3
+		}
+
+		categories = {
+			infantry_tech
+			infantry_weapons
+		}		
+	}
+
+	rcmi_interwar_low_calibre_improvements = {
+		start_year = 1934
+		research_cost = 0.6
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -4 
+				y = 2
+			}
+		}
+
+		path = {
+			leads_to_tech = rcmi_anti_air_improvements_1
+			research_cost_coeff = 1.0
+		}
+
+		category_anti_air = {
+			air_attack_factor = 0.02
+		}
+		category_all_infantry = {
+			soft_attack = 0.02 
+		}
+
+		categories = {
+			mio_cat_all_artillery_equipment
+			artillery
+			cat_anti_air
+		}
+	}
+
+	rcmi_anti_air_improvements_1 = {
+		start_year = 1938 
+		research_cost = 0.8
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -4
+				y = 3
+			}
+		}
+
+		path = {
+			leads_to_tech = rcmi_anti_air_2
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = rcmi_antitank_squeeze_1
+			research_cost_coeff = 1.0
+		}
+
+		anti_air = {
+			air_attack = 0.05
+		}
+		mot_anti_air_brigade = {
+			air_attack = 0.05
+		}
+		motorised_anti_air = {
+			air_attack = 0.05
+		}
+		light_sp_anti_air_brigade  = {
+			air_attack = 0.05
+		}
+		medium_sp_anti_air_brigade  = {
+			air_attack = 0.05
+		}
+		enable_equipment_modules = {
+			ship_anti_air_2
+			tank_auto_cannon
+			tank_small_cannon
+		}
+		categories = {
+			mio_cat_all_artillery_equipment
+			artillery
+			cat_anti_air
+		}
+	}
+
+	rcmi_anti_air_2 = {
+		start_year = 1940
+		research_cost = 2
+
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -4 
+				y = 5.5
+			}
+		}
+
+		path = {
+			leads_to_tech = rcmi_anti_air_improvements_2
+			research_cost_coeff = 1.0
+		}
+
+		enable_equipments = {
+			anti_air_equipment_2
+		}
+
+		enable_equipment_modules = {
+			ship_anti_air_3
+		}
+
+		categories = {
+			artillery
+			cat_anti_air
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_antitank_squeeze_1 = {
+		start_year = 1939
+		research_cost = 2
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -1
+				y = 4
+			}
+		}
+
+		enable_equipments = {
+			anti_tank_equipment_squeeze_1
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			cat_anti_tank
+		}
+	}
+
+	rcmi_anti_air_improvements_2 = {
+		start_year = 1941
+		research_cost = 1.2
+
+		anti_air = {
+			air_attack = 0.05
+		}
+		mot_anti_air_brigade = {
+			air_attack = 0.05
+		}
+		motorised_anti_air = {
+			air_attack = 0.05
+		}
+		light_sp_anti_air_brigade  = {
+			air_attack = 0.05
+		}
+		medium_sp_anti_air_brigade  = {
+			air_attack = 0.05
+		}
+		pack_antitank_brigade = {
+			hard_attack = 0.1
+		}
+		enable_equipment_modules = { 
+			ship_anti_air_4
+		}
+		
+		path = {
+			leads_to_tech = rcmi_anti_air_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_antitank_squeeze_2
+			research_cost_coeff = 1.5
+		}
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -4
+				y = 7.5
+			}
+		}
+
+		categories = {
+			cat_anti_air
+			cat_anti_tank
+			mio_cat_all_artillery_equipment
+			artillery
+		}
+	}	
+
+	rcmi_antitank_squeeze_2 = {
+		start_year = 1942
+		research_cost = 2
+
+		allow = {
+			has_tech = rcmi_anti_air_improvements_2
+		}
+
+		enable_equipments = {
+			anti_tank_equipment_squeeze_2
+		}
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -1
+				y = 9
+			}
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_anti_air_3 = {
+		start_year = 1943
+		research_cost = 2
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -4 
+				y = 12
+			}
+		}
+
+		enable_equipments = {
+			anti_air_equipment_3
+		}
+
+		categories = {
+			mio_cat_all_artillery_equipment
+			artillery
+			cat_anti_air
+		}
+	}
+	
+
+	rcmi_shell_research = {
+		research_cost = 0.35
+
+		start_year = 1922
+
+		path = {
+			leads_to_tech = rcmi_basic_chemical_shells
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_basic_kinetic_shells
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = { x = 6 y = 1}
+		}
+
+		category_all_armor = {
+			hard_attack = 0.02
+			soft_attack = 0.02
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_tech_all_armor_and_modules
+		}		
+	}
+
+	rcmi_basic_chemical_shells = {
+		research_cost = 0.35
+
+		start_year = 1935
+
+		path = {
+			leads_to_tech = rcmi_improved_chemical_shells
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 5
+				y = 2
+			}
+		}
+
+		enable_equipment_modules = {
+			tank_shell_aphe
+			tank_shell_heat
+			tank_secondary_shell_aphe
+			tank_secondary_shell_heat
+		}
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}
+
+	rcmi_improved_chemical_shells = {
+		research_cost = 0.35
+
+		start_year = 1937
+
+		path = {
+			leads_to_tech = rcmi_tank_grenades
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_anti_emplacement_shells
+			research_cost_coeff = 1
+		}		
+		path = {
+			leads_to_tech = rcmi_fin_stabilized_chemical_shells
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_hetf_shells
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 5
+				y = 4
+			}
+		}
+
+		category_all_armor = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+		}
+
+		enable_equipment_modules = {
+			tank_shell_aphebc
+			tank_shell_aphecbc
+			tank_shell_saphecbc
+			tank_shell_saphei
+			tank_secondary_shell_aphebc
+			tank_secondary_shell_aphecbc
+			tank_secondary_shell_saphecbc
+			tank_secondary_shell_saphei
+		}
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}	
+
+	rcmi_tank_grenades = {
+		research_cost = 0.35
+
+		start_year = 1937
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 3
+				y = 4
+			}
+		}
+
+		category_all_armor = {
+			soft_attack = 0.02
+		}
+
+		enable_equipment_modules = {
+			tank_shell_vog
+			tank_shell_heat_grenade
+			tank_secondary_shell_vog
+			tank_secondary_shell_heat_grenade
+		}
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}		
+
+	rcmi_anti_emplacement_shells = {
+		research_cost = 0.35
+
+		start_year = 1940
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 3
+				y = 6
+			}
+		}
+
+
+		category_all_armor = {
+			fort = {
+				soft_attack = 0.05
+			}
+		}
+
+		enable_equipment_modules = {
+			tank_shell_ac
+			tank_shell_hesh
+			tank_secondary_shell_ac
+			tank_secondary_shell_hesh
+		}
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}	
+	
+	rcmi_fin_stabilized_chemical_shells = {
+		research_cost = 0.35
+
+		start_year = 1945
+
+		path = {
+			leads_to_tech = rcmi_heatfsmp_shells
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 5
+				y = 16
+			}
+		}
+
+
+		category_all_armor = {
+			ap_attack = 0.05
+		}
+
+		enable_equipment_modules = {
+			tank_shell_heatfs
+			tank_secondary_shell_heatfs
+		}
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}	
+	rcmi_heatfsmp_shells = {
+		research_cost = 0.35
+
+		allow = {
+			has_tech = rcmi_hevt_shells
+		}
+
+		start_year = 1945
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 3
+				y = 16
+			}
+		}
+
+
+		category_all_armor = {
+			air_attack = 0.05
+		}
+
+		enable_equipment_modules = {
+			tank_shell_heatfsmp
+			tank_secondary_shell_heatfsmp
+		}
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}		
+	rcmi_hetf_shells = {
+		research_cost = 0.35
+
+		path = {
+			leads_to_tech = rcmi_hevt_shells
+			research_cost_coeff = 1
+		}
+
+		start_year = 1943
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 3
+				y = 12
+			}
+		}
+
+
+		category_all_armor = {
+			air_attack = 0.05
+		}
+
+		enable_equipment_modules = {
+			tank_shell_hetf
+			tank_secondary_shell_hetf
+		}
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}	
+	rcmi_hevt_shells = {
+		research_cost = 0.35
+
+		path = {
+			leads_to_tech = rcmi_hevt_shells
+			research_cost_coeff = 1
+		}
+
+		start_year = 1944
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 3
+				y = 14
+			}
+		}
+
+		category_artillery = {
+			soft_attack = 0.15
+		}
+		category_all_armor = {
+			air_attack = 0.05
+		}
+
+		enable_equipment_modules = {
+			tank_shell_hevt
+			tank_secondary_shell_hevt
+		}
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}		
+	rcmi_basic_kinetic_shells = {
+		research_cost = 0.35
+
+		start_year = 1935
+
+		path = {
+			leads_to_tech = rcmi_improved_kinetic_shells
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 7
+				y = 2
+			}
+		}
+
+		category_all_armor = {
+			ap_attack = 0.02
+		}
+
+		enable_equipment_modules = {
+			tank_shell_apcr
+			tank_secondary_shell_apcr
+		}
+		categories = {
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}		
+	rcmi_improved_kinetic_shells = {
+		research_cost = 0.35
+
+		start_year = 1937
+
+		path = {
+			leads_to_tech = rcmi_apds_shells
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 7
+				y = 4
+			}
+		}
+
+		category_all_armor = {
+			ap_attack = 0.02
+		}
+
+		enable_equipment_modules = {
+			tank_shell_apbc
+			tank_shell_apcbc
+			tank_secondary_shell_apbc
+			tank_secondary_shell_apcbc
+		}
+		categories = {
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}
+	rcmi_apds_shells = {
+		research_cost = 0.35
+
+		start_year = 1943
+
+		path = {
+			leads_to_tech = rcmi_apfsds_shells
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 7
+				y = 12
+			}
+		}
+
+		category_all_armor = {
+			ap_attack = 0.02
+		}
+
+		enable_equipment_modules = {
+			tank_shell_apds
+			tank_secondary_shell_apds
+		}
+		categories = {
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}	
+	rcmi_apfsds_shells = {
+		research_cost = 0.35
+
+		start_year = 1945
+
+		path = {
+			leads_to_tech = rcmi_apfsds_du_shells
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 7
+				y = 16
+			}
+		}
+
+		category_all_armor = {
+			ap_attack = 0.02
+		}
+
+		enable_equipment_modules = {
+			tank_shell_apfsds
+			tank_secondary_shell_apfsds
+		}
+		categories = {
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}	
+	rcmi_apfsds_du_shells = {
+		research_cost = 0.35
+
+		start_year = 1960
+
+		folder = {
+			name = artillery_folder
+			position = {
+				x = 7
+				y = 24
+			}
+		}
+
+		category_all_armor = {
+			ap_attack = 0.05
+		}
+
+		enable_equipment_modules = {
+			tank_shell_du_apfsds
+			tank_secondary_shell_du_apfsds
+		}
+
+		on_research_complete = {
+			modify_building_resources = {
+				building = nuclear_reactor
+				resource = tungsten
+				amount = 2
+			}				
+		}
+		categories = {
+			mio_cat_tech_all_armor_and_modules
+		}			
+	}				
+	
+	rcmi_interwar_medium_shells = {
+		start_year = 1934
+		research_cost = 1.2
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 12
+				y = 0
+			}
+		}
+
+		category_artillery = {
+			soft_attack = 0.02
+		}
+		category_all_armor = {
+			soft_attack = 0.02
+		}
+
+		categories = {
+			mio_cat_all_artillery_equipment
+			artillery
+		}
+
+		path = {
+			leads_to_tech = rcmi_artillery_improvements_1 
+			research_cost_coeff = 1.0 
+		}
+	}
+
+	rcmi_artillery_improvements_1 = {
+		start_year = 1938 
+		research_cost = 0.8
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 12
+				y = 2
+			}
+		}
+
+		artillery_brigade = {
+			soft_attack = 0.03
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.03
+		}
+		pack_artillery_brigade = {
+			soft_attack = 0.03
+		}
+		anti_tank_brigade = {
+			hard_attack = 0.03
+		}		
+		mot_anti_tank_brigade = {
+			hard_attack = 0.03
+		}
+		
+		categories = {
+			mio_cat_all_artillery_equipment
+			artillery
+			cat_anti_tank
+		}
+
+		path = {
+			leads_to_tech = rcmi_artillery_2 
+			research_cost_coeff = 1.0
+		}
+		path = {
+			leads_to_tech = rcmi_anti_tank_2
+			research_cost_coeff = 1.0
+		}
+		path = {
+			leads_to_tech = rcmi_artillery_improvements_2
+			research_cost_coeff = 1.0
+		}
+	}
+
+	rcmi_artillery_2 = {
+		start_year = 1939 
+		research_cost = 2
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 10
+				y = 3
+			}
+		}
+
+		enable_equipments = {
+			artillery_equipment_2
+		}
+		enable_equipment_modules = {
+			# TANK HOWITZER 1 here 
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_anti_tank_2 = {
+		start_year = 1939 
+		research_cost = 2.0
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 14.5
+				y = 3
+			}
+		}
+
+		enable_equipments = {
+			anti_tank_equipment_2
+		}
+
+		categories = {
+			mio_cat_all_artillery_equipment
+			cat_anti_tank
+			artillery
+		}
+	}
+
+	rcmi_artillery_improvements_2 = {
+		start_year = 1939
+		research_cost = 1.2
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 12
+				y = 4
+			}
+		}
+
+		artillery_brigade = {
+			soft_attack = 0.03
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.03			
+		}
+		pack_artillery_brigade = {
+			soft_attack = 0.03			
+		}
+		anti_tank_brigade = {
+			hard_attack = 0.03
+		}		
+		mot_anti_tank_brigade = {
+			hard_attack = 0.03
+		}
+
+		enable_equipment_modules = {
+			tank_small_cannon
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+			mio_cat_all_artillery_equipment
+		}
+
+		path = {
+			leads_to_tech = rcmi_artillery_improvements_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_pack_artillery_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_dp_artillery
+			research_cost_coeff = 1
+		}
+	}
+
+	rcmi_pack_artillery_2 = {
+		start_year = 1940 
+		research_cost = 1
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 10
+				y = 5
+			}
+		}
+
+		enable_equipments = {
+			pack_artillery_equipment_2
+		}
+		
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_dp_artillery = {
+		start_year = 1940 
+		research_cost = 2.0
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 14.5
+				y = 5
+			}
+		}
+
+		enable_equipments = {
+			dp_artillery_equipment
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_artillery_improvements_3 = {
+		start_year = 1940
+		research_cost = 1.2 
+
+		
+		artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.1
+			}
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.1
+			}
+		}
+		pack_artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.1
+			}
+		}
+		# TODO: FIX ASSAULT GUNS TO SPGS 
+		light_assault_gun_brigade = {
+			fort = {
+				attack = 0.1
+			}
+		}
+		medium_assault_gun_brigade = {
+			fort = {
+				attack = 0.2
+			}
+		}
+		anti_tank_brigade = {
+			hard_attack = 0.03
+		}
+		mot_anti_tank_brigade = {
+			hard_attack = 0.03
+		}
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 12
+				y = 6
+			}
+		}
+
+		categories = {
+			cat_anti_tank
+			artillery
+			mio_cat_tech_all_armor_and_modules
+			armor
+			mio_cat_all_artillery_equipment
+		}
+
+		path = {
+			leads_to_tech = rcmi_artillery_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_anti_tank_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_artillery_improvements_4
+			research_cost_coeff = 1
+		}
+	}
+
+	rcmi_artillery_3 = {
+		start_year = 1941
+		research_cost = 2.0
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 10 
+				y = 7
+			}
+		}
+
+		enable_equipments = {
+			artillery_equipment_3
+		}
+
+		categories = {
+			mio_cat_all_artillery_equipment
+			artillery
+		}
+	}
+
+	rcmi_anti_tank_3 = {
+		start_year = 1941
+		research_cost = 2.0 
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 14.5
+				y = 7
+			}
+		}
+
+		enable_equipments = {
+			anti_tank_equipment_3
+		}
+
+		categories = {
+			mio_cat_all_artillery_equipment
+			cat_anti_tank
+		}
+	}
+
+	rcmi_artillery_improvements_4 = {
+		start_year = 1941
+		research_cost = 2.0
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 12
+				y = 8
+			}
+		}
+
+		artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.1
+			}
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.1
+			}
+		}
+		pack_artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.1
+			}
+		}
+		light_assault_gun_brigade = {
+			fort = {
+				attack = 0.1
+			}
+		}
+		medium_assault_gun_brigade = {
+			fort = {
+				attack = 0.2
+			}
+		}
+		anti_tank_brigade = {
+			hard_attack = 0.03
+		}
+		mot_anti_tank_brigade = {
+			hard_attack = 0.03
+		}		
+
+		path = {
+			leads_to_tech = rcmi_pack_artillery_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_dp_artillery_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_artillery_improvements_5
+			research_cost_coeff = 1
+		}
+
+		categories = {
+			artillery
+			cat_anti_tank
+			armor
+			mio_cat_all_artillery_equipment
+			mio_cat_tech_all_armor_and_modules
+		}
+	}
+
+	rcmi_pack_artillery_3 = {
+		start_year = 1942
+		research_cost = 1.0
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 10 
+				y = 9
+			}
+		}
+
+		enable_equipments = {
+			pack_artillery_equipment_3 
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_dp_artillery_2 = {
+		start_year = 1942
+		research_cost = 2.0
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 14.5
+				y = 9
+			}
+		}
+
+		enable_equipments = {
+			dp_artillery_equipment_2
+		}
+
+		categories = {
+			mio_cat_all_artillery_equipment
+			artillery
+			cat_anti_tank
+		}
+	}
+
+	rcmi_artillery_improvements_5 = {
+		start_year = 1942
+		research_cost = 1.2
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 12
+				y = 10
+			}
+		}
+
+		artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.1
+			}
+		}
+		mot_artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.1
+			}
+		}
+		pack_artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.1
+			}
+		}
+		light_assault_gun_brigade = {
+			fort = {
+				attack = 0.1
+			}
+		}
+		medium_assault_gun_brigade = {
+			fort = {
+				attack = 0.2
+			}
+		}
+		anti_tank_brigade = {
+			hard_attack = 0.03
+		}
+		mot_anti_tank_brigade = {
+			hard_attack = 0.03
+		}	
+
+		path = {
+			leads_to_tech = rcmi_artillery_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_anti_tank_4
+			research_cost_coeff = 1
+		}
+		
+		categories = {
+			artillery
+			cat_anti_tank
+			mio_cat_all_artillery_equipment
+			armor
+			mio_cat_tech_all_armor_and_modules
+		}
+	}
+
+	rcmi_artillery_4 = {
+		start_year = 1943
+		research_cost = 2.0
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 10
+				y = 11
+			}
+		}
+
+		enable_equipments = {
+			artillery_equipment_4
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_anti_tank_4 = {
+		start_year = 1943
+		research_cost = 2.0
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 14.5
+				y = 11
+			}
+		}
+
+		enable_equipments = {
+			anti_tank_equipment_4
+		}
+
+		categories = {
+			mio_cat_all_artillery_equipment
+			cat_anti_tank
+		}
+	}
+
+	rcmi_interwar_heavy_shells = {
+		start_year = 1932
+		research_cost = 1.8
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 20
+				y = 0
+			}
+		}
+
+		category_artillery = {
+			ap_attack = 0.02
+			fort = {
+				attack = 0.05
+			}
+		}
+
+		path = {
+			leads_to_tech = rcmi_heavy_arty_improvements_1
+			research_cost_coeff = 1.0
+		}
+	}
+
+	rcmi_heavy_arty_improvements_1 = {
+		start_year = 1938
+		research_cost = 1.2 
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 20
+				y = 2
+			}
+		}
+
+		heavy_artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.2
+			}
+		}
+		heavy_assault_gun_brigade = {
+			fort = {
+				attack = 0.3
+			}
+		}
+		heavy_anti_air = {
+			air_attack = 0.03
+			hard_attack = 0.03
+		}
+		tech_air_damage_factor = -0.02
+		
+		path = {
+			leads_to_tech = rcmi_heavy_arty_improvements_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_heavy_artillery_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_heavy_anti_air_1
+			research_cost_coeff = 1
+		}
+	}
+
+	rcmi_heavy_artillery_2 = {
+		start_year = 1939 
+		research_cost = 2.0
+		
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 18
+				y = 3
+			}
+		}
+
+		enable_equipments = {
+			heavy_artillery_equipment_2
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_heavy_anti_air_1 = {
+		start_year = 1939 
+		research_cost = 2.0 
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 22.5
+				y = 3
+			}
+		}
+
+		enable_equipments = {
+			heavy_anti_air_equipment_1
+		}
+
+		categories = {
+			cat_anti_air
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_heavy_arty_improvements_2 = {
+		start_year = 1940 
+		research_cost = 1.2 
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 20
+				y = 4
+			}
+		}
+		
+		heavy_artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.2
+			}
+		}
+		heavy_assault_gun_brigade = {
+			fort = {
+				attack = 0.3
+			}
+		}
+		heavy_anti_air = {
+			air_attack = 0.03
+			hard_attack = 0.03
+		}
+		heavy_anti_tank_brigade = {
+			hard_attack = 0.03
+		}
+		tech_air_damage_factor = -0.02
+
+		path = {
+			leads_to_tech = rcmi_heavy_arty_improvements_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_heavy_artillery_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_heavy_anti_tank
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_heavy_anti_air_2
+			research_cost_coeff = 1
+		}
+
+		categories = {
+			cat_anti_air
+			cat_anti_tank
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_heavy_artillery_3 = {
+		start_year = 1941
+		research_cost = 2.0
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 18
+				y = 5
+			}
+		}
+
+		enable_equipments = {
+			heavy_artillery_equipment_3
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_heavy_anti_tank = {
+		start_year = 1941
+		research_cost = 2.0 
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 24.5
+				y = 5
+			}
+		}
+
+		enable_equipments = {
+			heavy_anti_tank_equipment_1
+		}
+
+		categories = {
+			cat_anti_tank
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_heavy_anti_air_2 = {
+		start_year = 1942
+		research_cost = 2.0
+		
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 22.5
+				y = 7
+			}
+		}
+
+		enable_equipments = {
+			heavy_anti_air_equipment_2
+		}
+
+		categories = {
+			cat_anti_air
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_heavy_arty_improvements_3 = {
+		start_year = 1942
+		research_cost = 1.2
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 20
+				y = 8
+			}
+		}
+
+		heavy_artillery_brigade = {
+			soft_attack = 0.03
+			fort = {
+				attack = 0.2
+			}
+		}
+		heavy_anti_air = {
+			air_attack = 0.03
+			hard_attack = 0.03
+		}
+		heavy_anti_tank_brigade = {
+			hard_attack = 0.03
+		}
+		tech_air_damage_factor = -0.02
+	
+		path = {
+			leads_to_tech = rcmi_heavy_artillery_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = rcmi_heavy_anti_tank_2
+			research_cost_coeff = 1
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+			cat_anti_tank
+			cat_anti_air
+		}
+	}
+
+	rcmi_heavy_artillery_4 = {
+		start_year = 1943
+		research_cost = 1.2
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 18 
+				y = 9
+			}
+		}
+
+		enable_equipments = {
+			heavy_artillery_equipment_4
+		}
+
+		categories = {
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_heavy_anti_tank_2 = {
+		start_year = 1943
+		research_cost = 1.2 
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = 22.5
+				y = 9
+			}
+		}
+
+		enable_equipments = {
+			heavy_anti_tank_equipment_2
+		}
+
+		categories = {
+			cat_anti_tank
+			artillery
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+}
