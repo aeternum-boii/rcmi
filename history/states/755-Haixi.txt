@@ -16,7 +16,7 @@ state={
 		add_claim_by = TIB
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
+			industrial_complex = 2
 		}
 	}
 	local_supplies=0.0 

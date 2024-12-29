@@ -9,7 +9,7 @@ state={
 		add_core_of = SHN
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
 		}
 		victory_points = {
 			10076 3 

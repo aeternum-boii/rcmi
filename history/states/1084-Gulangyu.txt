@@ -1,6 +1,6 @@
 state={
 	id=1084
-	state_category = dense_urban
+	state_category = large_city
 	name="STATE_1084"
 	history={
 		owner = ENG

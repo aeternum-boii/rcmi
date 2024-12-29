@@ -13,8 +13,8 @@ state={
 		add_core_of = ZHL
 		buildings = {
 			infrastructure = 3 #was: 5
-			arms_factory = 1
-			industrial_complex = 1
+			arms_factory = 3
+			industrial_complex = 2
 			3900 = {
 				naval_base = 2
 			}

@@ -16,7 +16,7 @@ state={
 		owner = ALB
 		buildings = {
 			infrastructure = 2 #was 3
-			industrial_complex = 1 
+			industrial_complex = 2 
 		}
 		add_core_of = ALB
 		add_claim_by = ITA

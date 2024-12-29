@@ -17,7 +17,7 @@ state={
 		add_claim_by = TNG
 		buildings = {
 			infrastructure = 1
-			industrial_complex = 1
+			industrial_complex = 2
 		}
 	}
 

@@ -6,8 +6,8 @@ state={
 		owner = YUG
 		buildings = {
 			infrastructure = 3
-			arms_factory = 2
-			industrial_complex = 2
+			arms_factory = 6
+			industrial_complex = 4
 			air_base = 3
 		}
 		victory_points = {
