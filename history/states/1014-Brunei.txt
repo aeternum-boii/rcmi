@@ -26,7 +26,7 @@ state={
 	}
 
 	provinces={ # Could/should have an extra province for their little exclave
-		7371
+		7371 13448
 	}
 	manpower=31135
 	buildings_max_level_factor=1.000

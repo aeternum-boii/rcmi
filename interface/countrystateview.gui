@@ -132,29 +132,34 @@ guiTypes = {
 				format = center
 			}
 			
-			buttonType = {
-				name = "owner_flag"
-				quadTextureSprite ="GFX_flag_small2"
-				position = { x= 34 y = 63 }
+			OverlappingElementsBoxType = {
+				name = "state_owners"
+				position = { x = 35 y = 63 }
+				size = { x = 60 y = 40 }
+				format = left
+				spacing = 1.0
 			}
-			
-			iconType ={
-				name ="owner_flag_border"
-				quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
-				position = { x= 30 y = 59 }
-				alwaystransparent = yes
+
+			positionType = {
+				name = "state_owners_size_when_owner_is_controller"
+				position = { x = 110 y = 40 }
 			}
-			
+
+			positionType = {
+				name = "state_owners_size_when_owner_is_not_controller"
+				position = { x = 60 y = 40 }
+			}
+
 			buttonType = {
 				name = "controller_flag"
 				quadTextureSprite = "GFX_flag_small2"
-				position = { x= 74 y = 63 }
+				position = { x= 105 y = 63 }
 			}	
 			
 			iconType ={
 				name ="controller_flag_border"
 				quadTextureSprite = "GFX_diplo_countrylist_flag_frame"
-				position = { x= 70 y = 59 }
+				position = { x= 100 y = 59 }
 				alwaystransparent = yes
 			}
 			
@@ -384,26 +389,6 @@ guiTypes = {
 				slotsize = { width = 100 height = 44 }
 				max_slots_horizontal = 1
 			}
-			
-			buttonType = {
-				name = "nuke_province"
-				quadTextureSprite ="GFX_nuke_button"
-				position = { x= 13 y = -85 }
-			}
-			
-			iconType = {
-				name = "nuclear_strike_bar"
-				spriteType = "GFX_nuke_progress"
-				position = { x=23 y= 20 }
-				rotation = 1.5708		
-			}	
-			
-			iconType = {
-				name = "nuke_progress_frame"
-				spriteType = "GFX_nuke_progress_frame"
-				position = { x=15 y= -80 }	
-			}				
-			
 		}	
 		
 		buttonType = {
@@ -568,6 +553,38 @@ guiTypes = {
 	}
 	
 	containerWindowType = {
+		name = "province_building_special_icon_entry"
+		position = { x=-8 y=18 }
+		size = { width=50 height= 43 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			spriteType ="GFX_province_landmark_bg"
+		}
+
+		# Since the province building and facility icons are not the same size.
+		# For now use the position type X value as a scale, where 1 = 0.1 scale.
+		positionType = {
+			name = "facility_building_button_scale"
+			position = { x = 4 y = 0}
+		}
+
+		buttonType = {
+			name = "building_button"
+			quadTextureSprite = "GFX_placeholder_bg"
+			position = { x = 13 y = 6 }
+			scale = 1.0
+		}
+
+		iconType = {
+			name = "damage_bar"
+			spriteType = "GFX_province_landmark_damage_bar"
+			position = { x=6 y=8  }
+		}
+	}
+	
+	containerWindowType = {
 		name = "state_resource_entry"
 		position = { x=0 y=102 }
 		size = { width=23 height= 100 }
@@ -600,21 +617,21 @@ guiTypes = {
 		iconType = {	
 			name = "bg"	
 			spriteType = "GFX_occupation_state_compliance_bar_bg"	
-			position = { x = 0 y = 5 }	
+			position = { x = 0 y = 10 }	
 			scale = 0.95
 		}	
 				
 		iconType = {	
 			name = "progress"	
 			spriteType = "GFX_occupation_state_compliance_bar"	
-			position = { x = 3 y = 2 }	
+			position = { x = 3 y = 12.5 }	
 			frame = 100	
 			scale = 0.95
 		}	
 			
 		instantTextBoxType = {	
 			name ="progress_text"	
-			position = { x = 4 y = 5 }	
+			position = { x = 4 y = 10 }	
 			font = "hoi_18mbs"	
 			text = "100%"	
 			maxWidth = 80	
@@ -658,8 +675,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "state_view_dynamic_modifier_entry"	
 		position = {
-			x = 100
-			y = 0
+			x = 10
+			y = -50
 		}
 		size = { width = 40 height = 47 }	
 		clipping = no	

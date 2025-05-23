@@ -1,0 +1,24 @@
+
+state={
+	id=1094
+	name="STATE_1094"
+	provinces={
+		6598 9574 11419 13068 
+	}
+	history = {
+
+		owner = BEL
+		add_core_of = BEL
+		add_core_of = FLA
+
+
+		buildings = {
+			infrastructure = 1
+		}
+		
+	}	
+	manpower=1800000
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+	local_supplies=0.000
+}

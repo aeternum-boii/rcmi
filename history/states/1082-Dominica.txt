@@ -1,0 +1,11 @@
+state={
+	id=1082
+	name="STATE_1082"
+	provinces={
+		7123 
+	}
+	manpower=39433
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	local_supplies=0.000
+}

@@ -1,0 +1,18 @@
+state={
+	id=1088
+	name="STATE_1088"
+	provinces={
+		13080 
+	}
+	history={
+		owner = USA
+		add_core_of = SAM
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	manpower=11908
+	buildings_max_level_factor=1.000
+	state_category=tiny_island
+	local_supplies=0.000
+}

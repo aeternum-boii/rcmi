@@ -41,4 +41,3 @@ state={
 
 	local_supplies=1.0 
 }
-
