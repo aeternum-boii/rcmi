@@ -5,7 +5,7 @@ technologies = {
 		start_year = 1918
 
 		path = {
-			leads_to_tech = rcmi_early_low_calibre
+			leads_to_tech = rcmi_interwar_low_calibre_improvements
 			research_cost_coeff = 1
 		}
 
@@ -25,14 +25,12 @@ technologies = {
 		}
 
 		enable_equipments = {
-			anti_tank_equipment_1
-			anti_tank_equipment_squeeze_1
-			heavy_anti_tank_equipment_1
-			anti_air_equipment_1
-			heavy_anti_air_equipment_1
-			pack_artillery_equipment_1
 			artillery_equipment_1
-			heavy_artillery_equipment_1
+		}
+		enable_subunits = {
+			artillery
+			artillery_brigade
+			mot_artillery_brigade
 		}
 		enable_equipment_modules = {
 			ship_anti_air_1
@@ -55,11 +53,24 @@ technologies = {
 			name = artillery_folder
 			position = { x = 6 y = -1 }
 		}
+		special_project_specialization = { specialization_land }
 		
 		categories = {
 			artillery
 			standard_artillery_tech
 			mio_cat_all_artillery_equipment
+		}
+
+		on_research_complete = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_land_super_heavy_howitzer
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -90,8 +101,8 @@ technologies = {
 		folder = {
 			name = artillery_folder
 			position = {
-				x = -4
-				y = 0
+				x = -7.5
+				y = -1
 			}
 		}
 
@@ -124,6 +135,12 @@ technologies = {
 		heavy_sp_anti_air_brigade = {
 			air_attack = 0.05
 		}
+
+		enable_equipments = {
+			anti_air_equipment_1
+		}
+
+		special_project_specialization = { specialization_land }
 		
 		categories = {
 			cat_anti_air
@@ -164,7 +181,8 @@ technologies = {
 		enable_equipments = {
 			squad_equipment_0
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			infantry_tech
 			infantry_weapons
@@ -192,7 +210,8 @@ technologies = {
 			defense = 2
 			breakthrough = 2
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			infantry_tech
 			infantry_weapons
@@ -249,7 +268,8 @@ technologies = {
 				squad_equipment = 5
 			}
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			infantry_tech
 			infantry_weapons
@@ -277,7 +297,8 @@ technologies = {
 		enable_equipments = {
 			squad_equipment_2
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			infantry_tech
 			infantry_weapons
@@ -299,7 +320,8 @@ technologies = {
 		enable_equipments = {
 			squad_equipment_3
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			infantry_tech
 			infantry_weapons
@@ -314,8 +336,13 @@ technologies = {
 			name = artillery_folder
 			position = { 
 				x = -4 
-				y = 2
+				y = 0
 			}
+		}
+
+		allow = {
+			has_tech = rcmi_gw_artillery
+			has_tech = rcmi_early_low_calibre
 		}
 
 		path = {
@@ -329,7 +356,8 @@ technologies = {
 		category_all_infantry = {
 			soft_attack = 0.02 
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_all_artillery_equipment
 			artillery
@@ -378,7 +406,8 @@ technologies = {
 			ship_anti_air_2
 			tank_auto_cannon
 			tank_small_cannon
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_all_artillery_equipment
 			artillery
@@ -411,7 +440,8 @@ technologies = {
 		enable_equipment_modules = {
 			ship_anti_air_3
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			cat_anti_air
@@ -434,7 +464,8 @@ technologies = {
 		enable_equipments = {
 			anti_tank_equipment_squeeze_1
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -484,7 +515,8 @@ technologies = {
 				y = 7.5
 			}
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			cat_anti_air
 			cat_anti_tank
@@ -512,7 +544,8 @@ technologies = {
 				y = 9
 			}
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			cat_anti_tank
@@ -535,7 +568,8 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_3
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_all_artillery_equipment
 			artillery
@@ -567,7 +601,8 @@ technologies = {
 			hard_attack = 0.02
 			soft_attack = 0.02
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -598,7 +633,9 @@ technologies = {
 			tank_shell_heat
 			tank_secondary_shell_aphe
 			tank_secondary_shell_heat
-		}
+		}		
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -650,7 +687,8 @@ technologies = {
 			tank_secondary_shell_aphecbc
 			tank_secondary_shell_saphecbc
 			tank_secondary_shell_saphei
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -680,7 +718,8 @@ technologies = {
 			tank_shell_heat_grenade
 			tank_secondary_shell_vog
 			tank_secondary_shell_heat_grenade
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -713,7 +752,8 @@ technologies = {
 			tank_shell_hesh
 			tank_secondary_shell_ac
 			tank_secondary_shell_hesh
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -747,7 +787,8 @@ technologies = {
 		enable_equipment_modules = {
 			tank_shell_heatfs
 			tank_secondary_shell_heatfs
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -779,7 +820,8 @@ technologies = {
 		enable_equipment_modules = {
 			tank_shell_heatfsmp
 			tank_secondary_shell_heatfsmp
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -812,7 +854,8 @@ technologies = {
 		enable_equipment_modules = {
 			tank_shell_hetf
 			tank_secondary_shell_hetf
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -847,7 +890,8 @@ technologies = {
 		enable_equipment_modules = {
 			tank_shell_hevt
 			tank_secondary_shell_hevt
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -879,7 +923,8 @@ technologies = {
 		enable_equipment_modules = {
 			tank_shell_apcr
 			tank_secondary_shell_apcr
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_tech_all_armor_and_modules
 		}			
@@ -911,7 +956,8 @@ technologies = {
 			tank_shell_apcbc
 			tank_secondary_shell_apbc
 			tank_secondary_shell_apcbc
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_tech_all_armor_and_modules
 		}			
@@ -941,7 +987,8 @@ technologies = {
 		enable_equipment_modules = {
 			tank_shell_apds
 			tank_secondary_shell_apds
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_tech_all_armor_and_modules
 		}			
@@ -971,7 +1018,8 @@ technologies = {
 		enable_equipment_modules = {
 			tank_shell_apfsds
 			tank_secondary_shell_apfsds
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_tech_all_armor_and_modules
 		}			
@@ -1004,7 +1052,8 @@ technologies = {
 				resource = tungsten
 				amount = 2
 			}				
-		}
+		}		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_tech_all_armor_and_modules
 		}			
@@ -1028,7 +1077,8 @@ technologies = {
 		category_all_armor = {
 			soft_attack = 0.02
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_all_artillery_equipment
 			artillery
@@ -1067,6 +1117,7 @@ technologies = {
 		mot_anti_tank_brigade = {
 			hard_attack = 0.03
 		}
+				special_project_specialization = { specialization_land }
 		
 		categories = {
 			mio_cat_all_artillery_equipment
@@ -1106,7 +1157,8 @@ technologies = {
 		enable_equipment_modules = {
 			# TANK HOWITZER 1 here 
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -1128,7 +1180,8 @@ technologies = {
 		enable_equipments = {
 			anti_tank_equipment_2
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_all_artillery_equipment
 			cat_anti_tank
@@ -1167,7 +1220,8 @@ technologies = {
 		enable_equipment_modules = {
 			tank_small_cannon
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			cat_anti_tank
@@ -1200,9 +1254,16 @@ technologies = {
 			}
 		}
 
+		enable_subunits = {
+			pack_artillery_brigade
+			pack_artillery
+		}
+
 		enable_equipments = {
 			pack_artillery_equipment_2
 		}
+		
+		special_project_specialization = { specialization_land }
 		
 		categories = {
 			artillery
@@ -1225,7 +1286,12 @@ technologies = {
 		enable_equipments = {
 			dp_artillery_equipment
 		}
-
+		enable_subunits = {
+			dp_artillery_brigade
+			dp_artillery
+		}
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			cat_anti_tank
@@ -1281,7 +1347,8 @@ technologies = {
 				y = 6
 			}
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			cat_anti_tank
 			artillery
@@ -1319,7 +1386,8 @@ technologies = {
 		enable_equipments = {
 			artillery_equipment_3
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_all_artillery_equipment
 			artillery
@@ -1341,7 +1409,8 @@ technologies = {
 		enable_equipments = {
 			anti_tank_equipment_3
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_all_artillery_equipment
 			cat_anti_tank
@@ -1407,7 +1476,8 @@ technologies = {
 			leads_to_tech = rcmi_artillery_improvements_5
 			research_cost_coeff = 1
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			cat_anti_tank
@@ -1432,7 +1502,8 @@ technologies = {
 		enable_equipments = {
 			pack_artillery_equipment_3 
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -1454,7 +1525,8 @@ technologies = {
 		enable_equipments = {
 			dp_artillery_equipment_2
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_all_artillery_equipment
 			artillery
@@ -1517,6 +1589,7 @@ technologies = {
 			leads_to_tech = rcmi_anti_tank_4
 			research_cost_coeff = 1
 		}
+				special_project_specialization = { specialization_land }
 		
 		categories = {
 			artillery
@@ -1542,7 +1615,8 @@ technologies = {
 		enable_equipments = {
 			artillery_equipment_4
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -1564,7 +1638,8 @@ technologies = {
 		enable_equipments = {
 			anti_tank_equipment_4
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			mio_cat_all_artillery_equipment
 			cat_anti_tank
@@ -1654,7 +1729,8 @@ technologies = {
 		enable_equipments = {
 			heavy_artillery_equipment_2
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -1676,7 +1752,8 @@ technologies = {
 		enable_equipments = {
 			heavy_anti_air_equipment_1
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			cat_anti_air
 			artillery
@@ -1732,7 +1809,8 @@ technologies = {
 			leads_to_tech = rcmi_heavy_anti_air_2
 			research_cost_coeff = 1
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			cat_anti_air
 			cat_anti_tank
@@ -1756,7 +1834,8 @@ technologies = {
 		enable_equipments = {
 			heavy_artillery_equipment_3
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -1778,7 +1857,8 @@ technologies = {
 		enable_equipments = {
 			heavy_anti_tank_equipment_1
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			cat_anti_tank
 			artillery
@@ -1801,7 +1881,8 @@ technologies = {
 		enable_equipments = {
 			heavy_anti_air_equipment_2
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			cat_anti_air
 			artillery
@@ -1844,7 +1925,8 @@ technologies = {
 			leads_to_tech = rcmi_heavy_anti_tank_2
 			research_cost_coeff = 1
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -1868,7 +1950,8 @@ technologies = {
 		enable_equipments = {
 			heavy_artillery_equipment_4
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -1890,7 +1973,8 @@ technologies = {
 		enable_equipments = {
 			heavy_anti_tank_equipment_2
 		}
-
+		special_project_specialization = { specialization_land }
+		
 		categories = {
 			cat_anti_tank
 			artillery

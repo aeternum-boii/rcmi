@@ -1,4 +1,5 @@
-
+-- Changed Game Speed
+NDefines.NGame.GAME_SPEED_SECONDS = { 0.2, 0.1, 0.05, 0.025, 0.0 } --{ 2.0, 0.5, 0.2, 0.1, 0.0 }
 -- Removed days without surrender
 NDefines.NCountry.DAYS_OF_WAR_BEFORE_SURRENDER = 0  -- 7
 -- Reduced Base Max CP (balanced out by high command giving CP)
@@ -28,8 +29,10 @@ NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT
 -- Increased max Infra buff while reducing Infra buff per cic spent
 NDefines.NProduction.INFRA_MAX_CONSTRUCTION_COST_EFFECT = 1.5 
 
--- Changed Warscore gain
+-- Reduced Minimum Speed
+NDefines.NMilitary.SLOWEST_SPEED = 1 --4
 
+-- Changed Warscore gain
 NDefines.NMilitary.WAR_SCORE_LOSSES_RATIO = 0.05 								-- war score gained for every 1000 casualties
 NDefines.NMilitary.WAR_SCORE_LOSSES_MULT_IF_CAPITULATED = 0.25  				-- factor applied to war score gained from casualties if capitulated
 NDefines.NMilitary.WAR_SCORE_STRATEGIC_BOMBING_FACTOR = 0.02   				-- war score gained for every damage made to enemy's building with strategic bombing

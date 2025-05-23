@@ -1136,7 +1136,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "armour_year_left"
-					position = { x=10 y=185 }
+					position = { x=60 y=185 }
 					size = { width = 80 height = 100%% }
 					orientation = upper_left
 
@@ -1248,7 +1248,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "armour_year_right"
-					position = { x=-100 y=185 }
+					position = { x=0 y=185 }
 					size = { width = 80 height = 100%% }
 					orientation = upper_right
 
@@ -1429,7 +1429,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "armor_tech_1_tree"
-				position = { x = 37% y = 172 }
+				position = { x = -32% y = 172 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -1872,6 +1872,14 @@ guiTypes = {
 			gridboxtype = {
 				name = "rcmi_gw_artillery_tree"
 				position = { x = 10% y = 172 }
+				size = { width = 80% height = 80% }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
+			gridboxtype = {
+				name = "rcmi_early_low_calibre_tree"
+				position = { x = 0% y = 172 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -3946,6 +3954,7 @@ guiTypes = {
 			drag_scroll = { left middle }
 			verticalScrollbar = "right_vertical_slider"
 			horizontalScrollbar = "bottom_horizontal_slider"
+			scroll_wheel_factor = 40
 
 			background = {
 				name = "Background"
@@ -3956,7 +3965,7 @@ guiTypes = {
 				name = "size_filler"
 				position = { x=0 y=0 }
 				size = {
-					width = 710 height = 1500
+					width = 724 height = 1500
 					min = { width= 100%% height = 100%% }
 				}
 
@@ -3969,7 +3978,7 @@ guiTypes = {
 				iconType = {
 					name ="wonderweapons_bg"
 					spriteType = "GFX_wonderweapons_bg"
-					position = { x=810 y=0 }
+					position = { x=990 y=0 }
 					alwaystransparent = yes
 				}
 
@@ -3977,29 +3986,16 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "wonderweapon_year"
-				position = { x=1300 y=40 }
+				position = { x=1026 y=40 }
 				size = { width = 130 height = 100% }
 				orientation = upper_left
 
 				instantTextBoxType = {
 					name = "wonderweapon_year5"
-					position = { x = 0 y = 500 }
+					position = { x = 0 y = 140 }
 					textureFile = ""
 					font = "hoi_36header"
-					borderSize = {x = 0 y = 4}
-					text = "1938"
-					maxWidth = 130
-					maxHeight = 32
-					format = left
-					Orientation = "UPPER_LEFT"
-				}
-
-				instantTextBoxType = {
-					name = "wonderweapon_year6"
-					position = { x = 0 y = 620 }
-					textureFile = ""
-					font = "hoi_36header"
-					borderSize = {x = 0 y = 4}
+					borderSize = {x = 0 y = 5}
 					text = "1939"
 					maxWidth = 130
 					maxHeight = 32
@@ -4008,8 +4004,8 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "wonderweapon_year7"
-					position = { x = 0 y = 740 }
+					name = "wonderweapon_year6"
+					position = { x = 0 y = 263 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4021,8 +4017,8 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "wonderweapon_year8"
-					position = { x = 0 y = 860 }
+					name = "wonderweapon_year7"
+					position = { x = 0 y = 383 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4034,8 +4030,8 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "wonderweapon_year9"
-					position = { x = 0 y = 980 }
+					name = "wonderweapon_year8"
+					position = { x = 0 y = 503 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4046,11 +4042,9 @@ guiTypes = {
 					Orientation = "UPPER_LEFT"
 				}
 
-###------> Electronics Year Left <><> <><> <><> <><> <><>
-
 				instantTextBoxType = {
-					name = "wonderweapon_year10"
-					position = { x = 0 y = 1100 }
+					name = "wonderweapon_year9"
+					position = { x = 0 y = 623 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4061,9 +4055,11 @@ guiTypes = {
 					Orientation = "UPPER_LEFT"
 				}
 
+###------> Electronics Year Left <><> <><> <><> <><> <><>
+
 				instantTextBoxType = {
-					name = "wonderweapon_year11"
-					position = { x = 0 y = 1220 }
+					name = "wonderweapon_year10"
+					position = { x = 0 y = 743 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4075,8 +4071,8 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "wonderweapon_year12"
-					position = { x = 0 y = 1340 }
+					name = "wonderweapon_year11"
+					position = { x = 0 y = 863 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4088,8 +4084,21 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
+					name = "wonderweapon_year12"
+					position = { x = 0 y = 983 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1946"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
 					name = "wonderweapon_year13"
-					position = { x = 0 y = 1460 }
+					position = { x = 0 y = 1103 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4102,11 +4111,11 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "wonderweapon_year14"
-					position = { x = 0 y = 1580 }
+					position = { x = 0 y = 1223 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1949"
+					text = "1948"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -4115,7 +4124,20 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "wonderweapon_year15"
-					position = { x = 0 y = 1700 }
+					position = { x = 0 y = 1343 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1950"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "wonderweapon_year16"
+					position = { x = 0 y = 1463 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4127,8 +4149,21 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "wonderweapon_year16"
-					position = { x = 0 y = 1820 }
+					name = "wonderweapon_year17"
+					position = { x = 0 y = 1583 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1952"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "wonderweapon_year18"
+					position = { x = 0 y = 1703 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4140,8 +4175,21 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
-					name = "wonderweapon_year17"
-					position = { x = 0 y = 1940 }
+					name = "wonderweapon_year19"
+					position = { x = 0 y = 1823 }
+					textureFile = ""
+					font = "hoi_36header"
+					borderSize = {x = 0 y = 4}
+					text = "1954"
+					maxWidth = 130
+					maxHeight = 32
+					format = left
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "wonderweapon_year20"
+					position = { x = 0 y = 1943 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4152,39 +4200,13 @@ guiTypes = {
 					Orientation = "UPPER_LEFT"
 				}
 
-				instantTextBoxType = {
-					name = "wonderweapon_year18"
-					position = { x = 0 y = 2060 }
-					textureFile = ""
-					font = "hoi_36header"
-					borderSize = {x = 0 y = 4}
-					text = "1957"
-					maxWidth = 130
-					maxHeight = 32
-					format = left
-					Orientation = "UPPER_LEFT"
-				}
-
-				instantTextBoxType = {
-					name = "wonderweapon_year19"
-					position = { x = 0 y = 2180 }
-					textureFile = ""
-					font = "hoi_36header"
-					borderSize = {x = 0 y = 4}
-					text = "1959"
-					maxWidth = 130
-					maxHeight = 32
-					format = left
-					Orientation = "UPPER_RIGHT"
-				}
-
 ###------> X <><> <><> <><> <><> <><>
 
 			}
 
 			containerWindowType = {
 				name = "engineering_year_right"
-				position = { x=100 y=40 }
+				position = { x=50 y=40 }
 				size = { width = 130 height = 100% }
 				orientation = upper_left
 
@@ -4398,13 +4420,12 @@ guiTypes = {
 					Orientation = "UPPER_LEFT"
 				}
 
-###------> X <><> <><> <><> <><> <><>
-
 			}
+			###------> X <><> <><> <><> <><> <><>
 
 				instantTextBoxType = {
 					name = "electronic_eng_subtitle"
-					position = { x = 350 y = 100 }
+					position = { x = 245 y = 100 }
 					font = "hoi_22tech"
 					borderSize = {x = 0 y = 4}
 					text = "TITLE_ELECTRONIC_SUBTITLE"
@@ -4415,8 +4436,32 @@ guiTypes = {
 				}
 
 				instantTextBoxType = {
+					name = "fortification_eng_subtitle"
+					position = { x = 733 y = 100 }
+					font = "hoi_22tech"
+					borderSize = {x = 0 y = 4}
+					text = "TITLE_FORTIFICATION_SUBTITLE"
+					maxWidth = 250
+					maxHeight = 122
+					format = center
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
+					name = "wonderwaffle_eng_subtitle"
+					position = { x = 1151 y = 100 }
+					font = "hoi_22tech"
+					borderSize = {x = 0 y = 4}
+					text = "TITLE_WONDERWAFFLE_SUBTITLE"
+					maxWidth = 250
+					maxHeight = 122
+					format = center
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextBoxType = {
 					name = "experimental_rockets_subtitle"
-					position = { x = 1010 y = 535 }
+					position = { x = 1290 y = 218 }
 					font = "hoi_22tech"
 					borderSize = {x = 0 y = 4}
 					text = "TITLE_EXP_ROCKETS_SUBTITLE"
@@ -4428,10 +4473,10 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "atomic_research_subtitle"
-					position = { x = 835 y = 535 }
+					position = { x = 1052 y = 218 }
 					font = "hoi_22tech"
 					borderSize = {x = 0 y = 4}
-					text = "TITLE_ATOMIC_RESEARCH_SUBTITLE"
+					text = "Atomics"
 					maxWidth = 200
 					maxHeight = 122
 					format = center
@@ -4440,7 +4485,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "electronic_mechanical_engineering_tree"
-				position = { x=50 y=172 }
+				position = { x=0 y=172 }
 				size = { width = 680 height = 800 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
@@ -4449,9 +4494,17 @@ guiTypes = {
 			iconType = {
 				name = "highlight_engineering_1"
 				spriteType = "GFX_tutorial_research_small_item_icon_glow"
-				position = { x=355 y=172}
+				position = { x=305 y=172}
 				hide = yes
 				alwaystransparent = yes
+			}
+
+			gridboxtype = {
+				name = "basic_fortification_tech_tree"
+				position = { x=400 y=172 }
+				size = { width = 680 height = 800 }
+				slotsize = { width=60 height= 60 }
+				format = "UP"
 			}
 
 			gridboxtype = {
@@ -4460,14 +4513,27 @@ guiTypes = {
 				size = { width = 480 height = 650 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
-
-
-
 			}
 
+			#gridboxtype = {
+			#	name = "sp_rockets_dual_chamber_rocket_engine_1_tree" 
+			#	position = { x=980 y=172 }
+			#	size = { width = 480 height = 650 }
+			#	slotsize = { width=60 height= 60 }
+			#	format = "UP"
+			#}
+
+			#gridboxtype = {
+			#	name = "atomic_research_tree"
+			#	position = { x=655 y=292 }
+			#	size = { width = 680 height = 500 }
+			#	slotsize = { width=60 height= 60 }
+			#	format = "UP"
+			#}
+
 			gridboxtype = {
-				name = "atomic_research_tree"
-				position = { x=655 y=292 }
+				name = "r56_centralized_military_research_and_development_tree"
+				position = { x=745 y=172 }
 				size = { width = 680 height = 500 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"

@@ -1,0 +1,567 @@
+spriteTypes = {
+
+	### EQUIPMENTS ### 
+
+	SpriteType = {
+		name = "GFX_rcmi_gw_artillery_medium"
+		texturefile = "gfx/interface/technologies/com_arty_1.dds"
+	} 
+
+	SpriteType = {
+		name = "GFX_rcmi_early_squad_weapons_medium"
+		texturefile = "gfx/interface/technologies/com_squad_eq_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_squad_weapons_1_medium"
+		texturefile = "gfx/interface/technologies/com_squad_eq_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_squad_weapons_2_medium"
+		texturefile = "gfx/interface/technologies/com_squad_eq_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_squad_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/com_squad_eq_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_early_low_calibre_medium" 
+		texturefile = "gfx/interface/technologies/com_aa_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_anti_air_2_medium" 
+		texturefile = "gfx/interface/technologies/com_aa_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_anti_air_3_medium"
+		texturefile = "gfx/interface/technologies/com_aa_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_antitank_squeeze_1_medium" 
+		texturefile = "gfx/interface/technologies/com_at_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_antitank_squeeze_2_medium" 
+		texturefile = "gfx/interface/technologies/com_at_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_artillery_2_medium" 
+		texturefile = "gfx/interface/technologies/com_arty_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_artillery_3_medium" 
+		texturefile = "gfx/interface/technologies/com_arty_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_artillery_4_medium" 
+		texturefile = "gfx/interface/technologies/com_arty_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_anti_tank_2_medium" 
+		texturefile = "gfx/interface/technologies/com_at_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_anti_tank_3_medium" 
+		texturefile = "gfx/interface/technologies/com_at_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_anti_tank_4_medium" 
+		texturefile = "gfx/interface/technologies/com_at_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_pack_artillery_2_medium" 
+		texturefile = "gfx/interface/technologies/com_at_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_pack_artillery_3_medium" 
+		texturefile = "gfx/interface/technologies/com_at_5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_dp_artillery_medium" 
+		texturefile = "gfx/interface/technologies/dual_purpose_arty.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_dp_artillery_2_medium" 
+		texturefile = "gfx/interface/technologies/dual_purpose_arty.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_heavy_artillery_2_medium" 
+		texturefile = "gfx/interface/technologies/com_heavy_arty_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_heavy_artillery_3_medium" 
+		texturefile = "gfx/interface/technologies/com_heavy_arty_3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_heavy_artillery_4_medium" 
+		texturefile = "gfx/interface/technologies/com_heavy_arty_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_heavy_anti_air_1_medium" 
+		texturefile = "gfx/interface/technologies/com_heavy_aa_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_heavy_anti_air_2_medium" 
+		texturefile = "gfx/interface/technologies/com_heavy_aa_2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_heavy_anti_tank_medium" 
+		texturefile = "gfx/interface/technologies/com_heavy_at_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_heavy_anti_tank_2_medium" 
+		texturefile = "gfx/interface/technologies/com_heavy_at_2.dds"
+	}
+
+	### SMALL IMPROVEMENTS ###
+
+	SpriteType = {
+		name = "GFX_rcmi_interwar_low_calibre_improvements_medium" 
+		texturefile = "gfx/interface/technologies/basic_light_shell.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_anti_air_improvements_1_medium" 
+		texturefile = "gfx/interface/technologies/antiair1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_anti_air_improvements_2_medium" 
+		texturefile = "gfx/interface/technologies/antiair2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_interwar_medium_shells_medium" 
+		texturefile = "gfx/interface/technologies/basic_medium_shell.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_artillery_improvements_1_medium" 
+		texturefile = "gfx/interface/technologies/artillery1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_artillery_improvements_2_medium" 
+		texturefile = "gfx/interface/technologies/artillery2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_artillery_improvements_3_medium" 
+		texturefile = "gfx/interface/technologies/artillery3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_artillery_improvements_4_medium" 
+		texturefile = "gfx/interface/technologies/artillery4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_artillery_improvements_5_medium" 
+		texturefile = "gfx/interface/technologies/artillery5.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_interwar_heavy_shells_medium" 
+		texturefile = "gfx/interface/technologies/basic_heavy_shell.dds"
+	} 
+
+	SpriteType = {
+		name = "GFX_rcmi_heavy_arty_improvements_1_medium" 
+		texturefile = "gfx/interface/technologies/antitank1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_heavy_arty_improvements_2_medium" 
+		texturefile = "gfx/interface/technologies/antitank2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_heavy_arty_improvements_3_medium" 
+		texturefile = "gfx/interface/technologies/antitank3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_squad_weapons_upgrade_1_medium" 
+		texturefile = "gfx/interface/technologies/support_weapons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_squad_weapons_upgrade_2_medium" 
+		texturefile = "gfx/interface/technologies/support_weapons2.dds"
+	}
+
+	### SHELLS ### 
+
+	SpriteType = {
+		name = "GFX_rcmi_shell_research_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_ap.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_basic_chemical_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_aphe.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_improved_chemical_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_aphecbc.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_tank_grenades_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heatGrenade.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_anti_emplacement_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_hesh.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_hetf_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_hevt.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_hevt_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heprx.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_fin_stabilized_chemical_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heatfs.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_heatfsmp_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heatfs.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_basic_kinetic_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apcr.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_improved_kinetic_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apcbc.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_apds_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apds.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_apfsds_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apfsds.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_rcmi_apfsds_du_shells_medium" 
+		texturefile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apfsds.dds"
+	}
+
+	### PRIMARY SHELLS ### 
+
+	spriteType = {
+		name = "GFX_EMI_tank_shell_ap"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_ap.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_shell_ap_hv"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_ap.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_apc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apc.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_apbc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apbc.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_apcbc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apcbc.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_aphe"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_aphe.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_aphebc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_aphebc.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_aphecbc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_aphecbc.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_saphecbc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_sap.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_saphei"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_sap.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_ac"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_ac.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_apcr"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apcr.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_apds"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apds.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_apfsds"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apfsds.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_du_apfsds"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apfsds.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_he"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_he.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_hetf"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heprx.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_hevt"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_hevt.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_he_grenade"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heGrenade.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_vog"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_vog.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_shrapnel"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_shrapnel.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_hesh"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_hesh.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_heat"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heat.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_heatfs"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heatfs.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_heatfsmp"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heatfs.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_heat_grenade"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heatGrenade.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_shell_smoke"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_smoke.dds"
+		legacy_lazy_load = no
+	}
+
+	### SECONDARY SHELLS ###
+
+	
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_ap"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_ap.dds"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_ap_hv"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_ap.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_apc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apc.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_apbc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apbc.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_apcbc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apcbc.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_aphe"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_aphe.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_aphebc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_aphebc.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_aphecbc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_aphecbc.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_saphecbc"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_sap.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_saphei"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_sap.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_ac"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_ac.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_apcr"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apcr.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_apds"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apds.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_apfsds"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apfsds.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_du_apfsds"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_apfsds.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_he"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_he.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_hetf"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heprx.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_hevt"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_hevt.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_he_grenade"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heGrenade.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_vog"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_vog.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_shrapnel"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_shrapnel.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_hesh"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_hesh.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_heat"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heat.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_heatfs"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heatfs.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_heatfsmp"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heatfs.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_heat_grenade"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_heatGrenade.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_secondary_shell_smoke"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/shell_smoke.dds"
+		legacy_lazy_load = no
+	}
+}  
