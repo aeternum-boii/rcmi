@@ -47,6 +47,7 @@ sub_units = {
 
 
 		can_be_parachuted = yes
+		same_support_type = artillery
 	}
 	
 	rocket_artillery = {
@@ -96,6 +97,7 @@ sub_units = {
 
 
 		can_be_parachuted = yes
+		same_support_type = artillery
 	}
 
 	pack_artillery = {
@@ -144,6 +146,7 @@ sub_units = {
 
 
 		can_be_parachuted = yes
+		same_support_type = artillery
 	}
 
 	dp_artillery = {
@@ -191,7 +194,8 @@ sub_units = {
 		hard_attack = -0.4
 
 
-		can_be_parachuted = yes
+		can_be_parachuted = no
+		same_support_type = artillery
 	}
 	
 	super_heavy_artillery = {
