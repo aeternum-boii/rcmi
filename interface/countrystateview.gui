@@ -102,11 +102,11 @@ guiTypes = {
 			
 			instantTextboxType = {
 				name = "claims"
-				position = { x = 15 y = 97 }
+				position = { x = 15 y = 99 }
 				textureFile = ""
 				font = "hoi_18mbs"
 				text = ""
-				maxWidth = 120	
+				maxWidth = 140
 				maxHeight = 30
 				fixedsize = yes
 				format = center				
@@ -637,7 +637,6 @@ guiTypes = {
 			maxWidth = 80	
 			format = center	
 			alwaystransparent = yes	
-			scale = 0.95
 		}	
 	}	
 	containerWindowType = {	
@@ -668,7 +667,6 @@ guiTypes = {
 			maxWidth = 80	
 			format = center	
 			alwaystransparent = yes	
-			scale = 0.95
 		}	
 	}	
 		

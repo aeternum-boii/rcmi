@@ -1,0 +1,206 @@
+sub_units = {
+
+	light_sp_artillery = {
+		abbreviation = "LAR-S"
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 1795
+		ai_priority = 100
+		active = yes
+		is_artillery_brigade = yes
+		
+		type = {
+			armor
+			artillery
+			support
+		}
+		
+		group = support
+
+		categories = {
+			category_all_armor
+			category_army
+			category_self_propelled_artillery
+			category_support_artillery
+			category_support_battalions
+		}		
+
+		combat_width = 0
+
+		need = {
+			light_tank_artillery_chassis = 12
+		}
+		manpower = 120
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		training_time = 180
+		weight = 0.2
+		supply_consumption = 0.34
+
+		breakthrough = -0.2
+		soft_attack = 0.15
+		suppression = 1.0
+
+		battalion_mult = {
+			category = category_tanks
+			soft_attack = 0.3
+			breakthrough = 0.075
+		}
+
+		same_support_type = sp_artillery
+	}
+	
+	medium_sp_artillery = {
+		abbreviation = "MAR-S"
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 1796
+		ai_priority = 100
+		active = yes
+		is_artillery_brigade = yes
+		
+		type = {
+			armor
+			artillery
+			support
+		}
+		
+		group = support
+
+		categories = {
+			category_all_armor
+			category_army
+			category_self_propelled_artillery
+			category_support_artillery
+			category_support_battalions
+		}		
+
+		combat_width = 0
+
+		need = {
+			medium_tank_artillery_chassis = 12
+		}
+		manpower = 120
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		training_time = 180
+		weight = 0.3
+		supply_consumption = 0.36
+
+		breakthrough = -0.2
+		soft_attack = 0.15
+		suppression = 1.0
+
+		battalion_mult = {
+			category = category_tanks
+			soft_attack = 0.3
+			breakthrough = 0.075
+		}
+
+		same_support_type = sp_artillery
+	}
+
+	heavy_sp_artillery = {
+		abbreviation = "HAR-S"
+		sprite = heavy_armor
+		map_icon_category = armored
+		priority = 1797
+		ai_priority = 100
+		active = yes
+		is_artillery_brigade = yes
+
+		type = {
+			armor
+			artillery
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_all_armor
+			category_army
+			category_self_propelled_artillery
+			category_support_battalions
+			category_support_artillery
+		}
+
+		combat_width = 0
+
+		need = {
+			heavy_tank_artillery_chassis = 12
+		}
+		manpower = 120
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		training_time = 180
+		weight = 1.5
+		supply_consumption = 0.34
+
+		breakthrough = -0.2
+		soft_attack = 0.15
+		suppression = 1.25
+
+		battalion_mult = {
+			category = category_tanks
+			soft_attack = 0.3
+			breakthrough = 0.075
+		}
+
+		same_support_type = sp_artillery
+	}
+
+	modern_sp_artillery = {
+		abbreviation = "OAR-S"
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 1798
+		ai_priority = 100
+		active = yes
+		is_artillery_brigade = yes
+
+		type = {
+			armor
+			artillery
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_all_armor
+			category_army
+			category_self_propelled_artillery
+			category_support_battalions
+			category_support_artillery
+		}
+
+		combat_width = 0
+
+		need = {
+			modern_tank_artillery_chassis = 12
+		}
+		manpower = 120
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		training_time = 180
+		weight = 1.5
+		supply_consumption = 0.34
+
+		breakthrough = -0.2
+		soft_attack = 0.15
+		suppression = 1.25
+
+		battalion_mult = {
+			category = category_tanks
+			soft_attack = 0.3
+			breakthrough = 0.075
+		}
+
+		same_support_type = sp_artillery
+	}
+}

@@ -1,0 +1,209 @@
+sub_units = {
+
+	light_tank_destroyer = {
+		abbreviation = "LTD-S"
+		sprite = "light_armor"
+		map_icon_category = armored
+		priority = 1795
+		ai_priority = 100
+		active = yes
+		
+		type = {
+			armor
+			anti_tank
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_all_armor
+			category_army
+			category_tank_destroyers
+			category_support_battalions
+			category_support_artillery
+		}
+
+		combat_width = 0
+
+		need = {
+			light_tank_destroyer_chassis = 12
+		}
+		manpower = 120
+		max_organisation = 0
+		default_morale = 0.3
+		max_strength = 0.6
+		training_time = 180
+		weight = 0.2
+		supply_consumption = 0.16
+
+		breakthrough = -0.2
+		hard_attack = 0.15
+		suppression = 1.0
+
+		battalion_mult = {
+			category = category_tanks
+			hard_attack = 0.3
+			breakthrough = 0.075
+		}
+
+		same_support_type = tank_destroyer
+	}
+	
+	medium_tank_destroyer = {
+		abbreviation = "MTD-S"
+		sprite = "medium_armor"
+		map_icon_category = armored
+		priority = 1796
+		ai_priority = 100
+		active = yes
+		
+		type = {
+			armor
+			anti_tank
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_all_armor
+			category_army
+			category_tank_destroyers
+			category_support_artillery
+			category_support_battalions
+		}
+
+
+		combat_width = 0
+
+		need = {
+			medium_tank_destroyer_chassis = 12
+		}
+		manpower = 120
+		max_organisation = 0
+		default_morale = 0.3
+		max_strength = 0.6
+		training_time = 180
+		weight = 1.25
+		supply_consumption = 0.18
+
+		breakthrough = -0.2
+		hard_attack = 0.15
+		suppression = 1.0
+
+		battalion_mult = {
+			category = category_tanks
+			hard_attack = 0.3
+			breakthrough = 0.075
+		}
+
+		same_support_type = tank_destroyer
+	}
+	
+	heavy_tank_destroyer = {
+		abbreviation = "HTD-S"
+		sprite = "heavy_armor"
+		map_icon_category = armored
+		priority = 1797
+		ai_priority = 100
+		active = yes
+		training_time = 180
+		
+		type = {
+			armor
+			anti_tank
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_all_armor
+			category_army
+			category_tank_destroyers
+			category_support_artillery
+			category_support_battalions
+		}
+
+
+		combat_width = 0
+
+		need = {
+			heavy_tank_destroyer_chassis = 12
+		}
+		manpower = 120
+		max_organisation = 0
+		default_morale = 0.3
+		max_strength = 0.6
+		weight = 1.5
+		supply_consumption = 0.22
+
+		breakthrough = -0.2
+		hard_attack = 0.15
+		suppression = 1.0
+
+		battalion_mult = {
+			category = category_tanks
+			hard_attack = 0.3
+			breakthrough = 0.075
+		}
+
+		same_support_type = tank_destroyer
+	}
+	
+	modern_tank_destroyer = {
+		abbreviation = "OTD-S"
+		sprite = "medium_armor"
+		map_icon_category = armored
+		priority = 1796
+		ai_priority = 100
+		active = yes
+		
+		type = {
+			armor
+			anti_tank
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_front_line
+			category_all_armor
+			category_army
+			category_tank_destroyers
+			category_support_artillery
+			category_support_battalions
+		}
+
+
+		combat_width = 0
+
+		need = {
+			modern_tank_destroyer_chassis = 12
+		}
+		manpower = 120
+		max_organisation = 0
+		default_morale = 0.3
+		max_strength = 0.6
+		training_time = 180
+		weight = 1.5
+		supply_consumption = 0.22
+		
+		breakthrough = -0.2
+		hard_attack = 0.15
+		suppression = 1.0
+
+		battalion_mult = {
+			category = category_tanks
+			hard_attack = 0.3
+			breakthrough = 0.075
+		}
+
+		same_support_type = tank_destroyer
+	}
+}

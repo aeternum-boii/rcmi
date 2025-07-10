@@ -31,6 +31,21 @@ technologies = {
 			artillery
 			artillery_brigade
 			mot_artillery_brigade
+
+			light_sp_artillery  
+			medium_sp_artillery  
+			heavy_sp_artillery  
+			modern_sp_artillery  
+
+			light_tank_destroyer  
+			medium_tank_destroyer  
+			heavy_tank_destroyer  
+			modern_tank_destroyer  
+
+			light_sp_anti_air  
+			medium_sp_anti_air  
+			heavy_sp_anti_air  
+			modern_sp_anti_air  
 		}
 		enable_equipment_modules = {
 			ship_anti_air_1

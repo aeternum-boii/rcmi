@@ -1,0 +1,191 @@
+sub_units = {
+	light_sp_anti_air = {
+		abbreviation = "LAA"
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 301
+		ai_priority = 100
+		active = yes
+
+		type = {
+			support
+			armor
+			anti_air
+		}
+
+		group = support
+		same_support_type = spaa
+
+		categories = {
+			category_all_armor
+			category_army
+			category_self_propelled_anti_air
+		}
+
+		combat_width = 0
+
+		need = {
+			light_tank_aa_chassis = 36
+		}
+		manpower = 500
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		training_time = 180
+		weight = 1
+		supply_consumption = 0.1
+
+		breakthrough = -0.55
+		air_attack = 1.15
+		suppression = 0.75
+
+		battalion_mult = {
+			category = category_tanks
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+	}
+
+	medium_sp_anti_air = {
+		abbreviation = "MAA"
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 301
+		ai_priority = 100
+		active = yes
+
+		type = {
+			support
+			armor
+			anti_air
+		}
+
+		group = support
+		same_support_type = spaa
+
+		categories = {
+			category_all_armor
+			category_army
+			category_self_propelled_anti_air
+		}
+
+		combat_width = 0
+
+		need = {
+			medium_tank_aa_chassis = 36
+		}
+		manpower = 500
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		training_time = 180
+		weight = 1.25
+		supply_consumption = 0.1
+
+		breakthrough = -0.53
+		air_attack = 1.15
+		suppression = 0.8
+
+
+		battalion_mult = {
+			category = category_tanks
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+	}
+
+	heavy_sp_anti_air = {
+		abbreviation = "HAA"
+		sprite = heavy_armor
+		map_icon_category = armored
+		priority = 301
+		ai_priority = 100
+		active = yes
+
+		type = {
+			support
+			armor
+			anti_air
+		}
+
+		group = support
+		same_support_type = spaa
+
+		categories = {
+			category_all_armor
+			category_army
+			category_self_propelled_anti_air
+		}
+
+		combat_width = 0
+
+		need = {
+			heavy_tank_aa_chassis = 36
+		}
+		manpower = 500
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		training_time = 180
+		weight = 1.5
+		supply_consumption = 0.1
+
+		breakthrough = -0.35
+		air_attack = 1.15
+		suppression = 0.75
+
+
+		battalion_mult = {
+			category = category_tanks
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+	}
+
+	modern_sp_anti_air = {
+		abbreviation = "OAA"
+		sprite = medium_armor
+		map_icon_category = armored
+		priority = 301
+		ai_priority = 100
+		active = yes
+
+		type = {
+			support
+			armor
+			anti_air
+		}
+
+		group = support
+		same_support_type = spaa
+
+		categories = {
+			category_all_armor
+			category_army
+			category_self_propelled_anti_air
+		}
+
+		combat_width = 0
+
+		need = {
+			modern_tank_aa_chassis = 36
+		}
+		manpower = 500
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		training_time = 180
+		weight = 1.5
+		supply_consumption = 0.1
+
+		breakthrough = -0.53
+		air_attack = 1.15
+		suppression = 2
+
+		battalion_mult = {
+			category = category_tanks
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+	}
+}
