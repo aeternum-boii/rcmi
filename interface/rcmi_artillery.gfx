@@ -3,6 +3,16 @@ spriteTypes = {
 	### EQUIPMENTS ### 
 
 	SpriteType = {
+		name = "GFX_rcmi_mot_anti_air_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/sov_mot_aa.dds"
+	} 
+
+	SpriteType = {
+		name = "GFX_rcmi_mot_anti_air_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/sov_mech_aa.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_rcmi_gw_artillery_medium"
 		texturefile = "gfx/interface/technologies/com_arty_1.dds"
 	} 

@@ -49,7 +49,6 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			ship_anti_air_1
-			tank_small_cannon
 			secondary_turret_small_cannon
 			tank_close_support_gun			
 			tank_shell_ap
@@ -219,6 +218,10 @@ technologies = {
 				x = -11
 				y = 2
 			}
+		}
+
+		enable_equipment_modules = {
+			tank_heavy_machine_gun
 		}
 
 		category_front_line = {
@@ -421,7 +424,10 @@ technologies = {
 			ship_anti_air_2
 			tank_auto_cannon
 			tank_small_cannon
-		}		special_project_specialization = { specialization_land }
+			tank_anti_air_cannon
+		}		
+		
+		special_project_specialization = { specialization_land }
 		
 		categories = {
 			mio_cat_all_artillery_equipment
@@ -448,6 +454,11 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 
+		path = {
+			leads_to_tech = rcmi_mot_anti_air_1
+			research_cost_coeff = 1.0
+		}
+
 		enable_equipments = {
 			anti_air_equipment_2
 		}
@@ -455,6 +466,35 @@ technologies = {
 		enable_equipment_modules = {
 			ship_anti_air_3
 		}
+		special_project_specialization = { specialization_land }
+		
+		categories = {
+			artillery
+			cat_anti_air
+			mio_cat_all_artillery_equipment
+		}
+	}
+
+	rcmi_mot_anti_air_1 = {
+		start_year = 1940
+		research_cost = 2
+
+		allow = {
+			has_tech = motorised_infantry
+		}
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -8
+				y = 5.5
+			}
+		}
+
+		enable_equipments = {
+			mot_anti_air_equipment_1
+		}
+
 		special_project_specialization = { specialization_land }
 		
 		categories = {
@@ -512,6 +552,8 @@ technologies = {
 		}
 		enable_equipment_modules = { 
 			ship_anti_air_4
+			tank_auto_cannon_2
+			tank_anti_air_cannon_2
 		}
 		
 		path = {
@@ -580,6 +622,15 @@ technologies = {
 			}
 		}
 
+		path = {
+			leads_to_tech = rcmi_mot_anti_air_2
+			research_cost_coeff = 1.0
+		}
+
+		enable_equipment_modules = {
+			tank_anti_air_cannon_3
+		}
+
 		enable_equipments = {
 			anti_air_equipment_3
 		}
@@ -592,6 +643,35 @@ technologies = {
 		}
 	}
 	
+	rcmi_mot_anti_air_2 = {
+		start_year = 1943
+		research_cost = 2
+
+		allow = {
+			has_tech = motorised_infantry
+		}
+
+		folder = {
+			name = artillery_folder
+			position = { 
+				x = -8
+				y = 12
+			}
+		}
+
+		enable_equipments = {
+			mot_anti_air_equipment_2
+		}
+
+
+		special_project_specialization = { specialization_land }
+		
+		categories = {
+			artillery
+			cat_anti_air
+			mio_cat_all_artillery_equipment
+		}
+	}
 
 	rcmi_shell_research = {
 		research_cost = 0.35
@@ -1132,13 +1212,15 @@ technologies = {
 		mot_anti_tank_brigade = {
 			hard_attack = 0.03
 		}
-				special_project_specialization = { specialization_land }
+		
+		special_project_specialization = { specialization_land }
 		
 		categories = {
 			mio_cat_all_artillery_equipment
 			artillery
 			cat_anti_tank
 		}
+
 
 		path = {
 			leads_to_tech = rcmi_artillery_2 
@@ -1171,6 +1253,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			# TANK HOWITZER 1 here 
+			tank_medium_howitzer
 		}
 		special_project_specialization = { specialization_land }
 		
@@ -1337,22 +1420,50 @@ technologies = {
 				attack = 0.1
 			}
 		}
-		# TODO: FIX ASSAULT GUNS TO SPGS 
-		light_assault_gun_brigade = {
+
+		light_sp_artillery = {
 			fort = {
 				attack = 0.1
 			}
 		}
-		medium_assault_gun_brigade = {
+		light_sp_artillery_brigade = {
+			fort = {
+				attack = 0.1
+			}
+		}
+
+		medium_sp_artillery = {
 			fort = {
 				attack = 0.2
 			}
 		}
+		medium_sp_artillery_brigade = {
+			fort = {
+				attack = 0.2
+			}
+		}
+		
+		heavy_sp_artillery = {
+			fort = {
+				attack = 0.3
+			}
+		}
+		heavy_sp_artillery_brigade = {
+			fort = {
+				attack = 0.3
+			}
+		}
+
 		anti_tank_brigade = {
 			hard_attack = 0.03
 		}
 		mot_anti_tank_brigade = {
 			hard_attack = 0.03
+		}
+
+		enable_equipment_modules = {
+			tank_small_cannon_2
+			tank_medium_cannon
 		}
 
 		folder = {
@@ -1462,16 +1573,40 @@ technologies = {
 				attack = 0.1
 			}
 		}
-		light_assault_gun_brigade = {
+
+		light_sp_artillery = {
 			fort = {
 				attack = 0.1
 			}
 		}
-		medium_assault_gun_brigade = {
+		light_sp_artillery_brigade = {
+			fort = {
+				attack = 0.1
+			}
+		}
+
+		medium_sp_artillery = {
 			fort = {
 				attack = 0.2
 			}
 		}
+		medium_sp_artillery_brigade = {
+			fort = {
+				attack = 0.2
+			}
+		}
+		
+		heavy_sp_artillery = {
+			fort = {
+				attack = 0.3
+			}
+		}
+		heavy_sp_artillery_brigade = {
+			fort = {
+				attack = 0.3
+			}
+		}
+		
 		anti_tank_brigade = {
 			hard_attack = 0.03
 		}
@@ -1493,6 +1628,11 @@ technologies = {
 		}
 		special_project_specialization = { specialization_land }
 		
+		enable_equipment_modules = {
+			tank_medium_cannon_2
+			tank_medium_howitzer_2
+		}
+
 		categories = {
 			artillery
 			cat_anti_tank
@@ -1579,16 +1719,39 @@ technologies = {
 				attack = 0.1
 			}
 		}
-		light_assault_gun_brigade = {
+		light_sp_artillery = {
 			fort = {
 				attack = 0.1
 			}
 		}
-		medium_assault_gun_brigade = {
+		light_sp_artillery_brigade = {
+			fort = {
+				attack = 0.1
+			}
+		}
+
+		medium_sp_artillery = {
 			fort = {
 				attack = 0.2
 			}
 		}
+		medium_sp_artillery_brigade = {
+			fort = {
+				attack = 0.2
+			}
+		}
+		
+		heavy_sp_artillery = {
+			fort = {
+				attack = 0.3
+			}
+		}
+		heavy_sp_artillery_brigade = {
+			fort = {
+				attack = 0.3
+			}
+		}
+		
 		anti_tank_brigade = {
 			hard_attack = 0.03
 		}
@@ -1698,15 +1861,10 @@ technologies = {
 			}
 		}
 
-		heavy_artillery_brigade = {
+		dp_artillery_brigade = {
 			soft_attack = 0.03
 			fort = {
 				attack = 0.2
-			}
-		}
-		heavy_assault_gun_brigade = {
-			fort = {
-				attack = 0.3
 			}
 		}
 		heavy_anti_air = {
@@ -1726,6 +1884,11 @@ technologies = {
 		path = {
 			leads_to_tech = rcmi_heavy_anti_air_1
 			research_cost_coeff = 1
+		}
+
+		enable_equipment_modules = {
+			tank_heavy_cannon
+			tank_high_velocity_cannon
 		}
 	}
 
@@ -1788,15 +1951,10 @@ technologies = {
 			}
 		}
 		
-		heavy_artillery_brigade = {
+		dp_artillery_brigade = {
 			soft_attack = 0.03
 			fort = {
 				attack = 0.2
-			}
-		}
-		heavy_assault_gun_brigade = {
-			fort = {
-				attack = 0.3
 			}
 		}
 		heavy_anti_air = {
@@ -1825,6 +1983,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		special_project_specialization = { specialization_land }
+
+		enable_equipment_modules = {
+			tank_heavy_cannon_2
+			tank_high_velocity_cannon_2
+		}
 		
 		categories = {
 			cat_anti_air
@@ -1844,6 +2007,10 @@ technologies = {
 				x = 18
 				y = 5
 			}
+		}
+
+		enable_equipment_modules = {
+			tank_heavy_howitzer
 		}
 
 		enable_equipments = {
@@ -1917,7 +2084,7 @@ technologies = {
 			}
 		}
 
-		heavy_artillery_brigade = {
+		dp_artillery_brigade = {
 			soft_attack = 0.03
 			fort = {
 				attack = 0.2
@@ -1942,6 +2109,11 @@ technologies = {
 		}
 		special_project_specialization = { specialization_land }
 		
+		enable_equipment_modules = {
+			tank_heavy_cannon_3
+			tank_high_velocity_cannon_3
+		}
+
 		categories = {
 			artillery
 			mio_cat_all_artillery_equipment
@@ -1960,6 +2132,10 @@ technologies = {
 				x = 18 
 				y = 9
 			}
+		}
+
+		enable_equipment_modules = {
+			tank_super_heavy_cannon
 		}
 
 		enable_equipments = {

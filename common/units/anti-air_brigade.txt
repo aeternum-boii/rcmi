@@ -127,4 +127,190 @@ sub_units = {
 			attack = -0.4
 		}
 	}
+
+	heavy_anti_air_brigade = {
+		abbreviation = "HANA"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 301
+		ai_priority = 10
+		active = yes
+
+		type = {
+			infantry
+			anti_air
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_army
+			category_line_artillery
+			category_anti_air
+		}		
+		
+		combat_width = 1
+		
+		#Size Definitions
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.8
+		manpower = 500
+		training_time = 120
+		weight = 0.8
+		
+		supply_consumption = 0.1
+
+		need = {
+			heavy_anti_air_equipment = 30
+		}
+
+		forest = {
+			attack = -0.15
+			movement = -0.15
+		}
+
+		jungle = {
+			attack = -0.3
+			movement = -0.3
+		}
+
+		marsh = {
+			attack = -0.3
+			movement = -0.3
+		}
+
+		river = {
+			attack = -0.3
+			movement = -0.3
+		}
+
+		amphibious = {
+			attack = -0.6
+		}
+	}
+	mot_heavy_anti_air_brigade = {
+		abbreviation = "MHAA"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 301
+		ai_priority = 10
+		active = yes
+
+		type = {
+			motorized
+			anti_air
+		}
+		
+		group = mobile
+		
+		categories = {
+			category_army
+			category_line_artillery
+			category_mobile_and_mobile_combat_sup
+		}		
+		
+		combat_width = 1
+		
+		#Size Definitions
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		manpower = 500
+		training_time = 120
+		weight = 0.58
+		
+		supply_consumption = 0.2
+		transport = motorized_equipment
+		need = {
+			heavy_anti_air_equipment = 30
+			motorized_equipment = 50
+		}
+
+		forest = {
+			attack = -0.15
+			movement = -0.6
+		}
+
+		jungle = {
+			attack = -0.3
+			movement = -0.6
+		}
+
+		marsh = {
+			attack = -0.3
+			movement = -0.3
+		}
+
+		river = {
+			attack = -0.3
+			movement = -0.3
+		}
+
+		amphibious = {
+			attack = -0.6
+		}
+	}
+
+	motorised_anti_air_brigade = {
+		abbreviation = "MAA"
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 301
+		ai_priority = 10
+		active = yes
+
+		type = {
+			motorized
+			anti_air
+		}
+		
+		group = mobile
+		
+		categories = {
+			category_army
+			category_line_artillery
+			category_mobile_and_mobile_combat_sup
+		}		
+		
+		combat_width = 1
+		
+		#Size Definitions
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.6
+		manpower = 500
+		training_time = 120
+		weight = 0.58
+		
+		supply_consumption = 0.2
+		transport = mot_anti_air_equipment
+		need = {
+			mot_anti_air_equipment = 30
+		}
+
+		forest = {
+			attack = -0.1
+			movement = -0.3
+		}
+
+		jungle = {
+			attack = -0.15
+			movement = -0.3
+		}
+
+		marsh = {
+			attack = -0.1
+			movement = -0.1
+		}
+
+		river = {
+			attack = -0.1
+			movement = -0.1
+		}
+
+		amphibious = {
+			attack = -0.3
+		}
+	}
 }

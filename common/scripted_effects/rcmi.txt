@@ -59,3 +59,90 @@ rcmi_sic_reset = {
 		rcmi_shared_cic_from_subjects = 0 
 	}		
 }
+rcmi_tech_startup_effects = {
+	if = {
+		limit = {
+			OR = {
+				tag = GER
+				tag = JAP 
+				tag = ENG
+				tag = FRA
+				tag = SOV 
+				tag = USA 
+				tag = ITA
+			}
+		} 
+		rcmi_tech_startup_effects_major = yes 
+	} else_if = {
+		limit = {
+			OR = {
+				tag = HUN
+				tag = POL 
+				tag = ROM 
+				tag = GRE 
+				tag = YUG 
+				tag = BUL 
+				tag = CAN 
+				tag = BEL 
+				tag = HOL 
+				tag = SPR 
+				tag = FIN
+				tag = SAF
+				tag = AST 
+				tag = NZL
+				tag = RAJ
+			}
+		}
+		rcmi_tech_startup_effects_minor = yes
+	} else = {
+		rcmi_tech_startup_effects_base = yes
+	}
+}
+rcmi_tech_startup_effects_major = {
+	rcmi_tech_startup_effects_minor = yes 
+	set_technology = {
+		popup = no 
+		rcmi_early_squad_weapons = 1
+		rcmi_squad_weapons_upgrade_1 = 1
+		rcmi_interwar_low_calibre_improvements = 1
+		rcmi_basic_chemical_shells = 1
+		rcmi_basic_kinetic_shells = 1
+		rcmi_interwar_medium_shells = 1
+		rcmi_interwar_heavy_shells = 1
+	}
+	add_equipment_production = {
+		equipment = { 
+			type = squad_equipment_0
+		}
+		requested_factories = 1
+		efficiency = 5
+	}
+}
+rcmi_tech_startup_effects_minor = {
+	rcmi_tech_startup_effects_base = yes 
+	set_technology = {
+		popup = no 
+		rcmi_early_low_calibre = 1
+		rcmi_shell_research = 1
+	}
+	add_equipment_production = {
+		equipment = { 
+			type = anti_air_equipment_1
+		}
+		requested_factories = 1
+		efficiency = 5
+	}
+}
+rcmi_tech_startup_effects_base = {
+	set_technology = {
+		popup = no 
+		rcmi_gw_artillery = 1
+	}
+	add_equipment_production = {
+		equipment = { 
+			type = artillery_equipment_1
+		}
+		requested_factories = 1
+		efficiency = 5
+	}
+}
