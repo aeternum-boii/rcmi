@@ -93,24 +93,44 @@ equipments = {
 	dp_artillery_equipment = {
 		year = 1940
 
-		archetype = artillery_equipment
-		parent = artillery_equipment_2
+		is_archetype = yes
 		priority = 100
 		visual_level = 2
 		
-		defense = 8
+		defense = 12
 		breakthrough = 4
-		soft_attack = 20
-		hard_attack = 8
-		ap_attack = 45
+		soft_attack = 38
+		hard_attack = 9
+		ap_attack = 50
 		
-		build_cost_ic = 14.5
+		build_cost_ic = 24
+		
+		resources = {
+			tungsten = 1
+			steel = 2
+		}
+		
+		upgrades = {
+			ART_reliability_upgrade
+			ART_SA_upgrade
+			ART_HA_upgrade
+			ART_defence_upgrade
+		}
+		
+		picture = archetype_artillery_equipment
+		type = {
+			artillery
+			infantry
+		}
+		group_by = archetype
+
+		interface_category = interface_category_land
 	}
 
 	dp_artillery_equipment_2 = {
 		year = 1942
 
-		archetype = artillery_equipment
+		archetype = dp_artillery_equipment
 		parent = dp_artillery_equipment
 		priority = 100
 		visual_level = 2
