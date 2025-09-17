@@ -147,6 +147,15 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 		}		
+
+		enable_equipment_modules = {
+			secondary_turret_hmg
+		}
+
+		enable_building = {
+			building = anti_air_building	#was misspelled
+			level = 5
+		}
 	}
 
 	rcmi_early_squad_weapons = {
@@ -406,7 +415,9 @@ technologies = {
 			ship_anti_air_2
 			tank_auto_cannon
 			tank_small_cannon
-		}		special_project_specialization = { specialization_land }
+		}		
+		
+		special_project_specialization = { specialization_land }
 		
 		categories = {
 			mio_cat_all_artillery_equipment
@@ -439,6 +450,7 @@ technologies = {
 
 		enable_equipment_modules = {
 			ship_anti_air_3
+			tank_anti_air_gun
 		}
 		special_project_specialization = { specialization_land }
 		
@@ -463,6 +475,14 @@ technologies = {
 
 		enable_equipments = {
 			anti_tank_equipment_squeeze_1
+		}
+		enable_subunits = {
+			squeeze_anti_tank
+			squeeze_anti_tank_brigade
+		}
+		enable_equipment_modules = {
+			tank_anti_air_cannon
+			tank_small_howitzer
 		}
 		special_project_specialization = { specialization_land }
 		
@@ -1117,7 +1137,8 @@ technologies = {
 		mot_anti_tank_brigade = {
 			hard_attack = 0.03
 		}
-				special_project_specialization = { specialization_land }
+		
+		special_project_specialization = { specialization_land }
 		
 		categories = {
 			mio_cat_all_artillery_equipment
@@ -1137,7 +1158,15 @@ technologies = {
 			leads_to_tech = rcmi_artillery_improvements_2
 			research_cost_coeff = 1.0
 		}
+
+		enable_equipment_modules = {
+			tank_small_howitzer
+			tank_small_cannon
+			tank_secondary_cannon
+			tank_secondary_howitzer
+		}
 	}
+
 
 	rcmi_artillery_2 = {
 		start_year = 1939 
@@ -1284,7 +1313,7 @@ technologies = {
 		}
 
 		enable_equipments = {
-			dp_artillery_equipment
+			dp_artillery_equipment_1
 		}
 		enable_subunits = {
 			dp_artillery_brigade
@@ -1355,6 +1384,10 @@ technologies = {
 			mio_cat_tech_all_armor_and_modules
 			armor
 			mio_cat_all_artillery_equipment
+		}
+
+		enable_equipment_modules = {
+			r56_tank_medium_cannon_3
 		}
 
 		path = {
@@ -1598,6 +1631,11 @@ technologies = {
 			armor
 			mio_cat_tech_all_armor_and_modules
 		}
+
+		enable_equipment_modules = {
+			r56_tank_heavy_cannon_4
+			r56_tank_medium_cannon_4
+		}
 	}
 
 	rcmi_artillery_4 = {
@@ -1729,6 +1767,9 @@ technologies = {
 		enable_equipments = {
 			heavy_artillery_equipment_2
 		}
+		enable_subunits = {
+			heavy_artillery_brigade
+		}
 		special_project_specialization = { specialization_land }
 		
 		categories = {
@@ -1751,6 +1792,10 @@ technologies = {
 
 		enable_equipments = {
 			heavy_anti_air_equipment_1
+		}
+		enable_subunits = {
+			heavy_anti_air
+			heavy_anti_air_brigade
 		}
 		special_project_specialization = { specialization_land }
 		
@@ -1817,6 +1862,11 @@ technologies = {
 			artillery
 			mio_cat_all_artillery_equipment
 		}
+
+		enable_equipment_modules = {
+			r56_tank_high_velocity_cannon_4
+			r56_tank_heavy_cannon_4
+		}
 	}
 
 	rcmi_heavy_artillery_3 = {
@@ -1856,6 +1906,10 @@ technologies = {
 
 		enable_equipments = {
 			heavy_anti_tank_equipment_1
+		}
+		enable_subunits = {
+			heavy_anti_tank_brigade
+			heavy_anti_tank
 		}
 		special_project_specialization = { specialization_land }
 		

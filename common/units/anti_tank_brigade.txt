@@ -143,4 +143,211 @@ sub_units = {
 			attack = -0.4
 		}
 	}
+
+	squeeze_anti_tank_brigade = {
+		abbreviation = "SANT"
+		sprite = anti_tank
+		map_icon_category = infantry
+		priority = 1197
+		ai_priority = 100
+		active = yes
+		
+		type = {
+			infantry
+			anti_tank
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_army
+			category_line_artillery
+		}		
+		
+		combat_width = 1
+
+		need = {
+			anti_tank_equipment_squeeze = 36
+		}
+		manpower = 500
+		max_organisation = 0
+		default_morale = 0
+		max_strength = 0.6
+		training_time = 120
+		weight = 0.4
+
+		supply_consumption = 0.075
+
+		forest = {
+			attack = -0.05
+		}
+
+		mountain = {
+			movement = -0.05
+		}
+
+		jungle = {
+			attack = -0.1
+			movement = -0.05
+		}
+
+		marsh = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		fort = {
+			attack = 0.05
+		}
+
+		river = {
+			attack = -0.05
+			movement = -0.05
+		}
+
+		amphibious = {
+			attack = -0.15
+		}
+	}
+	mot_squeeze_anti_tank_brigade = {
+		abbreviation = "MSAT"
+		sprite = anti_tank
+		map_icon_category = infantry
+		priority = 1197
+		ai_priority = 100
+		active = yes
+		
+		type = {
+			motorized
+			anti_tank
+		}
+		
+		group = mobile
+		
+		categories = {
+			category_front_line
+			category_army
+			category_line_artillery
+		}		
+		
+		combat_width = 1
+		transport = motorized_equipment
+		need = {
+			anti_tank_equipment_squeeze = 36
+			motorized_equipment = 50
+		}
+		manpower = 500
+		max_organisation = 0
+		default_morale = 0
+		max_strength = 0.6
+		training_time = 120
+		weight = 0.4
+
+		supply_consumption = 0.1
+
+		forest = {
+			movement = -0.25
+		}
+
+		mountain = {
+			movement = -0.05
+		}
+
+		jungle = {
+			attack = -0.1
+			movement = -0.25
+		}
+
+		marsh = {
+			attack = -0.05
+			movement = -0.1
+		}
+
+		fort = {
+			attack = 0.05
+		}
+
+		river = {
+			attack = -0.05
+			movement = -0.05
+		}
+
+		amphibious = {
+			attack = -0.15
+		}
+	}
+
+	heavy_anti_tank_brigade = {
+		abbreviation = "HANT"
+		sprite = anti_tank
+		map_icon_category = infantry
+		priority = 1197
+		ai_priority = 100
+		active = yes
+		
+		type = {
+			infantry
+			anti_tank
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_army
+			category_line_artillery
+		}		
+		
+		combat_width = 1
+
+		need = {
+			heavy_anti_tank_equipment = 36
+			motorized_equipment = 12
+		}
+		manpower = 500
+		max_organisation = 0
+		default_morale = 0
+		max_strength = 0.6
+		training_time = 120
+		weight = 1
+
+		supply_consumption = 0.2
+
+		forest = {
+			attack = -0.3
+			movement = -0.3
+		}
+
+		hills = {
+			movement = -0.2
+		}
+
+		mountain = {
+			movement = -0.4
+		}
+
+		jungle = {
+			attack = -0.4
+			movement = -0.4
+		}
+
+		marsh = {
+			attack = -0.3
+			movement = -0.35
+		}
+
+		fort = {
+			attack = 0.5
+		}
+
+		river = {
+			attack = -0.4
+			movement = -0.4
+		}
+
+		amphibious = {
+			attack = -0.7
+		}
+	}
 }
